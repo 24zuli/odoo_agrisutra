@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { ArrowRight, Tractor, CloudRain, Sprout } from "lucide-react";
-import { isAuthenticated } from "./auth/isAuthenticated";
+import { isAuthenticated } from "../lib/auth";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -63,20 +63,10 @@ export default function Home() {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
             Market Trends
           </h2>
-          <div className="grid grid-cols-3 gap-4 mb-4">
-            <div className="p-4 bg-green-50 rounded-lg">
-              <h3 className="font-semibold">Wheat</h3>
-              <p className="text-green-600">₹2,100/quintal</p>
-            </div>
-            <div className="p-4 bg-green-50 rounded-lg">
-              <h3 className="font-semibold">Rice</h3>
-              <p className="text-green-600">₹1,900/quintal</p>
-            </div>
-            <div className="p-4 bg-green-50 rounded-lg">
-              <h3 className="font-semibold">Maize</h3>
-              <p className="text-green-600">₹1,800/quintal</p>
-            </div>
-          </div>
+          <p className="text-gray-600 mb-4">
+            Stay updated with the real time market prices and agricultural
+            commodity trends.
+          </p>
           <button
             onClick={() => router.push("/market")}
             className="flex items-center text-green-600 hover:text-green-700"
@@ -126,7 +116,7 @@ export default function Home() {
             Get personalized crop recommendations based on your soil analysis
           </p>
           <button
-            onClick={() => router.push("/quiz")}
+            onClick={() => router.push("/crop-recommendation")}
             className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors"
           >
             Start Analysis
