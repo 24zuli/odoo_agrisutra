@@ -10,20 +10,26 @@
         "bannerTitle": "સફળતા ઉછેરો",
         "bannerQuote": "“આપણા અર્થતંત્રમાં ખેડૂત એકમાત્ર એવો માણસ છે જે છૂટક વેચાણ પર બધું ખરીદે છે, જથ્થાબંધ વેચાણ પર બધું વેચે છે અને ભાડું બંને રીતે ચૂકવે છે.”",
         "governmentSchemesTitle": "સરકારી યોજનાઓ",
-        "governmentSchemesDescription": "ખેડૂતો માટે સરકાર દ્વારા પૂરી પાડવામાં આવતી વિવિધ કૃષિ યોજનાઓ અને સહાય.",
-        "exploreSchemes": "યોજનાઓ શોધો",
-        "marketTrendsTitle": "બજાર પ્રવૃત્તિઓ",
-        "marketTrendsDescription": "વાસ્તવિક સમયના બજાર ભાવ અને કૃષિ ચીજવસ્તુઓના વલણો સાથે અપડેટ રહો.",
-        "viewAllTrends": "વધુ જુઓ",
+        "governmentSchemesDescription": "ખેડુતો માટે ઉપલબ્ધ તાજેતરના સરકારી પ્રયાસો અને સહાયની માહિતી શોધો.",
+        "exploreSchemes": "યોજનાઓ જાણો",
+        "marketTrendsTitle": "કૃષિ બજાર પ્રવૃત્તિઓ",
+        "marketTrendsDescription": "કૃષિ સામગ્રી માટેના તાજેતરના બજાર ભાવો અને પ્રવૃત્તિઓની જાણકારી મેળવો.",
+        "viewAllTrends": "બધી પ્રવૃત્તિઓ જુઓ",
         "equipmentServicesTitle": "ઉપકરણ સેવાઓ",
         "tractorBooking": "ટ્રેક્ટર બુકિંગ",
-        "tractorBookingDescription": "તમારા ખેતી માટે ટ્રેક્ટર માટેનું બુકિંગ કરો",
-        "irrigationEquipment": "સેચન ઉપકરણ",
-        "irrigationEquipmentDescription": "આધુનિક સિંચાઈ ઉકેલ",
-        "viewAllEquipment": "વધુ સાધન જુઓ",
-        "soilAnalysisTitle": "માટી વિશ્લેષણ",
-        "soilAnalysisDescription": "તમારા માટીના વિશ્લેષણ પર આધારિત પાક ની ભલામણો મેળવો",
-        "startAnalysis": "વિશ્લેષણ શરૂ કરો"
+        "tractorBookingDescription": "તમારી ખેતીની જરૂરિયાત માટે ટ્રેક્ટર બુક કરો.",
+        "irrigationEquipment": "સિંચાઈ સાધનો",
+        "irrigationEquipmentDescription": "પાણીના ઉપયોગને મહત્તમ કરવા માટે આધુનિક સિંચાઈ ઉકેલો.",
+        "viewAllEquipment": "બધા સાધનો જુઓ",
+        "locationPermissionPopupTitle": "સ્થાનની અનુમતિ આપશો?",
+        "locationPermissionPopupDescription": "તમારા માટે ઉપલબ્ધ સાધનો બતાવવા માટે અમને તમારા સ્થાનોની જરૂર છે.",
+        "allow": "મંજૂર",
+        "deny": "અસ્વીકાર",
+        "soilAnalysisTitle": "માટીની વિશ્લેષણ",
+        "soilAnalysisDescription": "તમારી જમીનની સ્થિતિનું વિશ્લેષણ કરો અને વધુ સારા પાક માટે ભલામણો મેળવો.",
+        "startAnalysis": "વિશ્લેષણ શરૂ કરો",
+        "allowLocation": "સ્થાન સુલભતા મંજૂર કરો",
+        "locationInfo": "ઉપલબ્ધ સાધનો બતાવવા માટે અમને તમારા સ્થાનેની જરૂર છે."
     },
 
     "schemesPage": {
@@ -219,5 +225,25 @@
         "maxPrice": "ઉચ્ચતમ કિંમત",
         "modelPrice": "મોડલ કિંમત",
         "date": "તારીખ"
+    },
+    "soilAnalysis": {
+        "title": "માટીની વિશ્લેષણ પરીક્ષણ",
+        "description": "માટીના પેરામીટરો મેન્યુઅલી દાખલ કરવાનું અથવા PDF/છબી અપલોડ કરવાનું પસંદ કરો.",
+        "manualInput": "મેન્યુઅલ ઈનપુટ",
+        "uploadPdfImage": "PDF/છબી અપલોડ કરો",
+        "uploadLabel": "છબી અથવા PDF અપલોડ કરો",
+        "getRecommendation": "સૂચન મેળવો",
+        "cropRecommendation": "ઉત્કૃષ્ટ પાક માટે ભલામણ",
+        "noDescription": "કોઈ વર્ણન ઉપલબ્ધ નથી.",
+        "errorFetching": "ભવિષ્યવાણી મેળવવામાં ભૂલ. કૃપા કરીને ફરી પ્રયત્ન કરો.",
+        "formLabels": {
+            "N": "નાઈટ્રોજન (N)",
+            "P": "ફોસ્ફરસ (P)",
+            "K": "પોટેશિયમ (K)",
+            "temperature": "તાપમાન (°C)",
+            "humidity": "આર્દ્રતા (%)",
+            "ph": "pH લેવલ",
+            "rainfall": "વરસાદ (મીમી)"
+        }
     }
 }

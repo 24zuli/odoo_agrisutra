@@ -11,20 +11,26 @@
         "bannerTitle": "Cultivate Success",
         "bannerQuote": "\"The farmer is the only man in our economy who buys everything at retail, sells everything at wholesale, and pays the freight both ways.\"",
         "governmentSchemesTitle": "Government Schemes",
-        "governmentSchemesDescription": "Discover various agricultural schemes and subsidies provided by the government to support farmers.",
+        "governmentSchemesDescription": "Discover the latest government initiatives and subsidies available for farmers.",
         "exploreSchemes": "Explore Schemes",
-        "marketTrendsTitle": "Market Trends",
-        "marketTrendsDescription": "Stay updated with the real time market prices and agricultural commodity trends.",
+        "marketTrendsTitle": "Agri Market Trends",
+        "marketTrendsDescription": "Stay updated with the latest market prices and trends for agricultural commodities.",
         "viewAllTrends": "View All Trends",
         "equipmentServicesTitle": "Equipment Services",
         "tractorBooking": "Tractor Booking",
-        "tractorBookingDescription": "Book tractors for your farming needs",
+        "tractorBookingDescription": "Book tractors for your farming needs.",
         "irrigationEquipment": "Irrigation Equipment",
-        "irrigationEquipmentDescription": "Modern irrigation solutions",
+        "irrigationEquipmentDescription": "Modern irrigation solutions to optimize water usage.",
         "viewAllEquipment": "View All Equipment",
-        "soilAnalysisTitle": "Soil Analysis Test",
-        "soilAnalysisDescription": "Get personalized crop recommendations based on your soil analysis",
-        "startAnalysis": "Start Analysis"
+        "locationPermissionPopupTitle": "Allow Location Access?",
+        "locationPermissionPopupDescription": "We need your location to show available equipment.",
+        "allow": "Allow",
+        "deny": "Deny",
+        "soilAnalysisTitle": "Soil Analysis",
+        "soilAnalysisDescription": "Analyze your soil condition and get recommendations for better crop yield.",
+        "startAnalysis": "Start Analysis",
+        "allowLocation": "Allow Location Access",
+        "locationInfo": "We need your location to show available equipment."
     },
     "schemesPage": {
         "schemeNotFound": "Scheme not found",
@@ -201,5 +207,25 @@
         "maxPrice": "Max Price",
         "modelPrice": "Model Price",
         "date": "Date"
+    },
+    "soilAnalysis": {
+        "title": "Soil Analysis Test",
+        "description": "Choose whether to manually enter the soil parameters or upload a PDF/Image.",
+        "manualInput": "Manual Input",
+        "uploadPdfImage": "Upload PDF/Image",
+        "uploadLabel": "Upload Image or PDF",
+        "getRecommendation": "Get Recommendation",
+        "cropRecommendation": "Crop Recommendation",
+        "noDescription": "No description available.",
+        "errorFetching": "Error fetching prediction. Please try again.",
+        "formLabels": {
+            "N": "Nitrogen (N)",
+            "P": "Phosphorus (P)",
+            "K": "Potassium (K)",
+            "temperature": "Temperature (°C)",
+            "humidity": "Humidity (%)",
+            "ph": "pH Level",
+            "rainfall": "Rainfall (mm)"
+        }
     }
 }
