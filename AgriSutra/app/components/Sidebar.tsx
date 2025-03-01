@@ -57,7 +57,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       <div className="p-4">
         <div className="flex justify-between items-center mb-8">
           <div className="flex items-center">
-            <Sprout className="h-8 w-8 text-green-600" />
+            {/* <Sprout className="h-8 w-8 text-green-600" /> */}
             <span className="ml-2 text-xl font-bold text-green-800">AgriSutra</span>
           </div>
           <button

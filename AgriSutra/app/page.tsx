@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { ArrowRight, Tractor, CloudRain, Sprout } from "lucide-react";
 import { isAuthenticated } from "../lib/auth";
@@ -9,12 +9,111 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   const router = useRouter();
+  const [showPopup, setShowPopup] = useState<boolean>(false);
 
   useEffect(() => {
     if (!isAuthenticated()) {
       router.push("/login");
     }
   }, [router]);
+
+  const getUserIdFromToken = () => {
+    if (typeof window !== "undefined") {
+      const token = localStorage.getItem("token");
+
+      if (!token) {
+        console.error(" No token found in localStorage.");
+        return null;
+      }
+
+      try {
+        const base64Url = token.split(".")[1]; // Extract payload part of JWT
+        if (!base64Url) {
+          console.error(" Invalid token format.");
+          return null;
+        }
+
+        const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+        const decodedToken = JSON.parse(atob(base64));
+
+        if (!decodedToken.id) {
+          console.error(" User ID missing in token.");
+          return null;
+        }
+
+        console.log(" User ID from Token:", decodedToken.id);
+        return decodedToken.id;
+      } catch (error) {
+        console.error(" Error decoding token:", error);
+        return null;
+      }
+    }
+
+    console.error(" Window object not found (server-side).");
+    return null;
+  };
+
+  const userId = getUserIdFromToken();
+
+  // Function to fetch and store location in the database
+  const getLocationAndStore = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        async (position) => {
+          const lat = position.coords.latitude;
+          const lng = position.coords.longitude;
+
+          const token = localStorage.getItem("token"); // Fetch token
+          if (!token) {
+            console.error(" No auth token found. User might be logged out.");
+            router.push("/equipment");
+            return;
+          }
+
+          const userId = getUserIdFromToken();
+          if (!userId) {
+            console.error(" User ID not found, skipping location update.");
+            router.push("/equipment");
+            return;
+          }
+
+          try {
+            const response = await fetch(
+              `http://localhost:3001/api/users/update-location/${userId}`,
+              {
+                method: "PUT",
+                headers: {
+                  "Content-Type": "application/json",
+                  Authorization: `Bearer ${token}`, // Ensure token is sent
+                },
+                body: JSON.stringify({
+                  location_lat: lat,
+                  location_lng: lng,
+                }),
+              }
+            );
+
+            const data = await response.json();
+            if (!response.ok) {
+              throw new Error(data.error || "Failed to update location");
+            }
+            console.log(" Location updated successfully:", data);
+          } catch (error) {
+            console.error(" Error updating location:", error);
+          }
+
+          router.push("/equipment");
+        },
+        (error) => {
+          console.error(" Error getting location:", error);
+          router.push("/equipment");
+        }
+      );
+    } else {
+      console.error(" Geolocation is not supported by this browser.");
+      router.push("/equipment");
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gray-50 pb-16">
@@ -76,7 +175,6 @@ export default function Home() {
           </button>
         </section>
 
-        {/* Equipment Services */}
         <section className="bg-white rounded-xl p-6 shadow-sm">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
             Equipment Services
@@ -97,14 +195,48 @@ export default function Home() {
               </p>
             </div>
           </div>
+
+          {/* View All Equipment Button with Location Pop-up */}
           <button
-            onClick={() => router.push("/equipment")}
+            onClick={() => setShowPopup(true)}
             className="flex items-center text-green-600 hover:text-green-700"
           >
             View All Equipment
             <ArrowRight className="ml-2 h-5 w-5" />
           </button>
         </section>
+
+        {/* Location Permission Pop-up */}
+        {showPopup && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+            <div className="bg-white p-6 rounded-lg text-center">
+              <p className="text-lg font-semibold">Allow Location Access?</p>
+              <p className="text-sm text-gray-600">
+                We need your location to show available equipment.
+              </p>
+              <div className="mt-4 flex justify-around">
+                <button
+                  onClick={() => {
+                    setShowPopup(false);
+                    getLocationAndStore(); // Fetch and store location if allowed
+                  }}
+                  className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600"
+                >
+                  Allow
+                </button>
+                <button
+                  onClick={() => {
+                    setShowPopup(false);
+                    router.push("/equipment"); // Redirect without fetching location
+                  }}
+                  className="px-4 py-2 bg-gray-300 rounded-lg hover:bg-gray-400"
+                >
+                  Deny
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Soil Analysis */}
         <section className="bg-white rounded-xl p-6 shadow-sm text-center">
