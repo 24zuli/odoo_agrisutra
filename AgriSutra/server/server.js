@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 const bodyParser = require("body-parser");
 const authRoutes = require("./routes/auth");
 const newsRoutes = require("./routes/news");
+const marketTrendsRoute = require("./routes/marketTrends");
 const profileRoute = require("./routes/profile");
 const categoriesRoutes = require("./routes/categories");
 // const equipmentRoutes = require("./routes/equipment"); // Import the equipment routes
@@ -21,6 +22,7 @@ app.use(cors({ origin: "http://localhost:3000" }));
 app.use("/api/auth", authRoutes);
 app.use("/api/news", newsRoutes);
 app.use("/api/profile", profileRoute);
+app.use("/api/market-trends", marketTrendsRoute);
 // app.use("/api/equipment", equipmentRoutes);
 app.use("/api/categories", categoriesRoutes);
 // app.use("/api/users", usersRoute);
