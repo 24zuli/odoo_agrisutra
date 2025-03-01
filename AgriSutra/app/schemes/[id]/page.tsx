@@ -8,7 +8,11 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function SchemeDetailPage({ params }: { params: { id: string } }) {
+export default async function SchemeDetailPage({
+  params,
+}: {
+  params: { id: string };
+}) {
   const { id } = params;
   const scheme = await fetchSchemeById(id);
 
