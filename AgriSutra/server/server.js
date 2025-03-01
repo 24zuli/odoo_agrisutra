@@ -8,7 +8,7 @@ const marketTrendsRoute = require("./routes/marketTrends");
 const schemeRoutes = require("./routes/schemes");
 const profileRoute = require("./routes/profile");
 const categoriesRoutes = require("./routes/categories");
-const equipmentRoutes = require("./routes/equipment");
+// const equipmentRoutes = require("./routes/equipment");
 const usersRoute = require("./routes/users");
 
 dotenv.config();
@@ -25,20 +25,17 @@ app.use("/api/news", newsRoutes);
 app.use("/api/profile", profileRoute);
 app.use("/api/market-trends", marketTrendsRoute);
 app.use("/api/schemes", schemeRoutes);
-app.use("/api/equipment", equipmentRoutes);
+// app.use("/api/equipment", equipmentRoutes);
 app.use("/api/categories", categoriesRoutes);
 app.use("/api/users", usersRoute);
 
 const { Pool } = require("pg");
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl:
-    process.env.NODE_ENV === "production"
-      ? { rejectUnauthorized: false }
-      : false,
+    connectionString: process.env.DATABASE_URL,
+    ssl: process.env.NODE_ENV === "production" ? { rejectUnauthorized: false } : false,
 });
 
 const PORT = 3001;
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+    console.log(`Server running on port ${PORT}`);
 });
