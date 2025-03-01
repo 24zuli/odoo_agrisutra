@@ -8,7 +8,7 @@ const marketTrendsRoute = require("./routes/marketTrends");
 const profileRoute = require("./routes/profile");
 const categoriesRoutes = require("./routes/categories");
 // const equipmentRoutes = require("./routes/equipment"); // Import the equipment routes
-// const usersRoute = require("./routes/users");
+const usersRoute = require("./routes/users");
 
 dotenv.config();
 
@@ -25,7 +25,7 @@ app.use("/api/profile", profileRoute);
 app.use("/api/market-trends", marketTrendsRoute);
 // app.use("/api/equipment", equipmentRoutes);
 app.use("/api/categories", categoriesRoutes);
-// app.use("/api/users", usersRoute);
+app.use("/api/users", usersRoute);
 
 const { Pool } = require("pg");
 const pool = new Pool({
