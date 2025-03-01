@@ -3,6 +3,7 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const bodyParser = require("body-parser");
 const authRoutes = require("./routes/auth");
+const newsRoutes = require("./routes/news");
 
 dotenv.config();
 
@@ -14,6 +15,7 @@ app.use(cors({ origin: "http://localhost:3000" }));
 
 // Use Auth Routes
 app.use("/api/auth", authRoutes);
+app.use("/api/news", newsRoutes);
 
 // PostgreSQL Database Connection
 const { Pool } = require("pg");
