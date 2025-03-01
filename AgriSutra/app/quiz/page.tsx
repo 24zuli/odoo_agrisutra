@@ -305,18 +305,18 @@ export default function QuizPage() {
 
   return (
     <main className="container mx-auto px-4 py-6">
-      {/* Optional nav link back to home */}
-      <div className="mb-4">
-        <a href="/" className="inline-flex items-center text-sm text-green-700 hover:text-green-800">
-          <ArrowLeft className="h-5 w-5 mr-1" />
-          Soil Analysis Test
+      {/* Back Link with Larger Bold Text */}
+      <div className="mb-6">
+        <a href="/" className="inline-flex items-center text-lg font-bold text-green-700 hover:text-green-800">
+          <ArrowLeft className="h-6 w-6 mr-2" />
+          <span className="text-3xl font-extrabold">Soil Analysis Test</span>
         </a>
       </div>
 
-      {/* Form card with green border */}
-      <div className="bg-white border border-green-400 rounded-lg shadow-md p-6 mb-6">
-        <h1 className="text-xl font-bold mb-2 text-green-700">Soil Analysis</h1>
-        <p className="text-sm text-gray-600 mb-4">
+      {/* Form card with increased spacing */}
+      <div className="bg-white border border-green-400 rounded-lg shadow-md p-6 mb-12 mt-8">
+        <h1 className="text-2xl font-bold mb-4 text-green-700">Soil Analysis</h1>
+        <p className="text-md text-gray-600 mb-6">
           Choose whether to manually enter the soil parameters or upload a PDF/Image.
         </p>
 
