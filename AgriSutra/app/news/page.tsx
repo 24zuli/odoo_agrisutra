@@ -1,11 +1,14 @@
 "use client";
 
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { fetchNews } from '../../lib/news';
-import Image from 'next/image';
-import Link from 'next/link';
-import { ArrowLeft } from 'lucide-react';
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import { fetchNews } from "../../lib/news";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
+
+// 1. Import the translation hook
+import { useTranslation } from "react-i18next";
 
 interface Article {
   title: string;
@@ -19,6 +22,9 @@ export default function NewsPage() {
   const [articles, setArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
+
+  // 2. Initialize the translation hook
+  const { t } = useTranslation();
 
   useEffect(() => {
     const getNews = async () => {
@@ -40,7 +46,10 @@ export default function NewsPage() {
         <button onClick={() => router.back()} className="p-2">
           <ArrowLeft size={28} className="text-blue-900" />
         </button>
-        <h1 className="text-2xl font-semibold ml-3">Latest News</h1>
+        {/* 3. Use translated "Latest News" */}
+        <h1 className="text-2xl font-semibold ml-3">
+          {t("newsPage.latestNews")}
+        </h1>
       </div>
 
       {loading ? (
@@ -48,7 +57,7 @@ export default function NewsPage() {
       ) : (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {articles.map((article, index) => {
-            const imageUrl = article.image || '/news.jpg';
+            const imageUrl = article.image || "/news.jpg";
             return (
               <div
                 key={index}
@@ -70,7 +79,8 @@ export default function NewsPage() {
                     target="_blank"
                     className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg"
                   >
-                    Read More
+                    {/* 4. Use translated "Read More" */}
+                    {t("newsPage.readMore")}
                   </Link>
                 </div>
               </div>
