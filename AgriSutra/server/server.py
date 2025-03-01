@@ -138,102 +138,109 @@ def extract_text_from_image(image_file):
 # Function to Extract Soil Parameters from Text
 def extract_parameters_from_text(text):
     try:
-        # Define regex patterns for different parameter formats
-        patterns = {
-            "N": r"N[:\s]+(\d+)",   # Matches "N: 90"
-            "P": r"P[:\s]+(\d+)",   # Matches "P: 45"
-            "K": r"K[:\s]+(\d+)",   # Matches "K: 47"
-            "temperature": r"temperature[:\s]+([\d.]+)",  # Matches "temperature: 25"
-            "humidity": r"humidity[:\s]+([\d.]+)",        # Matches "humidity: 89"
-            "ph": r"pH[:\s]+([\d.]+)",                   # Matches "pH: 6.5"
-            "rainfall": r"rainfall[:\s]+([\d.]+)"        # Matches "rainfall: 226.5"
+        print("📝 Raw Extracted Text:", text)
+
+        # Define the required soil parameters
+        required_parameters = {
+            "N": 50,  # Mean value or 0
+            "P": 30,  
+            "K": 20,  
+            "temperature": 25,  
+            "humidity": 60,  
+            "ph": 6.5,  
+            "rainfall": 100
         }
-        
+
+        # Regex patterns for extracting required parameters
+        patterns = {
+            "N": r"N[:\s]+(\d+)",
+            "P": r"P[:\s]+(\d+)",
+            "K": r"K[:\s]+(\d+)",
+            "temperature": r"temperature[:\s]+([\d.]+)",
+            "humidity": r"humidity[:\s]+([\d.]+)",
+            "ph": r"pH[:\s]+([\d.]+)",
+            "rainfall": r"rainfall[:\s]+([\d.]+)"
+        }
+
         extracted_values = {}
-        
+
         for key, pattern in patterns.items():
             match = re.search(pattern, text, re.IGNORECASE)
             if match:
-                extracted_values[key] = float(match.group(1))  # Convert to float
+                extracted_values[key] = float(match.group(1))
             else:
-                extracted_values[key] = None  # Mark missing values
-        
+                print(f"⚠️ {key} not found. Using default value: {required_parameters[key]}")
+                extracted_values[key] = required_parameters[key]  # Use default if missing
+
+        # Print final extracted values
+        print(f"📊 Final Processed Parameters (Only Required Ones): {extracted_values}")
+
         return extracted_values
     except Exception as e:
         return f"❌ Error processing extracted text: {e}"
 
+        
 @app.route("/predict", methods=["POST"])
 def predict():
     if model is None:
         return jsonify({"error": "Model is not loaded. Check the server logs."}), 500
 
     try:
-        if "file" in request.files:
+        extracted_text = None
+        extracted_params = {}
+
+        # Define default values
+        default_values = {
+            "N": 50,  
+            "P": 30,  
+            "K": 20,  
+            "temperature": 25,  
+            "humidity": 60,  
+            "ph": 6.5,  
+            "rainfall": 100
+        }
+
+        if "file" in request.files:  # If file is uploaded (PDF/Image)
             file = request.files["file"]
             filename = file.filename.lower()
             print(f"📂 Received File: {filename}")
 
-            # Extract text from PDF or Image
+            # Extract text from the file
             extracted_text = extract_text_from_pdf(file) if filename.endswith(".pdf") else extract_text_from_image(file)
+            print(f"📝 Extracted Text: {extracted_text}")
 
-            #print(f"📝 Extracted Text: {extracted_text}")
-
-            # Extract numeric values from text
+            # Extract only required soil parameters
             extracted_params = extract_parameters_from_text(extracted_text)
-            #print(f"📊 Extracted Parameters: {extracted_params}")
 
-            # Check if all required parameters are extracted
-            if None in extracted_params.values():
-                return jsonify({
-                    "error": "Could not extract all required soil parameters from the uploaded file.",
-                    "extractedText": extracted_text,
-                    "extractedParams": extracted_params
-                }), 400
+        # ✅ Use `request.form` instead of `request.json`
+        if request.form:  # If manual input (form data) is provided
+            print("📨 Received Form Data:", request.form)
 
-            # Convert extracted data to NumPy array for prediction
-            features = np.array([[
-                extracted_params["N"], extracted_params["P"], extracted_params["K"],
-                extracted_params["temperature"], extracted_params["humidity"],
-                extracted_params["ph"], extracted_params["rainfall"]
-            ]])
+            for key in default_values:
+                if key in request.form and request.form[key]:  # Use form input if provided
+                    extracted_params[key] = float(request.form[key])
+                elif key not in extracted_params or extracted_params[key] is None:  # Use default if missing
+                    extracted_params[key] = default_values[key]
 
-            # Get model prediction
-            predicted_crop = model.predict(features)[0]  # Get crop prediction
-            predicted_crop = str(predicted_crop)  # Ensure it's a string
+        print(f"📊 Final Processed Parameters: {extracted_params}")
 
-            return jsonify({
-                "recommendedCrop": predicted_crop,
-                "description": f"The recommended crop based on extracted data is {predicted_crop}.",
-                "extractedText": extracted_text,
-                "extractedParams": extracted_params
-            })
+        # Convert extracted values into a NumPy array
+        features = np.array([[
+            extracted_params["N"], extracted_params["P"], extracted_params["K"],
+            extracted_params["temperature"], extracted_params["humidity"],
+            extracted_params["ph"], extracted_params["rainfall"]
+        ]])
 
-        else:
-            # If manual input is used instead of a file
-            data = request.form
-            print("📨 Received Form Data:", data)
+        # Get prediction from model
+        predicted_crop = model.predict(features)[0]
+        predicted_crop = str(predicted_crop)
 
-            required_fields = ["N", "P", "K", "temperature", "humidity", "ph", "rainfall"]
-            missing_fields = [field for field in required_fields if field not in data]
-
-            if missing_fields:
-                return jsonify({"error": f"Missing fields: {', '.join(missing_fields)}"}), 400
-
-            features = np.array([[  
-                float(data["N"]), float(data["P"]), float(data["K"]),
-                float(data["temperature"]), float(data["humidity"]),
-                float(data["ph"]), float(data["rainfall"])
-            ]])
-
-            predicted_crop = model.predict(features)[0]
-            predicted_crop = str(predicted_crop)
-            description = "Predicted crop based on soil data."
-
-            return jsonify({
-                "recommendedCrop": predicted_crop,
-                "description": description,
-                "extractedText": None
-            })
+        return jsonify({
+            "recommendedCrop": predicted_crop,
+            "description": f"The recommended crop based on extracted data is {predicted_crop}.",
+            "extractedText": extracted_text,
+            "extractedParams": extracted_params
+        })
 
     except Exception as e:
         print(f"❌ Prediction Error: {e}")
