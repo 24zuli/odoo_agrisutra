@@ -5,7 +5,6 @@ const bodyParser = require("body-parser");
 const authRoutes = require("./routes/auth");
 
 dotenv.config();
-console.log(process.env.DB_PASSWORD);
 
 const app = express();
 app.use(cors());
