@@ -35,7 +35,7 @@ export default function Login() {
       });
 
       const data = await response.json();
-      console.log("🔹 API Response:", data);
+      console.log("API Response:", data);
 
       if (!response.ok) {
         throw new Error(data.message || "Invalid credentials");
