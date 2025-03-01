@@ -5,9 +5,10 @@ const bodyParser = require("body-parser");
 const authRoutes = require("./routes/auth");
 const newsRoutes = require("./routes/news");
 const marketTrendsRoute = require("./routes/marketTrends");
+const schemeRoutes = require("./routes/schemes");
 const profileRoute = require("./routes/profile");
 const categoriesRoutes = require("./routes/categories");
-// const equipmentRoutes = require("./routes/equipment"); // Import the equipment routes
+const equipmentRoutes = require("./routes/equipment");
 const usersRoute = require("./routes/users");
 
 dotenv.config();
@@ -23,7 +24,8 @@ app.use("/api/auth", authRoutes);
 app.use("/api/news", newsRoutes);
 app.use("/api/profile", profileRoute);
 app.use("/api/market-trends", marketTrendsRoute);
-// app.use("/api/equipment", equipmentRoutes);
+app.use("/api/schemes", schemeRoutes);
+app.use("/api/equipment", equipmentRoutes);
 app.use("/api/categories", categoriesRoutes);
 app.use("/api/users", usersRoute);
 
