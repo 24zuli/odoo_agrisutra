@@ -18,11 +18,11 @@ async function predictCrop(req, res) {
       { headers: { "Content-Type": "application/json" } }
     );
 
-    console.log("✅ Flask Response:", response.data);
-
+    console.log(" Flask Response:", response.data);
+    
     // Extract the predicted crop from the Flask response
     const cropPrediction = response.data.recommendedCrop;
-    console.log(`🌱 Predicted Crop: ${cropPrediction}`);
+    console.log(` Predicted Crop: ${cropPrediction}`);
 
     // Query the database for the crop description (case-insensitive match)
     const queryText = `
@@ -44,7 +44,7 @@ async function predictCrop(req, res) {
     });
   } catch (error) {
     console.error(
-      "❌ Error in /predict:",
+      " Error in /predict:",
       error.response ? error.response.data : error.message
     );
     res.status(500).json({

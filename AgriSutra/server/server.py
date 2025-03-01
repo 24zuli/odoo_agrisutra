@@ -15,9 +15,9 @@ MODEL_PATH = os.path.join(BASE_DIR, "..", "KNN.pkl")
 
 try:
     model = joblib.load(MODEL_PATH)
-    print(f"✅ KNN Model loaded successfully from {MODEL_PATH}")
+    print(f" KNN Model loaded successfully from {MODEL_PATH}")
 except Exception as e:
-    print(f"❌ Error loading model: {e}")
+    print(f" Error loading model: {e}")
     model = None
 
 # Sample crop descriptions (replace with a database query if needed)
