@@ -245,5 +245,19 @@
             "ph": "pH લેવલ",
             "rainfall": "વરસાદ (મીમી)"
         }
+    },
+    "weather": {
+        "locationAccess": "સ્થાન પ્રવેશની મંજૂરી આપો?",
+        "locationInfo": "ચોક્કસ હવામાન અપડેટ માટે અમને તમારું સ્થાન જરૂરી છે.",
+        "allow": "મંજૂર",
+        "deny": "નકારો",
+        "temperature": "તાપમાન",
+        "humidity": "આર્દ્રતા",
+        "uvIndex": "યુવી ઇન્ડેક્સ",
+        "windSpeed": "પવનની ઝડપ",
+        "airQualityIndex": "એર ક્વોલિટી ઇન્ડેક્સ",
+        "sunrise": "સૂર્યોદય",
+        "sunset": "સૂર્યાસ્ત",
+        "sevenDayForecast": "7-દિવસની આગાહી"
     }
 }

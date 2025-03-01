@@ -227,5 +227,19 @@
             "ph": "pH Level",
             "rainfall": "Rainfall (mm)"
         }
+    },
+    "weather": {
+        "locationAccess": "Allow Location Access?",
+        "locationInfo": "We need your location to provide accurate weather updates.",
+        "allow": "Allow",
+        "deny": "Deny",
+        "temperature": "Temperature",
+        "humidity": "Humidity",
+        "uvIndex": "UV Index",
+        "windSpeed": "Wind Speed",
+        "airQualityIndex": "Air Quality Index",
+        "sunrise": "Sunrise",
+        "sunset": "Sunset",
+        "sevenDayForecast": "7-Day Forecast"
     }
 }
