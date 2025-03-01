@@ -183,5 +183,22 @@
     "newsPage": {
         "latestNews": "Latest News",
         "readMore": "Read More"
+    },
+    "marketPage": {
+        "heading": "Agri Market Trends",
+        "selectCommodity": "Select Commodity",
+        "selectState": "Select State",
+        "selectDistrict": "Select District",
+        "fetchData": "Fetch Data",
+        "fetchingData": "Fetching Market Data...",
+        "noMarketData": "No market trends available. Try selecting a commodity, state, and district to see the latest updates.",
+        "selectAllFields": "Please select a commodity, state, and district.",
+        "fetchError": "Failed to fetch market data. Please try again later.",
+        "city": "City",
+        "commodity": "Commodity",
+        "minPrice": "Min Price",
+        "maxPrice": "Max Price",
+        "modelPrice": "Model Price",
+        "date": "Date"
     }
 }
