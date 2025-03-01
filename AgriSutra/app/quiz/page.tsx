@@ -1,8 +1,7 @@
-// app/quiz/page.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";
-
+import { ArrowLeft } from "lucide-react";
 interface FormData {
   N: string;
   P: string;
@@ -21,13 +20,13 @@ interface ResultType {
 
 export default function QuizPage() {
   const [formData, setFormData] = useState<FormData>({
-    N: " ",
-    P: " ",
-    K: " ",
-    temperature: " ",
-    humidity: " ",
-    ph: " ",
-    rainfall: " ",
+    N: "",
+    P: "",
+    K: "",
+    temperature: "",
+    humidity: "",
+    ph: "",
+    rainfall: "",
   });
 
   const [result, setResult] = useState<ResultType | null>(null);
@@ -109,12 +108,12 @@ export default function QuizPage() {
               d="M15 19l-7-7 7-7"
             />
           </svg>
-          Home
+          Soil Analysis Test
         </a>
       </div>
 
-      {/* Form card */}
-      <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+      {/* Form card with green border */}
+      <div className="bg-white border border-green-400 rounded-lg shadow-md p-6 mb-6">
         <h1 className="text-xl font-bold mb-2 text-green-700">Soil Analysis</h1>
         <p className="text-sm text-gray-600 mb-4">
           Enter your soil parameters and environmental conditions to get a
@@ -125,144 +124,38 @@ export default function QuizPage() {
           onSubmit={handleSubmit}
           className="grid grid-cols-1 sm:grid-cols-2 gap-4"
         >
-          {/* Nitrogen */}
-          <div>
-            <label className="block font-medium text-sm mb-1" htmlFor="N">
-              Nitrogen (N)
-            </label>
-            <input
-              id="N"
-              name="N"
-              type="number"
-              value={formData.N}
-              onChange={handleChange}
-              className="border border-gray-300 rounded w-full p-2"
-              required
-            />
-            <p className="text-xs text-gray-400">
-              Nitrogen content in soil (0-140)
-            </p>
-          </div>
-
-          {/* Phosphorus */}
-          <div>
-            <label className="block font-medium text-sm mb-1" htmlFor="P">
-              Phosphorus (P)
-            </label>
-            <input
-              id="P"
-              name="P"
-              type="number"
-              value={formData.P}
-              onChange={handleChange}
-              className="border border-gray-300 rounded w-full p-2"
-              required
-            />
-            <p className="text-xs text-gray-400">
-              Phosphorus content in soil (0-145)
-            </p>
-          </div>
-
-          {/* Potassium */}
-          <div>
-            <label className="block font-medium text-sm mb-1" htmlFor="K">
-              Potassium (K)
-            </label>
-            <input
-              id="K"
-              name="K"
-              type="number"
-              value={formData.K}
-              onChange={handleChange}
-              className="border border-gray-300 rounded w-full p-2"
-              required
-            />
-            <p className="text-xs text-gray-400">
-              Potassium content in soil (0-205)
-            </p>
-          </div>
-
-          {/* Temperature */}
-          <div>
-            <label
-              className="block font-medium text-sm mb-1"
-              htmlFor="temperature"
-            >
-              Temperature (°C)
-            </label>
-            <input
-              id="temperature"
-              name="temperature"
-              type="number"
-              value={formData.temperature}
-              onChange={handleChange}
-              className="border border-gray-300 rounded w-full p-2"
-              required
-            />
-            <p className="text-xs text-gray-400">
-              Average temperature in Celsius (8-44)
-            </p>
-          </div>
-
-          {/* Humidity */}
-          <div>
-            <label
-              className="block font-medium text-sm mb-1"
-              htmlFor="humidity"
-            >
-              Humidity (%)
-            </label>
-            <input
-              id="humidity"
-              name="humidity"
-              type="number"
-              value={formData.humidity}
-              onChange={handleChange}
-              className="border border-gray-300 rounded w-full p-2"
-              required
-            />
-            <p className="text-xs text-gray-400">Relative humidity (14-100)</p>
-          </div>
-
-          {/* pH */}
-          <div>
-            <label className="block font-medium text-sm mb-1" htmlFor="ph">
-              pH Level
-            </label>
-            <input
-              id="ph"
-              name="ph"
-              type="number"
-              step="0.1"
-              value={formData.ph}
-              onChange={handleChange}
-              className="border border-gray-300 rounded w-full p-2"
-              required
-            />
-            <p className="text-xs text-gray-400">pH value of soil (3.5-10)</p>
-          </div>
-
-          {/* Rainfall */}
-          <div>
-            <label
-              className="block font-medium text-sm mb-1"
-              htmlFor="rainfall"
-            >
-              Rainfall (mm)
-            </label>
-            <input
-              id="rainfall"
-              name="rainfall"
-              type="number"
-              value={formData.rainfall}
-              onChange={handleChange}
-              className="border border-gray-300 rounded w-full p-2"
-              required
-            />
-            <p className="text-xs text-gray-400">
-              Annual rainfall in mm (20-300)
-            </p>
-          </div>
+          {["N", "P", "K", "temperature", "humidity", "ph", "rainfall"].map(
+            (param) => (
+              <div key={param}>
+                <label
+                  className="block font-medium text-sm mb-1"
+                  htmlFor={param}
+                >
+                  {param.charAt(0).toUpperCase() + param.slice(1)}
+                </label>
+                <input
+                  id={param}
+                  name={param}
+                  type="number"
+                  value={formData[param as keyof FormData]}
+                  onChange={handleChange}
+                  className="border border-gray-300 rounded w-full p-2 focus:border-green-500 focus:ring focus:ring-green-200 transition"
+                  required
+                />
+                <p className="text-xs text-gray-400">
+                  {param === "ph"
+                    ? "pH value of soil (3.5-10)"
+                    : param === "temperature"
+                    ? "Average temperature in Celsius (8-44)"
+                    : param === "humidity"
+                    ? "Relative humidity (14-100)"
+                    : param === "rainfall"
+                    ? "Annual rainfall in mm (20-300)"
+                    : `Soil content range`}
+                </p>
+              </div>
+            )
+          )}
 
           {/* Submit button */}
           <div className="sm:col-span-2 mt-2">
@@ -279,9 +172,9 @@ export default function QuizPage() {
         {error && <p className="text-red-600 mt-4 text-sm">{error}</p>}
       </div>
 
-      {/* Result card */}
+      {/* Result card with green border */}
       {result && (
-        <div className="bg-white rounded-lg shadow-md p-6">
+        <div className="bg-white border border-green-400 rounded-lg shadow-md p-6">
           <h2 className="text-xl font-bold text-green-700 mb-2">
             Crop Recommendation
           </h2>
