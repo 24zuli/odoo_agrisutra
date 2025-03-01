@@ -10,7 +10,7 @@ const profileRoute = require("./routes/profile");
 const categoriesRoutes = require("./routes/categories");
 const equipmentRoutes = require("./routes/equipment");
 const usersRoute = require("./routes/users");
-const equipmentRoutes = require("./routes/equipment");
+const bookEquipmentRoutes = require("./routes/bookEquipment");
 const seedRoutes = require("./routes/seeds");
 
 dotenv.config();
