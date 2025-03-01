@@ -25,21 +25,21 @@ export default function WeatherApp() {
       setLoading(true);
       setError(null);
 
-      // 📍 Fetch Location Name
+      // Fetch Location Name
       const locationResponse = await fetch(
         `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=en`
       );
       const locationData = await locationResponse.json();
       setLocation(locationData.city || "Unknown Location");
 
-      // 🌡 Fetch Real-Time Weather
+      // Fetch Real-Time Weather
       const currentWeatherResponse = await fetch(
         `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m&timezone=auto`
       );
       const currentWeatherData = await currentWeatherResponse.json();
       setCurrentTemp(currentWeatherData?.current?.temperature_2m || null);
 
-      // 🌤 Fetch 7-Day Forecast
+      // Fetch 7-Day Forecast
       const response = await fetch(
         `https://api.tomorrow.io/v4/weather/forecast?location=${lat},${lon}&timesteps=1d&apikey=${API_KEY}`
       );
@@ -47,7 +47,7 @@ export default function WeatherApp() {
       const data = await response.json();
       setWeatherData(data?.timelines || null);
 
-      // 🌫 Fetch AQI Data
+      // Fetch AQI Data
       const aqiResponse = await fetch(
         `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${AQI_API_KEY}`
       );
