@@ -7,7 +7,6 @@
         "profile": "Profile"
     },
 
-
     "homepage": {
         "bannerTitle": "Cultivate Success",
         "bannerQuote": "\"The farmer is the only man in our economy who buys everything at retail, sells everything at wholesale, and pays the freight both ways.\"",
@@ -26,8 +25,6 @@
         "soilAnalysisTitle": "Soil Analysis Test",
         "soilAnalysisDescription": "Get personalized crop recommendations based on your soil analysis",
         "startAnalysis": "Start Analysis"
-
-
     },
     "schemesPage": {
         "schemeNotFound": "Scheme not found",
@@ -57,9 +54,9 @@
     },
 
     "profilePage": {
-        "profile": "Profile",
         "loading": "Loading...",
         "errorLoadingProfile": "Error loading profile.",
+        "profileHeading": "Profile",
         "editProfile": "Edit Profile",
         "equipmentHistory": "Equipment History",
         "trackEquipment": "Track Equipment",
@@ -183,5 +180,26 @@
         "contactUsHeading": "10. Contact Us",
         "contactUsContent": "If you have any questions or concerns about this Privacy Policy, please contact us at",
         "contactEmail": "agrisutra@gmail.com"
+    },
+    "newsPage": {
+        "latestNews": "Latest News",
+        "readMore": "Read More"
+    },
+    "marketPage": {
+        "heading": "Agri Market Trends",
+        "selectCommodity": "Select Commodity",
+        "selectState": "Select State",
+        "selectDistrict": "Select District",
+        "fetchData": "Fetch Data",
+        "fetchingData": "Fetching Market Data...",
+        "noMarketData": "No market trends available. Try selecting a commodity, state, and district to see the latest updates.",
+        "selectAllFields": "Please select a commodity, state, and district.",
+        "fetchError": "Failed to fetch market data. Please try again later.",
+        "city": "City",
+        "commodity": "Commodity",
+        "minPrice": "Min Price",
+        "maxPrice": "Max Price",
+        "modelPrice": "Model Price",
+        "date": "Date"
     }
 }

@@ -7,6 +7,9 @@ import states from "../helper/states.json";
 import districtsData from "../helper/districts.json";
 import commodities from "../helper/commodities.json";
 
+// 1. Import the translation hook
+import { useTranslation } from "react-i18next";
+
 interface State {
   id: string;
   name: string;
@@ -43,14 +46,17 @@ export default function MarketPage() {
   const [data, setData] = useState<MarketData[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
-  const [appUrl, setAppUrl] = useState<string>(""); // ✅ Fix APP_URL issue
+  const [appUrl, setAppUrl] = useState<string>("");
   const MAX_RETRIES = 3;
   const router = useRouter();
 
-  // Update the districts when state changes
+  // 2. Initialize the translation hook
+  const { t } = useTranslation();
+
+  // Districts based on selected state
   const districts = state ? typedDistricts[state] || [] : [];
 
-  // ✅ Update API URL when any filter changes
+  // Update appUrl whenever commodity, state, or district changes
   useEffect(() => {
     if (commodity && state && district) {
       setAppUrl(
@@ -62,7 +68,7 @@ export default function MarketPage() {
   const fetchMarketData = async (attempt = 1) => {
     try {
       if (!commodity || !state || !district) {
-        setError("Please select a commodity, state, and district.");
+        setError(t("marketPage.selectAllFields"));
         return;
       }
       setLoading(true);
@@ -81,7 +87,7 @@ export default function MarketPage() {
         console.log(`Retrying... Attempt ${attempt + 1}`);
         setTimeout(() => fetchMarketData(attempt + 1), 2000);
       } else {
-        setError("Failed to fetch market data. Please try again later.");
+        setError(t("marketPage.fetchError"));
         setLoading(false);
       }
     }
@@ -97,8 +103,9 @@ export default function MarketPage() {
         >
           <ArrowLeft className="h-6 w-6 mr-2" />
         </button>
+        {/* 3. Translate "Agri Market Trends 🌿" */}
         <h1 className="text-3xl font-bold tracking-wide uppercase">
-          Agri Market Trends 🌿
+          {t("marketPage.heading")} 🌿
         </h1>
         <div></div> {/* Empty div to balance spacing */}
       </div>
@@ -110,7 +117,8 @@ export default function MarketPage() {
           onChange={(e) => setCommodity(e.target.value)}
           className="border p-2 h-10 rounded"
         >
-          <option value="">Select Commodity</option>
+          {/* 4. Translate "Select Commodity" */}
+          <option value="">{t("marketPage.selectCommodity")}</option>
           {typedCommodities.map((item) => (
             <option key={item.id} value={item.name}>
               {item.name}
@@ -123,7 +131,8 @@ export default function MarketPage() {
           onChange={(e) => setState(e.target.value)}
           className="border p-2 h-10 rounded"
         >
-          <option value="">Select State</option>
+          {/* 5. Translate "Select State" */}
+          <option value="">{t("marketPage.selectState")}</option>
           {typedStates.map((item) => (
             <option key={item.id} value={item.id}>
               {item.name}
@@ -136,7 +145,8 @@ export default function MarketPage() {
           onChange={(e) => setDistrict(e.target.value)}
           className="border p-2 h-10 rounded"
         >
-          <option value="">Select District</option>
+          {/* 6. Translate "Select District" */}
+          <option value="">{t("marketPage.selectDistrict")}</option>
           {districts.map((item) => (
             <option key={item.id} value={item.id}>
               {item.name}
@@ -144,11 +154,12 @@ export default function MarketPage() {
           ))}
         </select>
 
+        {/* 7. Translate "Fetch Data" */}
         <button
           onClick={() => fetchMarketData()}
           className="bg-green-600 text-white px-4 py-2 h-10 rounded shadow"
         >
-          Fetch Data
+          {t("marketPage.fetchData")}
         </button>
       </div>
 
@@ -162,25 +173,27 @@ export default function MarketPage() {
                 🌱
               </div>
             </div>
-            <p className="mt-3 font-medium">Fetching Market Data...</p>
+            {/* 8. Translate "Fetching Market Data..." */}
+            <p className="mt-3 font-medium">{t("marketPage.fetchingData")}</p>
           </div>
         ) : error ? (
           <p className="text-center py-4 text-red-500 font-semibold">{error}</p>
         ) : data.length === 0 ? (
+          // 9. Translate "No market trends available..."
           <p className="text-center py-4 text-green-700 font-semibold">
-            No market trends available. Try selecting a commodity, state, and district to see the latest updates.
+            {t("marketPage.noMarketData")}
           </p>
         ) : (
           <table className="min-w-full border border-green-300 bg-white shadow-md rounded-lg overflow-hidden">
             <thead className="bg-green-500 text-white">
               <tr>
                 <th className="border p-3">S.No</th>
-                <th className="border p-3">City</th>
-                <th className="border p-3">Commodity</th>
-                <th className="border p-3">Min Price</th>
-                <th className="border p-3">Max Price</th>
-                <th className="border p-3">Model Price</th>
-                <th className="border p-3">Date</th>
+                <th className="border p-3">{t("marketPage.city")}</th>
+                <th className="border p-3">{t("marketPage.commodity")}</th>
+                <th className="border p-3">{t("marketPage.minPrice")}</th>
+                <th className="border p-3">{t("marketPage.maxPrice")}</th>
+                <th className="border p-3">{t("marketPage.modelPrice")}</th>
+                <th className="border p-3">{t("marketPage.date")}</th>
               </tr>
             </thead>
             <tbody>
@@ -192,9 +205,15 @@ export default function MarketPage() {
                   <td className="border p-3 text-green-700">{idx + 1}</td>
                   <td className="border p-3 text-green-700">{item.City}</td>
                   <td className="border p-3 text-green-700">{item.Commodity}</td>
-                  <td className="border p-3 text-green-700">{item["Min Price"]}</td>
-                  <td className="border p-3 text-green-700">{item["Max Price"]}</td>
-                  <td className="border p-3 text-green-700">{item["Model Price"]}</td>
+                  <td className="border p-3 text-green-700">
+                    {item["Min Price"]}
+                  </td>
+                  <td className="border p-3 text-green-700">
+                    {item["Max Price"]}
+                  </td>
+                  <td className="border p-3 text-green-700">
+                    {item["Model Price"]}
+                  </td>
                   <td className="border p-3 text-green-700">{item.Date}</td>
                 </tr>
               ))}
