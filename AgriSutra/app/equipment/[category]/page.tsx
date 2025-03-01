@@ -14,10 +14,10 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function EquipmentCategoryPage({ params }: Props) {
-  const { category } = params;
-  const equipment = await fetchEquipmentByCategory(category);
-
+export default async function EquipmentCategoryPage({ params }: { params: Promise<{ category: string }> }) {
+    const resolvedParams = await params; // ✅ Await params before destructuring
+    const { category } = resolvedParams;
+    const equipment = await fetchEquipmentByCategory(category);
   return (
     <div className="max-w-6xl mx-auto px-6 py-8">
       {/* ✅ Move the header (Back button + Category title) to the top */}

@@ -22,4 +22,29 @@ export const fetchEquipmentByCategory = async (category: string) => {
       return [];
     }
   };
+
+
+  export const fetchAvailableEquipment = async (category: string, availability?: string) => {
+    try {
+      let url = `http://localhost:3001/api/equipment/available`;
+      const params = new URLSearchParams();
+  
+      if (category) params.append("category", category.toLowerCase()); // ✅ Pass category name
+      if (availability && availability !== "All") params.append("availability", availability.toLowerCase()); // ✅ Pass availability filter
+  
+      if (params.toString()) {
+        url += `?${params.toString()}`;
+      }
+  
+      const response = await fetch(url);
+      if (!response.ok) throw new Error(`Failed to fetch equipment: ${response.status}`);
+  
+      return await response.json();
+    } catch (error) {
+      console.error("🔥 Error fetching equipment:", error);
+      return [];
+    }
+  };
+  
+  
   
