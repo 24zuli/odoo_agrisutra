@@ -30,8 +30,14 @@ export default function TrendingSchemesPage() {
       .catch((err) => console.error("Error fetching schemes:", err));
   }, []);
 
+  // Filter schemes by search query
   const filteredSchemes = schemes.filter((scheme) =>
     scheme.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  // Further filter schemes to get only trending schemes (date between 2023-01-01 and 2025-12-31)
+  const trendingSchemes = filteredSchemes.filter(
+    (scheme) => scheme.date >= "2023-01-01" && scheme.date <= "2025-12-31"
   );
 
   return (
@@ -67,7 +73,7 @@ export default function TrendingSchemesPage() {
             Top Trending Schemes
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {filteredSchemes.map((scheme) => (
+            {trendingSchemes.map((scheme) => (
               <SchemeCard key={scheme.id} scheme={scheme} />
             ))}
           </div>

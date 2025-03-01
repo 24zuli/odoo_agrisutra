@@ -39,8 +39,20 @@ export default function SchemesPage() {
       .catch((err) => console.error("Error fetching schemes:", err));
   }, []);
 
+  // 1) Filter by search query
   const filteredSchemes = schemes.filter((scheme) =>
     scheme.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  // 2) Determine which schemes are "trending" by date range
+  //    (Adjust the date range as needed)
+  const trendingSchemes = filteredSchemes.filter(
+    (scheme) => scheme.date >= "2023-01-01" && scheme.date <= "2025-12-31"
+  );
+
+  // 3) Separate out the non-trending schemes
+  const otherSchemes = filteredSchemes.filter(
+    (scheme) => scheme.date < "2023-01-01" || scheme.date > "2025-12-31"
   );
 
   return (
@@ -59,6 +71,7 @@ export default function SchemesPage() {
               Government Schemes
             </span>
           </motion.button>
+
           <div className="relative w-full">
             <Search className="absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-400" />
             <input
@@ -77,6 +90,7 @@ export default function SchemesPage() {
             <h2 className="text-2xl font-semibold text-green-800">
               Trending Schemes
             </h2>
+            {/* "View All" goes to a page showing all trending schemes */}
             <Link href="/schemes/trending">
               <motion.button
                 whileHover={{ scale: 1.1 }}
@@ -87,8 +101,10 @@ export default function SchemesPage() {
               </motion.button>
             </Link>
           </div>
+
+          {/* Show only up to 2 trending schemes on the main page */}
           <div className="grid md:grid-cols-2 gap-6">
-            {filteredSchemes.slice(0, 2).map((scheme) => (
+            {trendingSchemes.slice(0, 2).map((scheme) => (
               <SchemeCard key={scheme.id} scheme={scheme} />
             ))}
           </div>
@@ -100,6 +116,7 @@ export default function SchemesPage() {
             <h2 className="text-2xl font-semibold text-green-800">
               Explore More Schemes
             </h2>
+            {/* "View All" goes to a page showing all schemes */}
             <Link href="/schemes/all">
               <motion.button
                 whileHover={{ scale: 1.1 }}
@@ -110,8 +127,10 @@ export default function SchemesPage() {
               </motion.button>
             </Link>
           </div>
+
+          {/* Show only up to 2 non-trending schemes here */}
           <div className="grid md:grid-cols-2 gap-6">
-            {filteredSchemes.slice(0, 2).map((scheme) => (
+            {otherSchemes.slice(0, 2).map((scheme) => (
               <SchemeCard key={scheme.id} scheme={scheme} />
             ))}
           </div>
