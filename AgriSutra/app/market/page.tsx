@@ -43,24 +43,32 @@ export default function MarketPage() {
   const [data, setData] = useState<MarketData[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
+  const [appUrl, setAppUrl] = useState<string>(""); // ✅ Fix APP_URL issue
   const MAX_RETRIES = 3;
   const router = useRouter();
 
+  // Update the districts when state changes
   const districts = state ? typedDistricts[state] || [] : [];
 
-  let APP_URL = "";
+  // ✅ Update API URL when any filter changes
+  useEffect(() => {
+    if (commodity && state && district) {
+      setAppUrl(
+        `http://localhost:3001/api/market-trends?commodity=${commodity}&state=${state}&market=${district}`
+      );
+    }
+  }, [commodity, state, district]);
 
   const fetchMarketData = async (attempt = 1) => {
     try {
       if (!commodity || !state || !district) {
-        setError("Please select a commodity, state and district.");
+        setError("Please select a commodity, state, and district.");
         return;
       }
       setLoading(true);
       setError("");
 
-      const response = await fetch(APP_URL);
-
+      const response = await fetch(appUrl);
       if (!response.ok) {
         throw new Error(`Request failed with status ${response.status}`);
       }
@@ -78,10 +86,6 @@ export default function MarketPage() {
       }
     }
   };
-
-  useEffect(() => {
-    APP_URL = `http://localhost:3001/api/market-trends?commodity=${commodity}&state=${state}&market=${district}`;
-  }, [commodity, state, district]);
 
   return (
     <div className="p-6 bg-green-50 min-h-screen">
@@ -164,7 +168,7 @@ export default function MarketPage() {
           <p className="text-center py-4 text-red-500 font-semibold">{error}</p>
         ) : data.length === 0 ? (
           <p className="text-center py-4 text-green-700 font-semibold">
-            No market trends available. Try selecting a commodity, state and district to see the latest updates.
+            No market trends available. Try selecting a commodity, state, and district to see the latest updates.
           </p>
         ) : (
           <table className="min-w-full border border-green-300 bg-white shadow-md rounded-lg overflow-hidden">
