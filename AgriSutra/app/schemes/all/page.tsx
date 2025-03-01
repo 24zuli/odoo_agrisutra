@@ -6,25 +6,36 @@ import { Button } from "@/components/ui/button";
 import { fetchSchemes } from "@/lib/api";
 import { ArrowLeft, Search } from "lucide-react";
 import { motion } from "framer-motion";
+// 1. Import the translation hook
+import { useTranslation } from "react-i18next";
 
-const SchemeCard = ({ scheme }: { scheme: any }) => (
-  <motion.div
-    whileHover={{ scale: 1.05 }}
-    className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg transition-all duration-300"
-  >
-    <h3 className="text-xl font-bold text-green-700 mb-2">{scheme.name}</h3>
-    <p className="text-gray-600 mb-4">{scheme.description}</p>
-    <Link href={`/schemes/${scheme.id}`}>
-      <Button className="bg-green-500 hover:bg-green-700 text-white transition-all duration-300 transform hover:scale-105 rounded-large">
-        Learn More
-      </Button>
-    </Link>
-  </motion.div>
-);
+const SchemeCard = ({ scheme }: { scheme: any }) => {
+  // 2. Use the translation hook if you want to translate "Learn More"
+  const { t } = useTranslation();
+
+  return (
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg transition-all duration-300"
+    >
+      <h3 className="text-xl font-bold text-green-700 mb-2">{scheme.name}</h3>
+      <p className="text-gray-600 mb-4">{scheme.description}</p>
+      <Link href={`/schemes/${scheme.id}`}>
+        <Button className="bg-green-500 hover:bg-green-700 text-white transition-all duration-300 transform hover:scale-105 rounded-large">
+          {/* 3. Translate "Learn More" */}
+          {t("allSchemesPage.learnMore")}
+        </Button>
+      </Link>
+    </motion.div>
+  );
+};
 
 export default function AllSchemesPage() {
   const [schemes, setSchemes] = useState<any[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
+
+  // 4. Initialize the translation hook
+  const { t } = useTranslation();
 
   useEffect(() => {
     fetchSchemes()
@@ -45,7 +56,10 @@ export default function AllSchemesPage() {
           className="flex items-center text-green-700 hover:text-green-600 mb-6"
         >
           <ArrowLeft className="h-6 w-6 mr-3" />
-          <span className="text-2xl font-bold">All Government Schemes</span>
+          {/* 5. Translate "All Government Schemes" */}
+          <span className="text-2xl font-bold">
+            {t("allSchemesPage.title")}
+          </span>
         </button>
 
         {/* Search Bar */}
@@ -53,7 +67,8 @@ export default function AllSchemesPage() {
           <Search className="absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-400" />
           <input
             type="text"
-            placeholder="Search schemes..."
+            // 6. Translate "Search schemes..."
+            placeholder={t("allSchemesPage.searchPlaceholder")}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500"

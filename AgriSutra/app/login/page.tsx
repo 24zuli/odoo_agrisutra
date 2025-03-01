@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { setToken, setUserId } from "../../lib/auth";
 import { Loader2 } from "lucide-react";
 import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
 
@@ -11,7 +12,6 @@ export default function Login() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
@@ -35,13 +35,21 @@ export default function Login() {
       });
 
       const data = await response.json();
-      console.log("API Response:", data);
+      console.log("🔹 API Response:", data);
 
       if (!response.ok) {
         throw new Error(data.message || "Invalid credentials");
       }
 
+      if (!data.user.id) {
+        throw new Error("Invalid response: Missing user data");
+      }
+
       localStorage.setItem("token", data.token);
+      localStorage.setItem("userId", data.user.id);
+
+      console.log("✅ User ID stored:", data.user.id);
+
       router.push("/");
     } catch (err) {
       setError(

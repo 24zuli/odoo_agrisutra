@@ -7,6 +7,8 @@ import { fetchSchemes } from "@/lib/api";
 import { useRouter } from "next/navigation";
 import { ArrowLeft, Search } from "lucide-react";
 import { motion } from "framer-motion";
+// 1. Import the translation hook
+import { useTranslation } from "react-i18next";
 
 const SchemeCard = ({ scheme }: { scheme: any }) => (
   <motion.div
@@ -22,7 +24,8 @@ const SchemeCard = ({ scheme }: { scheme: any }) => (
         whileTap={{ scale: 0.9 }}
         className="px-5 py-2 bg-green-500 hover:bg-green-600 text-white font-medium rounded-large transition-all"
       >
-        Learn More
+        {/* 2. Use translated "Learn More" */}
+        {scheme.learnMoreText || "Learn More"}
       </motion.button>
     </Link>
   </motion.div>
@@ -33,24 +36,27 @@ export default function SchemesPage() {
   const [schemes, setSchemes] = useState<any[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
 
+  // 3. Initialize the translation hook
+  const { t } = useTranslation();
+
   useEffect(() => {
     fetchSchemes()
       .then((data) => setSchemes(data))
       .catch((err) => console.error("Error fetching schemes:", err));
   }, []);
 
-  // 1) Filter by search query
+  // Filter by search query
   const filteredSchemes = schemes.filter((scheme) =>
     scheme.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  // 2) Determine which schemes are "trending" by date range
-  //    (Adjust the date range as needed)
+  // Determine which schemes are "trending" by date range
+  // (Adjust the date range as needed)
   const trendingSchemes = filteredSchemes.filter(
     (scheme) => scheme.date >= "2023-01-01" && scheme.date <= "2025-12-31"
   );
 
-  // 3) Separate out the non-trending schemes
+  // Separate out the non-trending schemes
   const otherSchemes = filteredSchemes.filter(
     (scheme) => scheme.date < "2023-01-01" || scheme.date > "2025-12-31"
   );
@@ -67,8 +73,9 @@ export default function SchemesPage() {
             className="flex items-center text-green-800 hover:text-green-600 mb-4"
           >
             <ArrowLeft className="h-6 w-6 mr-3" />
+            {/* 4. Use translated "Government Schemes" */}
             <span className="text-2xl font-bold text-green-800">
-              Government Schemes
+              {t("schemesPage.governmentSchemes")}
             </span>
           </motion.button>
 
@@ -76,7 +83,8 @@ export default function SchemesPage() {
             <Search className="absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-400" />
             <input
               type="text"
-              placeholder="Search schemes..."
+              // 5. Use translated "Search schemes..."
+              placeholder={t("schemesPage.searchPlaceholder")}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500"
@@ -88,7 +96,7 @@ export default function SchemesPage() {
         <div className="mb-6">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-2xl font-semibold text-green-800">
-              Trending Schemes
+              {t("schemesPage.trendingSchemes")}
             </h2>
             {/* "View All" goes to a page showing all trending schemes */}
             <Link href="/schemes/trending">
@@ -97,7 +105,7 @@ export default function SchemesPage() {
                 whileTap={{ scale: 0.9 }}
                 className="px-4 py-2 border border-green-600 text-green-600 font-medium rounded-large hover:bg-green-600 hover:text-white transition-all"
               >
-                View All
+                {t("schemesPage.viewAll")}
               </motion.button>
             </Link>
           </div>
@@ -114,7 +122,7 @@ export default function SchemesPage() {
         <div>
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-2xl font-semibold text-green-800">
-              Explore More Schemes
+              {t("schemesPage.exploreMoreSchemes")}
             </h2>
             {/* "View All" goes to a page showing all schemes */}
             <Link href="/schemes/all">
@@ -123,7 +131,7 @@ export default function SchemesPage() {
                 whileTap={{ scale: 0.9 }}
                 className="px-4 py-2 border border-green-600 text-green-600 font-medium rounded-large hover:bg-green-600 hover:text-white transition-all"
               >
-                View All
+                {t("schemesPage.viewAll")}
               </motion.button>
             </Link>
           </div>

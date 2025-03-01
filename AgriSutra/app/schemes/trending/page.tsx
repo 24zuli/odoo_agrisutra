@@ -6,23 +6,34 @@ import { Button } from "@/components/ui/button";
 import { fetchSchemes } from "@/lib/api";
 import { useRouter } from "next/navigation";
 import { ArrowLeft, Search } from "lucide-react";
+// 1. Import the translation hook
+import { useTranslation } from "react-i18next";
 
-const SchemeCard = ({ scheme }: { scheme: any }) => (
-  <div className="bg-white border border-gray-200 rounded-large p-6 shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
-    <h3 className="text-xl font-bold text-green-800 mb-2">{scheme.name}</h3>
-    <p className="text-gray-600 mb-4">{scheme.description}</p>
-    <Link href={`/schemes/${scheme.id}`}>
-      <Button className="bg-green-500 hover:bg-green-600 text-white transition-transform transform active:scale-95">
-        Learn More
-      </Button>
-    </Link>
-  </div>
-);
+const SchemeCard = ({ scheme }: { scheme: any }) => {
+  // 2. Initialize translation hook if you want to translate "Learn More" directly
+  const { t } = useTranslation();
+
+  return (
+    <div className="bg-white border border-gray-200 rounded-large p-6 shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
+      <h3 className="text-xl font-bold text-green-800 mb-2">{scheme.name}</h3>
+      <p className="text-gray-600 mb-4">{scheme.description}</p>
+      <Link href={`/schemes/${scheme.id}`}>
+        <Button className="bg-green-500 hover:bg-green-600 text-white transition-transform transform active:scale-95">
+          {/* 3. Translate "Learn More" */}
+          {t("trendingSchemesPage.learnMore")}
+        </Button>
+      </Link>
+    </div>
+  );
+};
 
 export default function TrendingSchemesPage() {
   const router = useRouter();
   const [schemes, setSchemes] = useState<any[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
+
+  // 4. Initialize the translation hook
+  const { t } = useTranslation();
 
   useEffect(() => {
     fetchSchemes()
@@ -50,8 +61,9 @@ export default function TrendingSchemesPage() {
             className="flex items-center text-green-800 hover:text-green-600 mb-4"
           >
             <ArrowLeft className="h-6 w-6 mr-3" />
+            {/* 5. Translate "Trending Government Schemes" */}
             <span className="text-2xl font-bold text-green-800">
-              Trending Government Schemes
+              {t("trendingSchemesPage.title")}
             </span>
           </button>
 
@@ -59,7 +71,8 @@ export default function TrendingSchemesPage() {
             <Search className="absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-400" />
             <input
               type="text"
-              placeholder="Search trending schemes..."
+              // 6. Translate "Search trending schemes..."
+              placeholder={t("trendingSchemesPage.searchPlaceholder")}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
@@ -69,8 +82,9 @@ export default function TrendingSchemesPage() {
 
         {/* Trending Schemes Section */}
         <div>
+          {/* 7. Translate "Top Trending Schemes" */}
           <h2 className="text-2xl font-semibold text-green-800 mb-4">
-            Top Trending Schemes
+            {t("trendingSchemesPage.topTrendingSchemes")}
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {trendingSchemes.map((scheme) => (

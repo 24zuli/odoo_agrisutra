@@ -1,0 +1,187 @@
+{
+    "common": {
+        "welcome": "Welcome to AgriSutra!"
+    },
+    "navbar": {
+        "dashboard": "Dashboard",
+        "profile": "Profile"
+    },
+
+
+    "homepage": {
+        "bannerTitle": "Cultivate Success",
+        "bannerQuote": "\"The farmer is the only man in our economy who buys everything at retail, sells everything at wholesale, and pays the freight both ways.\"",
+        "governmentSchemesTitle": "Government Schemes",
+        "governmentSchemesDescription": "Discover various agricultural schemes and subsidies provided by the government to support farmers.",
+        "exploreSchemes": "Explore Schemes",
+        "marketTrendsTitle": "Market Trends",
+        "marketTrendsDescription": "Stay updated with the real time market prices and agricultural commodity trends.",
+        "viewAllTrends": "View All Trends",
+        "equipmentServicesTitle": "Equipment Services",
+        "tractorBooking": "Tractor Booking",
+        "tractorBookingDescription": "Book tractors for your farming needs",
+        "irrigationEquipment": "Irrigation Equipment",
+        "irrigationEquipmentDescription": "Modern irrigation solutions",
+        "viewAllEquipment": "View All Equipment",
+        "soilAnalysisTitle": "Soil Analysis Test",
+        "soilAnalysisDescription": "Get personalized crop recommendations based on your soil analysis",
+        "startAnalysis": "Start Analysis"
+
+
+    },
+    "schemesPage": {
+        "schemeNotFound": "Scheme not found",
+        "schemeDetails": "Scheme Details",
+        "saveScheme": "Save Scheme",
+        "schemeSavedSuccess": "Scheme saved successfully!",
+        "schemeSavedFail": "Failed to save scheme.",
+        "mustBeLoggedIn": "You must be logged in to save a scheme.",
+        "governmentSchemes": "Government Schemes",
+        "searchPlaceholder": "Search schemes...",
+        "trendingSchemes": "Trending Schemes",
+        "exploreMoreSchemes": "Explore More Schemes",
+        "viewAll": "View All",
+        "learnMore": "Learn More"
+    },
+    "trendingSchemesPage": {
+        "title": "Trending Government Schemes",
+        "searchPlaceholder": "Search trending schemes...",
+        "topTrendingSchemes": "Top Trending Schemes",
+        "learnMore": "Learn More"
+    },
+
+    "allSchemesPage": {
+        "title": "All Government Schemes",
+        "searchPlaceholder": "Search schemes...",
+        "learnMore": "Learn More"
+    },
+
+    "profilePage": {
+        "profile": "Profile",
+        "loading": "Loading...",
+        "errorLoadingProfile": "Error loading profile.",
+        "editProfile": "Edit Profile",
+        "equipmentHistory": "Equipment History",
+        "trackEquipment": "Track Equipment",
+        "languageSelection": "Language Selection",
+        "helpSupport": "Help & Support",
+        "rateUs": "Rate Us",
+        "aboutUs": "About Us",
+        "logout": "Logout"
+    },
+    "editProfilePage": {
+        "editProfile": "Edit Profile",
+        "saving": "Saving...",
+        "save": "Save",
+        "loading": "Loading...",
+        "errorLoadingProfile": "Error loading profile.",
+        "nameLabel": "Name *",
+        "usernameLabel": "Username *",
+        "emailLabel": "Email *",
+        "genderLabel": "Gender",
+        "selectGender": "Select Gender",
+        "male": "Male",
+        "female": "Female",
+        "other": "Other",
+        "dateOfBirth": "Date of Birth",
+        "state": "State",
+        "district": "District",
+        "phoneNumberLabel": "Phone Number *",
+        "failedToUpdateProfile": "Failed to update profile"
+    },
+    "ratePage": {
+        "rateUs": "Rate Us",
+        "rateOurApp": "Rate Our App",
+        "tellUsHowWeAreDoing": "Tell us how we're doing",
+        "tapAStar": "Tap a star to rate",
+        "pleaseSelectRating": "Please select a rating before submitting.",
+        "submittedRating": "You submitted a rating of {{rating}} stars!",
+        "submit": "Submit",
+        "submitting": "Submitting..."
+    },
+    "helpSupportPage": {
+        "helpAndSupport": "Help & Support",
+        "howCanWeHelp": "How can we help you?",
+        "callUs": "Call Us",
+        "phoneNumber": "+91 7984420655",
+        "emailSupport": "Email Support",
+        "emailAddress": "agrisutra4@gmail.com",
+        "chatSupport": "Chat Support",
+        "chatSupportDesc": "Contact at whatsapp",
+        "faqHeading": "Frequently Asked Questions",
+        "faq1Question": "How do I track my equipment?",
+        "faq1Answer": "You can track your equipment by visiting the \"Track Equipment\" section under your profile.",
+        "faq2Question": "How to update my profile?",
+        "faq2Answer": "Go to \"Edit Profile\" under your profile menu to change your details.",
+        "faq3Question": "Where can I find help on schemes?",
+        "faq3Answer": "Check out the \"Schemes\" page in the main menu for detailed information."
+    },
+    "languagePage": {
+        "selectLanguage": "Select Language",
+        "english": "English",
+        "gujarati": "Gujarati"
+    },
+    "aboutPage": {
+        "aboutUs": "About Us",
+        "ourMission": "Our Mission",
+        "missionDescription": "To empower farmers with modern technology and provide them with the best agricultural solutions for sustainable farming practices.",
+        "contactInformation": "Contact Information",
+        "email": "agrisutra4@gmail.com",
+        "phone": "+91 7984420655",
+        "website": "www.agrisutra.com",
+        "versionTitle": "Version",
+        "versionNumber": "1.0.0",
+        "termsPrivacyTitle": "Terms & Privacy",
+        "termsOfService": "Terms of Service",
+        "privacyPolicy": "Privacy Policy"
+    },
+    "termsPage": {
+        "title": "Terms of Service",
+        "introductionHeading": "1. Introduction",
+        "introductionContent": "Welcome to AgriSutra. By using our website, mobile application, or any related services (collectively, the “Services”), you agree to be bound by these Terms of Service (“Terms”). Please read them carefully before using our Services.",
+        "eligibilityHeading": "2. Eligibility",
+        "eligibilityContent": "You must be at least 18 years old to use our Services. By using our Services, you represent that you have the legal capacity to enter into a binding contract and are not barred from doing so under any applicable laws.",
+        "accountRegistrationHeading": "3. Account Registration",
+        "accountRegistrationContent": "You may be required to create an account to access certain features. You agree to provide accurate, current, and complete information and to keep such information updated. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.",
+        "useOfServicesHeading": "4. Use of Services",
+        "useOfServicesContent": "You agree to use the Services only for lawful purposes and in compliance with these Terms. You will not use our platform to post or transmit any material that is illegal, harassing, threatening, or otherwise objectionable.",
+        "intellectualPropertyHeading": "5. Intellectual Property",
+        "intellectualPropertyContent": "All content, trademarks, and data on our Services, including software, databases, text, graphics, icons, and hyperlinks are the property of AgriSutra or its licensors. You may not reproduce, modify, or distribute any part of the Services without our prior written permission.",
+        "disclaimersHeading": "6. Disclaimers",
+        "disclaimersContent": "Our Services are provided on an “as is” basis. We do not warrant the accuracy, reliability, or completeness of any information provided. AgriSutra disclaims all warranties, whether express or implied, including the implied warranties of merchantability, fitness for a particular purpose, and non-infringement.",
+        "limitationOfLiabilityHeading": "7. Limitation of Liability",
+        "limitationOfLiabilityContent": "In no event shall AgriSutra or its affiliates be liable for any indirect, incidental, special, or consequential damages arising out of or in connection with the use of our Services. Our total liability for any claim arising from or relating to these Terms shall not exceed the amount you paid, if any, for accessing the Services.",
+        "changesToTermsHeading": "8. Changes to These Terms",
+        "changesToTermsContent": "We reserve the right to modify or replace these Terms at any time. Any changes will be posted on our website or communicated to you via email. Your continued use of the Services after such modifications indicates your acceptance of the new Terms.",
+        "governingLawHeading": "9. Governing Law",
+        "governingLawContent": "These Terms shall be governed by and construed in accordance with the laws of your jurisdiction. Any dispute arising from or related to these Terms shall be resolved in the courts of that jurisdiction.",
+        "contactUsHeading": "10. Contact Us",
+        "contactUsContent": "If you have any questions about these Terms, please contact us at",
+        "contactEmail": "agrisutra@gmail.com"
+    },
+    "privacyPage": {
+        "title": "Privacy Policy",
+        "introductionHeading": "1. Introduction",
+        "introductionContent": "This Privacy Policy explains how AgriSutra collects, uses, and shares information about you when you use our Services. By using our Services, you agree to the collection and use of information in accordance with this policy.",
+        "informationWeCollectHeading": "2. Information We Collect",
+        "informationWeCollectContent": "We may collect personal information that you provide to us, such as your name, email address, phone number, and location data. We also automatically collect certain technical information when you use our Services, including your IP address, browser type, and device identifiers.",
+        "howWeUseYourInformationHeading": "3. How We Use Your Information",
+        "howWeUseYourInformationContentIntro": "We use the information we collect to:",
+        "howWeUseYourInformationList": "Provide, maintain, and improve our Services; Respond to your comments, questions, and customer service requests; Send you technical notices, updates, and security alerts; Analyze trends and usage to develop new features and services.",
+        "sharingYourInformationHeading": "4. Sharing Your Information",
+        "sharingYourInformationContent": "We do not sell your personal information. We may share your information with trusted third-party service providers who help us operate our Services. We may also share information if required by law or to protect our rights and property.",
+        "cookiesHeading": "5. Cookies",
+        "cookiesContent": "We use cookies and similar tracking technologies to collect information about your usage of our Services and to improve your experience. You can set your browser to refuse cookies or to alert you when cookies are being sent.",
+        "dataRetentionHeading": "6. Data Retention",
+        "dataRetentionContent": "We will retain your information for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law.",
+        "securityHeading": "7. Security",
+        "securityContent": "We take reasonable measures to protect your personal information from unauthorized access or disclosure. However, no security system is impenetrable, and we cannot guarantee the absolute security of your data.",
+        "childrenHeading": "8. Children's Privacy",
+        "childrenContent": "Our Services are not intended for individuals under the age of 18. We do not knowingly collect personal information from children under 18. If we discover that a child under 18 has provided us with personal information, we will delete such information from our systems.",
+        "changesHeading": "9. Changes to This Policy",
+        "changesContent": "We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new policy on our website or by sending an email to the address associated with your account.",
+        "contactUsHeading": "10. Contact Us",
+        "contactUsContent": "If you have any questions or concerns about this Privacy Policy, please contact us at",
+        "contactEmail": "agrisutra@gmail.com"
+    }
+}

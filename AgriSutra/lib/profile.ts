@@ -16,7 +16,7 @@ export interface ProfileData {
 
 export async function getProfile(): Promise<ProfileData> {
   // Get the user ID from localStorage (or your auth context)
-  const id = localStorage.getItem("userId") || "1";
+  const id = localStorage.getItem("userId");
   const res = await fetch(`http://localhost:3001/api/profile?userId=${id}`);
   if (!res.ok) {
     throw new Error("Failed to fetch profile");

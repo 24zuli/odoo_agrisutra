@@ -64,7 +64,7 @@ export default function EditProfilePage() {
             <input
               type="text"
               className="w-full border border-gray-300 rounded-lg p-2"
-              value={profile.name}
+              value={profile.name ?? ""}
               onChange={(e) =>
                 setProfile({ ...profile, name: e.target.value } as ProfileData)
               }
@@ -75,7 +75,7 @@ export default function EditProfilePage() {
             <input
               type="text"
               className="w-full border border-gray-300 rounded-lg p-2"
-              value={profile.username}
+              value={profile.username ?? ""}
               onChange={(e) =>
                 setProfile({
                   ...profile,
@@ -89,7 +89,7 @@ export default function EditProfilePage() {
             <input
               type="email"
               className="w-full border border-gray-300 rounded-lg p-2"
-              value={profile.email}
+              value={profile.email ?? ""}
               onChange={(e) =>
                 setProfile({ ...profile, email: e.target.value } as ProfileData)
               }
@@ -134,7 +134,7 @@ export default function EditProfilePage() {
             <input
               type="text"
               className="w-full border border-gray-300 rounded-lg p-2"
-              value={profile.state}
+              value={profile.state ?? ""}
               onChange={(e) =>
                 setProfile({ ...profile, state: e.target.value } as ProfileData)
               }
@@ -145,7 +145,7 @@ export default function EditProfilePage() {
             <input
               type="text"
               className="w-full border border-gray-300 rounded-lg p-2"
-              value={profile.district}
+              value={profile.district ?? ""}
               onChange={(e) =>
                 setProfile({
                   ...profile,
@@ -159,7 +159,7 @@ export default function EditProfilePage() {
             <input
               type="text"
               className="w-full border border-gray-300 rounded-lg p-2"
-              value={profile.phone_number}
+              value={profile.phone_number ?? ""}
               onChange={(e) =>
                 setProfile({
                   ...profile,
