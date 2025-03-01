@@ -26,7 +26,6 @@
         "startAnalysis": "વિશ્લેષણ શરૂ કરો"
     },
 
-
     "schemesPage": {
         "schemeNotFound": "યોજનાની માહિતી મળી નથી",
         "schemeDetails": "યોજના વિગતો",
@@ -73,7 +72,6 @@
     },
 
     "profilePage": {
-        "profile": "પ્રોફાઇલ",
         "loading": "લોડ કરી રહ્યું છે...",
         "errorLoadingProfile": "પ્રોફાઇલ લોડ કરવામાં ભૂલ.",
         "editProfile": "પ્રોફાઇલ સંપાદિત કરો",
@@ -199,5 +197,9 @@
         "contactUsHeading": "10. અમારો સંપર્ક કરો",
         "contactUsContent": "જો તમને આ ગોપનીયતા નીતિ અંગે કોઈ પ્રશ્નો હોય, તો કૃપા કરીને અમારો સંપર્ક કરો:",
         "contactEmail": "agrisutra@gmail.com"
+    },
+    "newsPage": {
+        "latestNews": "તાજેતરની સમાચાર",
+        "readMore": "વધુ વાંચો"
     }
 }

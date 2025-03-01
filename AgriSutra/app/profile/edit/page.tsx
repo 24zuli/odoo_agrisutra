@@ -3,6 +3,8 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { getProfile, updateProfile, ProfileData } from "@/lib/profile";
+import { ArrowLeft } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function EditProfilePage() {
   const router = useRouter();
@@ -10,6 +12,7 @@ export default function EditProfilePage() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
+  const { t } = useTranslation();
 
   useEffect(() => {
     async function fetchData() {
@@ -25,8 +28,11 @@ export default function EditProfilePage() {
     fetchData();
   }, []);
 
-  if (loading) return <div className="p-4">Loading...</div>;
-  if (!profile) return <div className="p-4">Error loading profile.</div>;
+  if (loading) return <div className="p-4">{t("editProfilePage.loading")}</div>;
+  if (!profile)
+    return (
+      <div className="p-4">{t("editProfilePage.errorLoadingProfile")}</div>
+    );
 
   const handleSave = async () => {
     setSaving(true);
@@ -36,7 +42,7 @@ export default function EditProfilePage() {
       setProfile(updated);
       router.push("/profile");
     } catch (err: any) {
-      setError(err.message || "Failed to update profile");
+      setError(err.message || t("editProfilePage.failedToUpdateProfile"));
     } finally {
       setSaving(false);
     }
@@ -44,59 +50,59 @@ export default function EditProfilePage() {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      {/* Header with Save button */}
       <div className="bg-white p-4 shadow-sm flex items-center justify-between">
-        <h1 className="text-lg font-bold">Edit Profile</h1>
+        <div className="flex items-center">
+          <button
+            onClick={() => router.back()}
+            className="text-black hover:text-gray-900 focus:outline-none mr-2"
+          >
+            <ArrowLeft className="h-6 w-6" />
+          </button>
+          <h1 className="text-xl font-bold text-black">
+            {t("editProfilePage.editProfile")}
+          </h1>
+        </div>
         <button
           onClick={handleSave}
           className="text-blue-600 hover:text-blue-800 font-semibold"
           disabled={saving}
         >
-          {saving ? "Saving..." : "Save"}
+          {saving ? t("editProfilePage.saving") : t("editProfilePage.save")}
         </button>
       </div>
 
-      {/* Form */}
       <div className="p-4">
         <div className="bg-white rounded-lg shadow-sm p-4 space-y-4">
+          {[
+            { label: "nameLabel", key: "name", type: "text" },
+            { label: "usernameLabel", key: "username", type: "text" },
+            { label: "emailLabel", key: "email", type: "email" },
+            { label: "state", key: "state", type: "text" },
+            { label: "district", key: "district", type: "text" },
+            { label: "phoneNumberLabel", key: "phone_number", type: "text" },
+          ].map(({ label, key, type }) => (
+            <div key={key}>
+              <label className="block font-semibold mb-1">
+                {t(`editProfilePage.${label}`)}
+              </label>
+              <input
+                type={type}
+                className="w-full border border-gray-300 rounded-lg p-2"
+                // value={profile?.[key] || ""}
+                onChange={(e) =>
+                  setProfile({
+                    ...profile,
+                    [key]: e.target.value,
+                  } as ProfileData)
+                }
+              />
+            </div>
+          ))}
+
           <div>
-            <label className="block font-semibold mb-1">Name *</label>
-            <input
-              type="text"
-              className="w-full border border-gray-300 rounded-lg p-2"
-              value={profile.name ?? ""}
-              onChange={(e) =>
-                setProfile({ ...profile, name: e.target.value } as ProfileData)
-              }
-            />
-          </div>
-          <div>
-            <label className="block font-semibold mb-1">Username *</label>
-            <input
-              type="text"
-              className="w-full border border-gray-300 rounded-lg p-2"
-              value={profile.username ?? ""}
-              onChange={(e) =>
-                setProfile({
-                  ...profile,
-                  username: e.target.value,
-                } as ProfileData)
-              }
-            />
-          </div>
-          <div>
-            <label className="block font-semibold mb-1">Email *</label>
-            <input
-              type="email"
-              className="w-full border border-gray-300 rounded-lg p-2"
-              value={profile.email ?? ""}
-              onChange={(e) =>
-                setProfile({ ...profile, email: e.target.value } as ProfileData)
-              }
-            />
-          </div>
-          <div>
-            <label className="block font-semibold mb-1">Gender</label>
+            <label className="block font-semibold mb-1">
+              {t("editProfilePage.genderLabel")}
+            </label>
             <select
               className="w-full border border-gray-300 rounded-lg p-2"
               value={profile.gender || ""}
@@ -107,14 +113,17 @@ export default function EditProfilePage() {
                 } as ProfileData)
               }
             >
-              <option value="">Select Gender</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-              <option value="Other">Other</option>
+              <option value="">{t("editProfilePage.selectGender")}</option>
+              <option value="Male">{t("editProfilePage.male")}</option>
+              <option value="Female">{t("editProfilePage.female")}</option>
+              <option value="Other">{t("editProfilePage.other")}</option>
             </select>
           </div>
+
           <div>
-            <label className="block font-semibold mb-1">Date of Birth</label>
+            <label className="block font-semibold mb-1">
+              {t("editProfilePage.dateOfBirth")}
+            </label>
             <input
               type="date"
               className="w-full border border-gray-300 rounded-lg p-2"
@@ -129,45 +138,7 @@ export default function EditProfilePage() {
               }
             />
           </div>
-          <div>
-            <label className="block font-semibold mb-1">State</label>
-            <input
-              type="text"
-              className="w-full border border-gray-300 rounded-lg p-2"
-              value={profile.state ?? ""}
-              onChange={(e) =>
-                setProfile({ ...profile, state: e.target.value } as ProfileData)
-              }
-            />
-          </div>
-          <div>
-            <label className="block font-semibold mb-1">District</label>
-            <input
-              type="text"
-              className="w-full border border-gray-300 rounded-lg p-2"
-              value={profile.district ?? ""}
-              onChange={(e) =>
-                setProfile({
-                  ...profile,
-                  district: e.target.value,
-                } as ProfileData)
-              }
-            />
-          </div>
-          <div>
-            <label className="block font-semibold mb-1">Phone Number *</label>
-            <input
-              type="text"
-              className="w-full border border-gray-300 rounded-lg p-2"
-              value={profile.phone_number ?? ""}
-              onChange={(e) =>
-                setProfile({
-                  ...profile,
-                  phone_number: e.target.value,
-                } as ProfileData)
-              }
-            />
-          </div>
+
           {error && <p className="text-red-500">{error}</p>}
         </div>
       </div>

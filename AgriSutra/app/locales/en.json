@@ -7,7 +7,6 @@
         "profile": "Profile"
     },
 
-
     "homepage": {
         "bannerTitle": "Cultivate Success",
         "bannerQuote": "\"The farmer is the only man in our economy who buys everything at retail, sells everything at wholesale, and pays the freight both ways.\"",
@@ -26,8 +25,6 @@
         "soilAnalysisTitle": "Soil Analysis Test",
         "soilAnalysisDescription": "Get personalized crop recommendations based on your soil analysis",
         "startAnalysis": "Start Analysis"
-
-
     },
     "schemesPage": {
         "schemeNotFound": "Scheme not found",
@@ -57,7 +54,6 @@
     },
 
     "profilePage": {
-        "profile": "Profile",
         "loading": "Loading...",
         "errorLoadingProfile": "Error loading profile.",
         "editProfile": "Edit Profile",
@@ -183,5 +179,9 @@
         "contactUsHeading": "10. Contact Us",
         "contactUsContent": "If you have any questions or concerns about this Privacy Policy, please contact us at",
         "contactEmail": "agrisutra@gmail.com"
+    },
+    "newsPage": {
+        "latestNews": "Latest News",
+        "readMore": "Read More"
     }
 }
