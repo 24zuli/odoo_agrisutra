@@ -56,6 +56,7 @@
     "profilePage": {
         "loading": "Loading...",
         "errorLoadingProfile": "Error loading profile.",
+        "profileHeading": "Profile",
         "editProfile": "Edit Profile",
         "equipmentHistory": "Equipment History",
         "trackEquipment": "Track Equipment",

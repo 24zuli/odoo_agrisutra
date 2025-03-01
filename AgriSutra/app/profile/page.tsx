@@ -14,19 +14,18 @@ import {
   LogOut,
   ArrowLeft,
 } from "lucide-react";
-
-// 1. Import the translation hook
 import { useTranslation } from "react-i18next";
+
+interface ProfileData {
+  name: string;
+  phone_number: string;
+}
 
 export default function ProfileHomePage() {
   const router = useRouter();
-  const [profile, setProfile] = useState<{
-    name: string;
-    phone_number: string;
-  } | null>(null);
+  const [profile, setProfile] = useState<ProfileData | null>(null);
   const [loading, setLoading] = useState(true);
 
-  // 2. Initialize the translation hook
   const { t } = useTranslation();
 
   // Logout handler
@@ -62,8 +61,8 @@ export default function ProfileHomePage() {
         const data = await res.json();
 
         // Provide default values if missing
-        if (!data.id) data.id = "Unknown ID";
         if (!data.name) data.name = "Unknown User";
+        if (!data.phone_number) data.phone_number = "N/A";
 
         setProfile(data);
       } catch (error) {
@@ -75,18 +74,43 @@ export default function ProfileHomePage() {
     fetchProfile();
   }, []);
 
+  // Helper to get first letter of the user name
+  const getFirstLetter = (name: string) =>
+    name ? name.charAt(0).toUpperCase() : "U";
+
   return (
     <div className="min-h-screen bg-gray-100">
       {loading ? (
-        // 3. Use translated "Loading..."
         <div className="p-4">{t("profilePage.loading")}</div>
       ) : profile ? (
         <>
-          {/* Top Section: "Profile" Heading and User Info */}
-          <div className="bg-white p-4 shadow-sm">
-            <div className="mt-4">
-              <h1 className="text-lg font-bold">{profile.name}</h1>
-              <p className="text-gray-500">{profile.phone_number || "N/A"}</p>
+          {/* Top Header: Arrow & "Profile" */}
+          <div className="bg-white p-4 shadow-sm flex items-center">
+            <button
+              onClick={() => router.back()}
+              className="text-black hover:text-gray-900 focus:outline-none mr-3"
+            >
+              <ArrowLeft className="h-6 w-6" />
+            </button>
+            <h1 className="text-xl font-bold text-black">
+              {t("profilePage.profileHeading")}
+            </h1>
+          </div>
+
+          {/* User Info Section */}
+          <div className="bg-white p-4 shadow-sm mt-2 flex items-center">
+            {/* Avatar Circle */}
+            <div className="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center mr-3">
+              <span className="text-white font-bold">
+                {getFirstLetter(profile.name)}
+              </span>
+            </div>
+            {/* Name & Phone */}
+            <div>
+              <p className="text-lg font-bold">{profile.name}</p>
+              <p className="text-gray-500 text-sm">
+                {profile.phone_number || "N/A"}
+              </p>
             </div>
           </div>
 
@@ -97,7 +121,6 @@ export default function ProfileHomePage() {
               onClick={() => router.push("/profile/edit")}
             >
               <User2 className="h-5 w-5 mr-3 text-gray-600" />
-              {/* 4. Translate "Edit Profile" */}
               <span className="flex-grow">{t("profilePage.editProfile")}</span>
             </li>
 
@@ -106,7 +129,6 @@ export default function ProfileHomePage() {
               onClick={() => console.log("Equipment History")}
             >
               <History className="h-5 w-5 mr-3 text-gray-600" />
-              {/* 5. Translate "Equipment History" */}
               <span className="flex-grow">
                 {t("profilePage.equipmentHistory")}
               </span>
@@ -117,7 +139,6 @@ export default function ProfileHomePage() {
               onClick={() => console.log("Track Equipment")}
             >
               <MapPin className="h-5 w-5 mr-3 text-gray-600" />
-              {/* 6. Translate "Track Equipment" */}
               <span className="flex-grow">
                 {t("profilePage.trackEquipment")}
               </span>
@@ -128,7 +149,6 @@ export default function ProfileHomePage() {
               onClick={() => router.push("/profile/language")}
             >
               <Globe className="h-5 w-5 mr-3 text-gray-600" />
-              {/* 7. Translate "Language Selection" */}
               <span className="flex-grow">
                 {t("profilePage.languageSelection")}
               </span>
@@ -139,7 +159,6 @@ export default function ProfileHomePage() {
               onClick={() => router.push("/profile/support")}
             >
               <HelpCircle className="h-5 w-5 mr-3 text-gray-600" />
-              {/* 8. Translate "Help & Support" */}
               <span className="flex-grow">{t("profilePage.helpSupport")}</span>
             </li>
 
@@ -148,7 +167,6 @@ export default function ProfileHomePage() {
               onClick={() => router.push("/profile/rate")}
             >
               <Star className="h-5 w-5 mr-3 text-gray-600" />
-              {/* 9. Translate "Rate Us" */}
               <span className="flex-grow">{t("profilePage.rateUs")}</span>
             </li>
 
@@ -157,7 +175,6 @@ export default function ProfileHomePage() {
               onClick={() => router.push("profile/about")}
             >
               <Info className="h-5 w-5 mr-3 text-gray-600" />
-              {/* 10. Translate "About Us" */}
               <span className="flex-grow">{t("profilePage.aboutUs")}</span>
             </li>
 
@@ -166,13 +183,11 @@ export default function ProfileHomePage() {
               onClick={handleLogout}
             >
               <LogOut className="h-5 w-5 mr-3" />
-              {/* 11. Translate "Logout" */}
               <span className="flex-grow">{t("profilePage.logout")}</span>
             </li>
           </ul>
         </>
       ) : (
-        // 12. Translate "Error loading profile."
         <div className="p-4">{t("profilePage.errorLoadingProfile")}</div>
       )}
     </div>

@@ -74,6 +74,7 @@
     "profilePage": {
         "loading": "લોડ કરી રહ્યું છે...",
         "errorLoadingProfile": "પ્રોફાઇલ લોડ કરવામાં ભૂલ.",
+        "profileHeading": "પ્રોફાઇલ",
         "editProfile": "પ્રોફાઇલ સંપાદિત કરો",
         "equipmentHistory": "ઉપકરણ ઇતિહાસ",
         "trackEquipment": "ઉપકરણ શોધો",
