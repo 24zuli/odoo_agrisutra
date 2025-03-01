@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { fetchSchemes } from "@/lib/api";
+import { fetchSchemes } from "../../lib/api";
 import { useRouter } from "next/navigation";
 import { ArrowLeft, Search } from "lucide-react";
 
@@ -102,5 +102,3 @@ export default function SchemesPage() {
     </div>
   );
 }
-
-
