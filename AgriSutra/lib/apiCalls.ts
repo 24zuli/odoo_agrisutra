@@ -10,3 +10,16 @@ export const fetchCategories = async () => {
       throw new Error("Failed to load categories. Please try again later.");
     }
   };
+
+  
+export const fetchEquipmentByCategory = async (category: string) => {
+    try {
+      const response = await fetch(`http://localhost:3001/api/equipment/${category}`);
+      if (!response.ok) throw new Error("Failed to fetch equipment");
+      return await response.json();
+    } catch (error) {
+      console.error("Error fetching equipment:", error);
+      return [];
+    }
+  };
+  
