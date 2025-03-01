@@ -37,8 +37,19 @@ export default function EditProfilePage() {
   const handleSave = async () => {
     setSaving(true);
     setError("");
+
     try {
-      const updated = await updateProfile(profile);
+      // Exclude read-only fields before sending update request
+      const {
+        username,
+        email,
+        profile_completed,
+        created_at,
+        updated_at,
+        ...updatableFields
+      } = profile;
+
+      const updated = await updateProfile(updatableFields);
       setProfile(updated);
       router.push("/profile");
     } catch (err: any) {
@@ -50,10 +61,11 @@ export default function EditProfilePage() {
 
   return (
     <div className="min-h-screen bg-gray-100">
+      {/* Header */}
       <div className="bg-white p-4 shadow-sm flex items-center justify-between">
         <div className="flex items-center">
           <button
-            onClick={() => router.back()}
+            onClick={() => router.push("/profile")}
             className="text-black hover:text-gray-900 focus:outline-none mr-2"
           >
             <ArrowLeft className="h-6 w-6" />
@@ -71,33 +83,97 @@ export default function EditProfilePage() {
         </button>
       </div>
 
+      {/* Profile Form */}
       <div className="p-4">
         <div className="bg-white rounded-lg shadow-sm p-4 space-y-4">
-          {[
-            { label: "nameLabel", key: "name", type: "text" },
-            { label: "usernameLabel", key: "username", type: "text" },
-            { label: "emailLabel", key: "email", type: "email" },
-            { label: "state", key: "state", type: "text" },
-            { label: "district", key: "district", type: "text" },
-            { label: "phoneNumberLabel", key: "phone_number", type: "text" },
-          ].map(({ label, key, type }) => (
-            <div key={key}>
-              <label className="block font-semibold mb-1">
-                {t(`editProfilePage.${label}`)}
-              </label>
-              <input
-                type={type}
-                className="w-full border border-gray-300 rounded-lg p-2"
-                // value={profile?.[key] || ""}
-                onChange={(e) =>
-                  setProfile({
-                    ...profile,
-                    [key]: e.target.value,
-                  } as ProfileData)
-                }
-              />
-            </div>
-          ))}
+          {/* Read-only username */}
+          <div>
+            <label className="block font-semibold mb-1">
+              {t("editProfilePage.usernameLabel")}
+            </label>
+            <input
+              type="text"
+              className="w-full border border-gray-300 rounded-lg p-2 bg-gray-100 text-gray-600 cursor-not-allowed"
+              value={profile.username || ""}
+              readOnly
+            />
+          </div>
+
+          {/* Read-only email */}
+          <div>
+            <label className="block font-semibold mb-1">
+              {t("editProfilePage.emailLabel")}
+            </label>
+            <input
+              type="email"
+              className="w-full border border-gray-300 rounded-lg p-2 bg-gray-100 text-gray-600 cursor-not-allowed"
+              value={profile.email || ""}
+              readOnly
+            />
+          </div>
+
+          {/* Editable fields */}
+          <div>
+            <label className="block font-semibold mb-1">
+              {t("editProfilePage.nameLabel")}
+            </label>
+            <input
+              type="text"
+              className="w-full border border-gray-300 rounded-lg p-2"
+              value={profile.name || ""}
+              onChange={(e) =>
+                setProfile({ ...profile, name: e.target.value } as ProfileData)
+              }
+            />
+          </div>
+
+          <div>
+            <label className="block font-semibold mb-1">
+              {t("editProfilePage.phoneNumberLabel")}
+            </label>
+            <input
+              type="text"
+              className="w-full border border-gray-300 rounded-lg p-2"
+              value={profile.phone_number || ""}
+              onChange={(e) =>
+                setProfile({
+                  ...profile,
+                  phone_number: e.target.value,
+                } as ProfileData)
+              }
+            />
+          </div>
+
+          <div>
+            <label className="block font-semibold mb-1">
+              {t("editProfilePage.state")}
+            </label>
+            <input
+              type="text"
+              className="w-full border border-gray-300 rounded-lg p-2"
+              value={profile.state || ""}
+              onChange={(e) =>
+                setProfile({ ...profile, state: e.target.value } as ProfileData)
+              }
+            />
+          </div>
+
+          <div>
+            <label className="block font-semibold mb-1">
+              {t("editProfilePage.district")}
+            </label>
+            <input
+              type="text"
+              className="w-full border border-gray-300 rounded-lg p-2"
+              value={profile.district || ""}
+              onChange={(e) =>
+                setProfile({
+                  ...profile,
+                  district: e.target.value,
+                } as ProfileData)
+              }
+            />
+          </div>
 
           <div>
             <label className="block font-semibold mb-1">
