@@ -22,12 +22,12 @@ interface ResultType {
 export default function QuizPage() {
   const [formData, setFormData] = useState<FormData>({
     N: " ",
-    P: "0",
-    K: "0",
-    temperature: "0",
-    humidity: "0",
-    ph: "0",
-    rainfall: "0",
+    P: " ",
+    K: " ",
+    temperature: " ",
+    humidity: " ",
+    ph: " ",
+    rainfall: " ",
   });
 
   const [result, setResult] = useState<ResultType | null>(null);
