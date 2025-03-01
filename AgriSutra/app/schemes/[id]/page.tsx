@@ -8,14 +8,23 @@ export async function generateStaticParams() {
   }));
 }
 
+// export default async function SchemeDetailPage({
+//   params,
+// }: {
+//   params: { id: string };
+// }) {
+//   const { id } = params;
+//   const scheme = await fetchSchemeById(id);
 export default async function SchemeDetailPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>; // ✅ Define params as a Promise
 }) {
-  const { id } = params;
-  const scheme = await fetchSchemeById(id);
+  const resolvedParams = await params; // ✅ Await params before destructuring
+  const { id } = resolvedParams;
 
+  const scheme = await fetchSchemeById(id);
+  
   if (!scheme) {
     return <div>Scheme not found</div>;
   }
