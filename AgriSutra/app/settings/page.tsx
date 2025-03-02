@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { getProfile, ProfileData } from "@/lib/profile";
 import { useTranslation } from "react-i18next";
+import { ArrowLeft } from "lucide-react";
 
 export default function ProfileHomePage() {
   const [profile, setProfile] = useState<ProfileData | null>(null);
@@ -31,6 +32,17 @@ export default function ProfileHomePage() {
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Header */}
+      <div className="bg-white p-4 shadow-sm flex items-center">
+        <button
+          //   onClick={() => router.push("/")}
+          className="text-black hover:text-gray-900 focus:outline-none mr-3"
+        >
+          <ArrowLeft className="h-6 w-6" />
+        </button>
+        <h1 className="text-xl font-bold text-black">
+          {t("settings.settings")}
+        </h1>
+      </div>
       <div className="bg-white p-4 shadow-sm">
         <div className="mt-4">
           <h1 className="text-lg font-bold">{profile.name}</h1>

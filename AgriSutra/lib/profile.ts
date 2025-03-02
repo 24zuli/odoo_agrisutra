@@ -53,7 +53,8 @@ export async function getProfile(): Promise<ProfileData> {
 export async function updateProfile(
   data: Partial<ProfileData>
 ): Promise<ProfileData> {
-  const res = await fetch("http://localhost:3001/api/profile", {
+  const id = localStorage.getItem("userId");
+  const res = await fetch(`http://localhost:3001/api/profile?userId=${id}`, {
     method: "PATCH",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
@@ -64,6 +65,3 @@ export async function updateProfile(
   }
   return res.json();
 }
-
-
-
