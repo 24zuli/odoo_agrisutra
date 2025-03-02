@@ -1,15 +1,16 @@
-
 "use client";
 
 import React, { useEffect, useState } from "react";
 import CategoryCard from "../components/CategoryCard"; 
-import { Category } from "../types/equipment"; // Assuming Equipment type is defined
-import { fetchCategories } from "../../lib/apiCalls"; // Import API call function
+import { Category } from "../types/equipment"; 
+import { fetchCategories } from "../../lib/apiCalls"; 
 import { useRouter } from "next/navigation";
-import { FaSearch, FaArrowLeft } from "react-icons/fa"; // Import search icon
+import { FaSearch, FaArrowLeft } from "react-icons/fa"; 
+import { useTranslation } from "react-i18next";
 
 const EquipmentPage = () => {
   const router = useRouter();
+  const { t } = useTranslation();
   const [categories, setCategories] = useState<Category[]>([]);
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [error, setError] = useState<string>("");
@@ -17,7 +18,6 @@ const EquipmentPage = () => {
   const [location, setLocation] = useState<{ lat: number; lng: number } | null>(null);
   const [locationError, setLocationError] = useState<string>("");
 
-  // Function to get user token
   const getToken = () => {
     if (typeof window !== "undefined") {
       return localStorage.getItem("token");
@@ -25,7 +25,6 @@ const EquipmentPage = () => {
     return null;
   };
 
-  // Function to extract user ID from JWT Token
   const getUserIdFromToken = () => {
     const token = getToken();
     if (!token) {
@@ -56,7 +55,6 @@ const EquipmentPage = () => {
     }
   };
 
-  // Function to fetch and store location in the database
   const getLocationAndStore = () => {
     if (!getToken()) {
       console.error("❌ User not authenticated. Redirecting to login.");
@@ -102,28 +100,26 @@ const EquipmentPage = () => {
           }
         },
         (error) => {
-          setLocationError("❌ Location permission denied. Some features may not work.");
+          setLocationError(t("equipment.locationInfo"));
           console.error("❌ Error getting location:", error);
         }
       );
     } else {
-      setLocationError("❌ Geolocation is not supported by this browser.");
+      setLocationError(t("equipment.locationInfo"));
     }
   };
 
-  // Request location when the page loads
   useEffect(() => {
     getLocationAndStore();
   }, []);
 
-  // Fetch categories when the page loads
   useEffect(() => {
     const fetchAndSetCategories = async () => {
       try {
         const data = await fetchCategories();
         setCategories(data);
       } catch (err) {
-        setError("Failed to load categories");
+        setError(t("equipment.loadingCategories"));
       } finally {
         setLoading(false);
       }
@@ -132,31 +128,27 @@ const EquipmentPage = () => {
     fetchAndSetCategories();
   }, []);
 
-  // Filter categories based on search input
   const filteredCategories = categories.filter((category) =>
     category.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
     <div className="max-w-6xl mx-auto px-6 py-8">
-      {/* Page Title
-      <h1 className="text-2xl font-bold text-left mb-6">Farming Equipments</h1> */}
-      {/* Header with Back Button */}
       <div className="flex items-center mb-6">
         <button 
           onClick={() => window.history.back()} 
           className="mr-1 p-2 text-black-600 hover:text-black"
         >
-        <FaArrowLeft size={20} />
+          <FaArrowLeft size={20} />
         </button>
-      <h1 className="text-2xl font-bold text-left mb-1">Farming Equipments</h1>
-    </div>
-      {/* Search Bar */}
+        <h1 className="text-2xl font-bold text-left mb-1">{t("equipment.farmingEquipments")}</h1>
+      </div>
+
       <div className="flex justify-center mb-6">
         <div className="relative w-full md:w-2/3">
           <input
             type="text"
-            placeholder="Search equipment categories..."
+            placeholder={t("equipment.searchPlaceholder")}
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm pl-10 focus:outline-none focus:ring-2 focus:ring-green-500"
@@ -165,16 +157,14 @@ const EquipmentPage = () => {
         </div>
       </div>
 
-
-      {/* Categories Grid */}
       {loading ? (
-        <p className="text-center text-gray-500">Loading categories...</p>
+        <p className="text-center text-gray-500">{t("equipment.loadingCategories")}</p>
       ) : error ? (
         <p className="text-center text-red-500">{error}</p>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {filteredCategories.length === 0 ? (
-            <p className="text-center text-gray-500">No categories found.</p>
+            <p className="text-center text-gray-500">{t("equipment.noCategoriesFound")}</p>
           ) : (
             filteredCategories.map((category) => (
               <CategoryCard
