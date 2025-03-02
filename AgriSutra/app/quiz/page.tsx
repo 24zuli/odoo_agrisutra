@@ -93,6 +93,7 @@ export default function QuizPage() {
       }
 
       const data: ResultType = await response.json();
+      console.log("API Response:", data); // ✅ Debugging API Response
       setResult(data);
     } catch (err) {
       setError((err as Error).message || t("soilAnalysis.errorFetching"));
@@ -112,7 +113,7 @@ export default function QuizPage() {
       {/* Form Card */}
       <div className="bg-white border border-green-400 rounded-lg shadow-md p-6 mb-6">
         <h1 className="text-xl font-bold mb-2 text-green-700">{t("soilAnalysis.description")}</h1>
-        <p className="text-sm text-gray-600 mb-4">{t(" ")}</p>
+        <p className="text-sm text-gray-600 mb-4">{t("soilAnalysis.chooseMethod")}</p>
 
         {/* Input method toggle */}
         <div className="flex gap-4 mb-4">
@@ -146,7 +147,7 @@ export default function QuizPage() {
                 key !== "file" ? (
                   <div key={key}>
                     <label className="block font-medium text-sm mb-1">
-                      {t(`soilAnalysis.formLabels.${key}`)}
+                      {t(`soilAnalysis.formLabels.${key}`, key)}
                     </label>
                     <input
                       name={key}
@@ -176,6 +177,23 @@ export default function QuizPage() {
           </div>
         </form>
       </div>
+
+      {/* ✅ Corrected Result Display */}
+      {result && (
+        <div className="bg-white border border-green-400 rounded-lg shadow-md p-6">
+          <h2 className="text-xl font-bold text-green-700 mb-2">{t("soilAnalysis.cropRecommendation")}</h2>
+          <h3 className="text-lg font-semibold mb-2">{result.recommendedCrop || t("soilAnalysis.noDescription")}</h3>
+          <p className="text-sm text-gray-700 mb-4">{result.description || t("soilAnalysis.noDescription")}</p>
+
+          {result.tips && (
+            <ul className="list-disc list-inside text-sm text-gray-600">
+              {result.tips.map((tip, index) => (
+                <li key={index}>{tip}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+      )}
     </main>
   );
 }
