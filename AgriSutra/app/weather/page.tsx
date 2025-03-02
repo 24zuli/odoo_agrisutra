@@ -7,19 +7,15 @@ import {
   Sun, CloudRain, Wind, Droplets, ArrowLeft, CloudSun, Cloud, Sunrise, Sunset
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import { useTranslation } from "react-i18next";
 
 export default function WeatherApp() {
   const router = useRouter();
-  const { t } = useTranslation();
-  
   const [weatherData, setWeatherData] = useState<any>(null);
   const [currentTemp, setCurrentTemp] = useState<number | null>(null);
   const [aqiData, setAqiData] = useState<any>(null);
   const [location, setLocation] = useState<string>("Your City");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [showPopup, setShowPopup] = useState<boolean>(false);
 
   const API_KEY = process.env.NEXT_PUBLIC_TOMORROW_API_KEY;
   const AQI_API_KEY = process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY;
@@ -67,29 +63,24 @@ export default function WeatherApp() {
 
   useEffect(() => {
     if (navigator.geolocation) {
-      setShowPopup(true);
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const lat = position.coords.latitude.toString();
+          const lon = position.coords.longitude.toString();
+          localStorage.setItem("userLat", lat);
+          localStorage.setItem("userLon", lon);
+          fetchWeather(lat, lon);
+        },
+        () => {
+          setError("Location access denied. Please enable location services.");
+          setLoading(false);
+        }
+      );
     } else {
       setError("Geolocation not supported by your browser.");
       setLoading(false);
     }
   }, []);
-
-  const handleAllowLocation = () => {
-    setShowPopup(false);
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        const lat = position.coords.latitude.toString();
-        const lon = position.coords.longitude.toString();
-        localStorage.setItem("userLat", lat);
-        localStorage.setItem("userLon", lon);
-        fetchWeather(lat, lon);
-      },
-      () => {
-        setError("Location access denied. Please enable location services.");
-        setLoading(false);
-      }
-    );
-  };
 
   if (loading) return (
     <div className="min-h-screen flex items-center justify-center bg-blue-100 text-blue-800">
@@ -103,6 +94,14 @@ export default function WeatherApp() {
     </div>
   );
 
+  const minTemp = weatherData?.daily?.[0]?.values?.temperatureMin;
+  const condition = weatherData?.daily?.[0]?.values?.weatherCode;
+  const uvIndex = weatherData?.daily?.[0]?.values?.uvIndexMax;
+  const humidity = weatherData?.daily?.[0]?.values?.humidity;
+  const windSpeed = weatherData?.daily?.[0]?.values?.windSpeed;
+  const sunriseTime = weatherData?.daily?.[0]?.values?.sunrise?.split("T")[1];
+  const sunsetTime = weatherData?.daily?.[0]?.values?.sunset?.split("T")[1];
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -110,30 +109,6 @@ export default function WeatherApp() {
       transition={{ duration: 1.2 }}
       className="min-h-screen bg-gradient-to-b from-blue-300 via-blue-200 to-blue-100 text-blue-900 p-6"
     >
-      {/* Location Permission Popup */}
-      {showPopup && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white p-6 rounded-lg text-center">
-            <p className="text-lg font-semibold">{t("weather.locationAccess")}</p>
-            <p className="text-sm text-gray-600">{t("weather.locationInfo")}</p>
-            <div className="mt-4 flex justify-around">
-              <button
-                onClick={handleAllowLocation}
-                className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600"
-              >
-                {t("weather.allow")}
-              </button>
-              <button
-                onClick={() => setShowPopup(false)}
-                className="px-4 py-2 bg-gray-300 rounded-lg hover:bg-gray-400"
-              >
-                {t("weather.deny")}
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
       {/* Header with Back Arrow & City Name */}
       <div className="flex items-center mb-6">
         <button onClick={() => router.back()} className="p-2">
@@ -142,8 +117,63 @@ export default function WeatherApp() {
         <h1 className="text-2xl font-semibold ml-3">{location}</h1>
       </div>
 
-      {/* Weather Information */}
+      {/* Current Temperature */}
+      <div className="flex justify-between items-center">
       <h1 className="text-6xl font-bold">{currentTemp ? `${currentTemp}°` : "--"}</h1>
+      {getWeatherIcon(condition)}
+      </div>
+      <p className="text-lg text-blue-700">
+      {minTemp ? `${minTemp}° / ${currentTemp}°` : "--"}
+      </p>
+      <p className="text-lg text-blue-700">{condition || ""}</p>
+
+
+      {/* Weekly Forecast */}
+      <Card className="bg-blue-100 p-4 mt-6 rounded-lg shadow-md">
+        <CardContent>
+          <h3 className="text-xl font-semibold mb-4 text-blue-800">7-Day Forecast</h3>
+          <div className="flex flex-col space-y-4">
+            {weatherData?.daily &&
+              weatherData.daily
+                .slice(1, 8)
+                .map((day: any, index: number) => {
+                  const dayOfWeek = new Date(day.time).toLocaleDateString("en-US", { weekday: "long" });
+
+                  return (
+                    <div key={index} className="flex justify-between bg-white p-2 rounded-md shadow-sm">
+                      <p className="font-medium text-blue-700">{dayOfWeek}</p>
+                      <div className="flex items-center text-blue-600">
+                        {getWeatherIcon(day.values.weatherCode)}
+                        <span className="ml-2 font-semibold">
+                          {day.values.temperatureMin ?? "--"}° / {day.values.temperatureMax ?? "--"}°
+                        </span>
+                      </div>
+                    </div>
+                  );
+                })}
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* AQI Section */}
+      <Card className="bg-white p-4 mt-6 rounded-lg shadow-md">
+        <CardContent>
+          <h3 className="text-xl font-semibold">Air Quality Index</h3>
+          {aqiData ? (
+            <div className="flex items-center justify-between">
+              <p className="text-4xl font-bold" style={{ color: getAqiColor(aqiData.main.aqi) }}>
+                {aqiData.main.aqi}
+              </p>
+              <p className="text-lg">{getAqiWarning(aqiData.main.aqi)}</p>
+            </div>
+          ) : null}
+        </CardContent>
+      </Card>
     </motion.div>
   );
 }
+
+// Helper Functions
+const getWeatherIcon = (weatherCode: string | null) => (!weatherCode ? <Cloud size={24} /> : <Sun size={24} />);
+const getAqiColor = (aqi: number) => (aqi <= 50 ? "#00E400" : aqi <= 100 ? "#FFFF00" : "#FF7E00");
+const getAqiWarning = (aqi: number) => (aqi <= 50 ? "Good" : aqi <= 100 ? "Moderate" : "Unhealthy");
