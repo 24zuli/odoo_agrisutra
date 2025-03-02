@@ -3,7 +3,7 @@
 **Team Name** : Fierces'  
 **Team Leader** : Zuli Dobariya - 22AIML009
 
-[📹 Watch Video : Drive Link]([https://drive.google.com/file/d/YOUR_VIDEO_ID/view](https://drive.google.com/drive/folders/1Kq7FHHe0k47sdOoSNX4BOsTMzxveMYUZ?usp=drive_link))
+[https://drive.google.com/file/d/YOUR_VIDEO_ID/view](https://drive.google.com/drive/folders/1Kq7FHHe0k47sdOoSNX4BOsTMzxveMYUZ?usp=drive_link)
 
 # 🌾 AgriSutra - Empowering Farmers with Technology
 
