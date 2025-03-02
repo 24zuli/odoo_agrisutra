@@ -5,7 +5,7 @@
 
 # 🌾 AgriSutra - Empowering Farmers with Technology
 
-![Homepage](./image.png)
+![Homepage](./image.png){width=600 height=300}
 
 ## 🚜 What is AgriSutra?
 AgriSutra is a smart digital assistant for farmers. It helps them make better farming decisions using **Artificial Intelligence (AI) and Machine Learning (ML)**. The platform provides real-time insights on:
