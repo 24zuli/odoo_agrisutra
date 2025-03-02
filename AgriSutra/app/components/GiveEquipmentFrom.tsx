@@ -70,12 +70,12 @@ const GiveEquipmentForm = ({ category }: { category: string }) => {
   return (
     <div className="max-w-4xl mx-auto p-6">
       {/* Back Button */}
-      <button className="flex items-center text-gray-600 hover:text-black mb-6" onClick={() => router.back()}>
-        <FaArrowLeft className="mr-2" /> Back
+      <button className="flex items-center text-black-600 hover:text-black mb-6" onClick={() => router.back()}>
+        <FaArrowLeft className="mr-3" /> <h6 className="text-2xl font-bold mb-1">List Your {category}</h6>
       </button>
 
       {/* Title */}
-      <h1 className="text-3xl font-bold mb-4">List Your {category}</h1>
+      {/* <h1 className="text-3xl font-bold mb-4">List Your {category}</h1> */}
 
       <p className="text-gray-600 mb-6">
         List your farming equipment for others to use. Fill out the details below to make your equipment available.

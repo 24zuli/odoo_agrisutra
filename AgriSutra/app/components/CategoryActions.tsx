@@ -54,7 +54,7 @@ const CategoryActions = ({ category }: { category: string }) => {
           <p className="text-gray-500 text-center mt-2">Find and book equipment for your needs</p>
         </div>
       </div>
-    </div>
+    </div>  
   );
 };
 

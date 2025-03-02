@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { fetchAvailableEquipment } from "@/lib/apiCalls";
+import { FaArrowLeft } from "react-icons/fa";
 
 interface Equipment {
   equipment_id: number;
@@ -37,7 +38,19 @@ const AvailableEquipment = ({ category }: { category: string }) => {
 
   return (
     <div className="max-w-6xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-6">Available {category} Equipment</h1>
+
+      <div className="flex items-center mb-6">
+              <button
+                className="flex items-center text-gray-600 hover:text-black mr-4"
+                onClick={() => router.back()}
+              >
+                <FaArrowLeft className="mr-2" /> 
+              </button>
+              <h1 className="text-2xl font-bold capitalize">Available {category} Equipment</h1>
+            </div>
+      
+      
+      {/* <h1 className="text-3xl font-bold mb-6">Available {category} Equipment</h1> */}
 
       {/* Filters */}
       <div className="bg-white p-4 shadow-md rounded-lg mb-6">
@@ -86,11 +99,11 @@ const AvailableEquipment = ({ category }: { category: string }) => {
                 item.availability === "Not Available" ? "opacity-50" : ""
               }`}
             >
-              <img
+              {/* <img
                 src="/placeholder.jpg"
                 alt={item.name}
                 className="w-24 h-24 object-cover mr-4 rounded-lg"
-              />
+              /> */}
               <div className="flex-1">
                 <h2 className="text-xl font-bold">{item.name}</h2>
                 <p className="text-gray-600">{item.description}</p>
