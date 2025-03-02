@@ -3,15 +3,22 @@
 **Team Name** : Fierces'  
 **Team Leader** : Zuli Dobariya - 22AIML009
 
+[📹 Watch Video : Drive Link]([https://drive.google.com/file/d/YOUR_VIDEO_ID/view](https://drive.google.com/drive/folders/1Kq7FHHe0k47sdOoSNX4BOsTMzxveMYUZ?usp=drive_link))
+
 # 🌾 AgriSutra - Empowering Farmers with Technology
 
 <div style="display: flex; justify-content: space-between;">
-    <img src="./image1.png" alt="Image 1" width="200" height="150">
-    <img src="./image2.png" alt="Image 2" width="200" height="150">
-    <img src="./image3.png" alt="Image 3" width="200" height="150">
-    <img src="./image4.png" alt="Image 4" width="200" height="150">
-    <img src="./image5.png" alt="Image 5" width="200" height="150">
+    <img src="./image1.png" alt="Image 1" width="300" height="400">
+    <img src="./image2.png" alt="Image 2" width="300" height="400">
+        <img src="./image3.png" alt="Image 3" width="300" height="400">
 </div>
+<div style="display: flex; justify-content: space-between;">
+    <img src="./image4.png" alt="Image 4" width="300" height="400">
+    <img src="./image5.png" alt="Image 5" width="300" height="400">
+</div>
+
+
+
 
 ## 🚜 What is AgriSutra?
 AgriSutra is a smart digital assistant for farmers. It helps them make better farming decisions using **Artificial Intelligence (AI) and Machine Learning (ML)**. The platform provides real-time insights on:
