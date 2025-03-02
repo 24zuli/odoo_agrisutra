@@ -18,7 +18,7 @@ export default function EquipmentCard({ equipment }: { equipment: Equipment }) {
       <p className="text-gray-600">Units Available: {equipment.no_of_units}</p>
       <p className="text-gray-600">Owner Name: {equipment.owner_name}</p>
       {equipment.price && <p className="text-green-600 font-semibold">Price per unit: {equipment.price}</p>}
-      <p className="text-gray-500">Location: {equipment.location_lat}, {equipment.location_lng}</p>
+
       
 
     </div>
