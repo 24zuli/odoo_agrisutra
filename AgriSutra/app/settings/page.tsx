@@ -5,10 +5,12 @@ import Link from "next/link";
 import { getProfile, ProfileData } from "@/lib/profile";
 import { useTranslation } from "react-i18next";
 import { ArrowLeft } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function ProfileHomePage() {
   const [profile, setProfile] = useState<ProfileData | null>(null);
   const [loading, setLoading] = useState(true);
+  const router = useRouter();
   const { t } = useTranslation(); // ✅ Add translation hook
 
   useEffect(() => {
@@ -34,7 +36,7 @@ export default function ProfileHomePage() {
       {/* Header */}
       <div className="bg-white p-4 shadow-sm flex items-center">
         <button
-          //   onClick={() => router.push("/")}
+          onClick={() => router.push("/")}
           className="text-black hover:text-gray-900 focus:outline-none mr-3"
         >
           <ArrowLeft className="h-6 w-6" />
