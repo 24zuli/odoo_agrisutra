@@ -241,5 +241,76 @@
         "sunrise": "Sunrise",
         "sunset": "Sunset",
         "sevenDayForecast": "7-Day Forecast"
+    },
+    "settings": {
+        "loading": "Loading...",
+        "errorLoadingProfile": "Error loading profile.",
+        "editProfile": "Edit Profile",
+        "languageSelection": "Language Selection",
+        "settings": "Settings"
+    },
+    "general": {
+        "back": "Back"
+    },
+    "equipment": {
+        "availableEquipment": "Available Equipment in {{category}}",
+        "noEquipment": "No equipment available for this category.",
+        "unitsAvailable": "Units Available",
+        "ownerName": "Owner Name",
+        "pricePerUnit": "Price per unit",
+        "location": "Location",
+        "giveEquipment": "Want to give your equipment?",
+        "listEquipment": "List your equipment for others to use",
+        "useEquipment": "Want to use equipment?",
+        "findEquipment": "Find and book equipment for your needs"
+    },
+    "giveEquipment": {
+        "title": "List Your {{category}}",
+        "description": "List your farming equipment for others to use. Fill out the details below to make your equipment available.",
+        "equipmentName": "Equipment Name",
+        "equipmentPlaceholder": "e.g., John Deere 5075E Tractor",
+        "descriptionLabel": "Description",
+        "descriptionPlaceholder": "Describe your equipment, including condition, features, etc.",
+        "rentalRate": "Rental Rate (per day)",
+        "pricePlaceholder": "e.g., 5000",
+        "location": "Location",
+        "locationPlaceholder": "e.g., Amritsar, Punjab",
+        "availability": "Availability",
+        "availableNow": "Available Now",
+        "notAvailable": "Not Available",
+        "contactInfo": "Contact Information",
+        "phonePlaceholder": "Phone number",
+        "listButton": "List Equipment",
+        "successMessage": "Equipment listed successfully!",
+        "errorMessage": "Failed to list equipment.",
+        "networkError": "A network error occurred. Please try again."
+    },
+    "availableEquipment": {
+        "title": "Available {{category}} Equipment",
+        "filterOptions": "Filter Options",
+        "all": "All",
+        "availableNow": "Available Now",
+        "notAvailable": "Not Available",
+        "perDay": "per day",
+        "location": "Location",
+        "owner": "Owner",
+        "available": "Available",
+        "notavailable": "Not Available",
+        "unknown": "Unknown",
+        "bookNow": "Book Now",
+        "unavailable": "Unavailable",
+        "noEquipment": "No {{category}} equipment available."
+    },
+    "bookEquipment": {
+        "back": "Back",
+        "title": "Book Equipment",
+        "equipmentName": "Equipment Name",
+        "location": "Location",
+        "owner": "Owner",
+        "bookingDetails": "Booking Details",
+        "startDate": "Start Date",
+        "endDate": "End Date",
+        "confirmBooking": "Confirm Booking",
+        "bookingSuccess": "Booking confirmed successfully!"
     }
 }

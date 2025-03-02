@@ -193,7 +193,6 @@ async function handleUserLogin(req, res) {
     }
 }
 
-
 async function handleForgotPassword(req, res) {
     const { email } = req.body;
     console.log("body", req.body);

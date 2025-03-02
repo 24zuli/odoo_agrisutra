@@ -87,7 +87,7 @@ export default function ProfileHomePage() {
           {/* Top Header: Arrow & "Profile" */}
           <div className="bg-white p-4 shadow-sm flex items-center">
             <button
-              onClick={() => router.back()}
+              onClick={() => router.push("/")}
               className="text-black hover:text-gray-900 focus:outline-none mr-3"
             >
               <ArrowLeft className="h-6 w-6" />

@@ -14,6 +14,32 @@ export interface ProfileData {
   updated_at?: string;
 }
 
+// export async function getProfile(): Promise<ProfileData> {
+//   // Get the user ID from localStorage (or your auth context)
+//   const id = localStorage.getItem("userId");
+//   const res = await fetch(`http://localhost:3001/api/profile?userId=${id}`);
+//   if (!res.ok) {
+//     throw new Error("Failed to fetch profile");
+//   }
+//   return res.json();
+// }
+
+// lib/api/profile.ts
+export interface ProfileData {
+  id: number;
+  name?: string;
+  username?: string;
+  email?: string;
+  gender?: string;
+  date_of_birth?: string; // ISO format (YYYY-MM-DD)
+  state?: string;
+  district?: string;
+  phone_number?: string;
+  profile_completed: boolean;
+  created_at?: string;
+  updated_at?: string;
+}
+
 export async function getProfile(): Promise<ProfileData> {
   // Get the user ID from localStorage (or your auth context)
   const id = localStorage.getItem("userId");
@@ -38,3 +64,6 @@ export async function updateProfile(
   }
   return res.json();
 }
+
+
+

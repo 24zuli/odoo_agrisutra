@@ -88,7 +88,6 @@ async function getUserProfile(req, res) {
     }
 }
 
-
 async function updateUserProfile(req, res) {
     try {
         const {
