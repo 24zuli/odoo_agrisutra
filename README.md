@@ -38,10 +38,14 @@ By focusing on these issues, AgriSutra not only promotes sustainable farming pra
 - **Government Subsidy Utilization:** Only about 30-40% of eligible farmers effectively access available government schemes due to complex procedures and lack of awareness.
 
 ## Tech-Stack
-- Frontend:
-1. Next.js: A React framework for building server-rendered and static web applications.
-2. TypeScript & JavaScript: Utilizing TypeScript for type safety and JavaScript for dynamic client-side interactions.
-- Backend:
-1. Express.js: A lightweight web application framework for creating RESTful APIs and handling server-side logic.
-- Database:
-1. PostgreSQL: A powerful, open-source relational database for managing structured data.
+  -Frontend:
+      -Next.js – A React framework for building server-rendered and static web applications.
+      -TypeScript – Ensures type safety and better maintainability for frontend development.
+   -Backend:
+      -Express.js (JavaScript) – A lightweight web framework for creating RESTful APIs and handling server-side logic.
+      -Flask (Python) – Used for developing and serving the machine learning API.
+   -Database:
+      -PostgreSQL – A powerful, open-source relational database for managing structured data.
+    -Machine Learning:
+      -Python – Used for developing, training, and deploying machine learning models.
+      -Flask – Serves the trained ML models as an API for integration with the backend.
