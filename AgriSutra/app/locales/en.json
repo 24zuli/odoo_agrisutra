@@ -253,6 +253,14 @@
         "back": "Back"
     },
     "equipment": {
+        "locationAccess": "Allow Location Access?",
+        "locationInfo": "We need your location to show nearby available farming equipment.",
+        "allow": "Allow",
+        "deny": "Deny",
+        "searchPlaceholder": "Search equipment categories...",
+        "loadingCategories": "Loading categories...",
+        "noCategoriesFound": "No categories found.",
+        "farmingEquipments": "Farming Equipments",
         "availableEquipment": "Available Equipment in {{category}}",
         "noEquipment": "No equipment available for this category.",
         "unitsAvailable": "Units Available",
