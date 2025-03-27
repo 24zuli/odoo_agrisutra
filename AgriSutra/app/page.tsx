@@ -6,6 +6,7 @@ import { ArrowRight, Tractor, CloudRain, Sprout } from "lucide-react";
 import { isAuthenticated } from "../lib/auth";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Chatbot from "./components/Chatbot";
 import { useTranslation } from "react-i18next";
 
 export default function Home() {
@@ -257,6 +258,7 @@ export default function Home() {
       </main>
 
       <Footer />
+      <Chatbot />
     </div>
   );
 }

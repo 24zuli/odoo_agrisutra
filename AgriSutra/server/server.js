@@ -12,6 +12,7 @@ const equipmentRoutes = require("./routes/equipment");
 const usersRoute = require("./routes/users");
 const bookEquipmentRoutes = require("./routes/bookEquipment");
 const seedRoutes = require("./routes/seeds");
+const chatbotRoutes = require("./routes/chatbot");
 
 dotenv.config();
 
@@ -32,6 +33,7 @@ app.use("/api/categories", categoriesRoutes);
 app.use("/api/users", usersRoute);
 app.use("/api/bookEquipment", bookEquipmentRoutes);
 app.use("/api/seeds", seedRoutes);
+app.use("/api/chat", chatbotRoutes);
 
 const { Pool } = require("pg");
 const pool = new Pool({
