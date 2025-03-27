@@ -55,7 +55,7 @@ const GiveEquipmentForm = ({ category }: { category: string }) => {
   
       if (response.ok) {
         alert("Equipment listed successfully!");
-        router.push(`/equipment/${category}`);
+        router.push(`/`);
       } else {
         console.error("🔥 Error Response:", responseData);
         alert("Failed to list equipment. " + (responseData.error || "Unknown Error"));
