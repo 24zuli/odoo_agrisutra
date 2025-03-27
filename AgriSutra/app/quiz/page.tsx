@@ -180,20 +180,46 @@ export default function QuizPage() {
 
       {/* ✅ Corrected Result Display */}
       {result && (
-        <div className="bg-white border border-green-400 rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-bold text-green-700 mb-2">{t("soilAnalysis.cropRecommendation")}</h2>
-          <h3 className="text-lg font-semibold mb-2">{result.recommendedCrop || t("soilAnalysis.noDescription")}</h3>
-          <p className="text-sm text-gray-700 mb-4">{result.description || t("soilAnalysis.noDescription")}</p>
+  <div className="relative overflow-hidden rounded-2xl border-l-[6px] border-green-600 bg-white/60 backdrop-blur-md shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:scale-[1.01]">
+    
+    {/* Decorative Blur Glow */}
+    <div className="absolute -top-10 -left-10 w-48 h-48 bg-green-200 opacity-20 blur-3xl rounded-full pointer-events-none z-0" />
+    <div className="absolute bottom-0 right-0 w-32 h-32 bg-green-100 opacity-30 blur-2xl rounded-full pointer-events-none z-0" />
 
-          {result.tips && (
-            <ul className="list-disc list-inside text-sm text-gray-600">
-              {result.tips.map((tip, index) => (
-                <li key={index}>{tip}</li>
-              ))}
-            </ul>
-          )}
+    <div className="relative z-10">
+      {/* Section Title */}
+      <h2 className="text-2xl font-bold text-green-700 mb-3">
+        {t("soilAnalysis.cropRecommendation")}
+      </h2>
+
+      {/* Crop Name Tag */}
+      <span className="inline-block bg-green-100 text-green-800 text-sm font-semibold px-4 py-1 rounded-full mb-3 shadow-sm">
+        {result.recommendedCrop || t("soilAnalysis.noDescription")}
+      </span>
+
+      {/* Description */}
+      <p className="text-gray-700 text-[15px] leading-relaxed mb-4">
+        {result.description || t("soilAnalysis.noDescription")}
+      </p>
+
+      {/* Cultivation Tips */}
+      {result.tips && result.tips.length > 0 && (
+        <div>
+          <h4 className="text-sm font-semibold text-gray-800 mb-1">
+            {t("soilAnalysis.tipsHeading") || "Tips for Cultivation:"}
+          </h4>
+          <ul className="list-disc list-inside text-sm text-gray-600 space-y-1 pl-1">
+            {result.tips.map((tip, index) => (
+              <li key={index}>{tip}</li>
+            ))}
+          </ul>
         </div>
       )}
+    </div>
+  </div>
+)}
+
+
     </main>
   );
 }
