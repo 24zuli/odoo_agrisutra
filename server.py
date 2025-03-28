@@ -95,8 +95,11 @@ else:
 
 print(f"✅ Tesseract Path Set: {pytesseract.pytesseract.tesseract_cmd}")
 
+
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(BASE_DIR, "..", "KNN.pkl")
+MODEL_PATH = os.path.join(BASE_DIR, "KNN.pkl")  # ✅ No '..' needed
+
 
 # Load Crop Prediction Model
 try:
