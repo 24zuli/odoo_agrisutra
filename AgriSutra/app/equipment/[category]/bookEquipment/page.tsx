@@ -15,7 +15,7 @@
 import BookEquipment from "../../../components/BookEquipment";
 import { fetchCategories } from "@/lib/apiCalls";
 
-// ✅ Static params generation for category-based routing
+// ✅ Next.js expects this function to return an array of params
 export async function generateStaticParams() {
   const categories = await fetchCategories();
   return categories.map((cat: { name: string }) => ({
@@ -23,13 +23,12 @@ export async function generateStaticParams() {
   }));
 }
 
-// ✅ Component with correct typing for Next.js 13+/14+/15+
-interface PageProps {
-  params: {
-    category: string;
-  };
-}
-
-export default function BookEquipmentPage({ params }: PageProps) {
-  return <BookEquipment category={params.category} />;
+// ✅ Page component receives params directly
+export default function BookEquipmentPage({
+  params,
+}: {
+  params: { category: string };
+}) {
+  const { category } = params;
+  return <BookEquipment category={category} />;
 }
