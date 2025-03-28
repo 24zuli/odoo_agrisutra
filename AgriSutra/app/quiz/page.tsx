@@ -42,7 +42,10 @@ export default function QuizPage() {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setApiUrl(process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001");
+    setApiUrl(
+      process.env.NEXT_PUBLIC_API_URL ||
+        "https://backend-agrisutra.onrender.com"
+    );
     setIsClient(true);
   }, []);
 

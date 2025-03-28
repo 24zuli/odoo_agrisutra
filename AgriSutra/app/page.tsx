@@ -79,7 +79,7 @@ export default function Home() {
 
           try {
             const response = await fetch(
-              `http://localhost:3001/api/users/update-location/${userId}`,
+              `https://backend-agrisutra.onrender.com/api/users/update-location/${userId}`,
               {
                 method: "PUT",
                 headers: {

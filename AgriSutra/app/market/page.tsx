@@ -60,7 +60,7 @@ export default function MarketPage() {
   useEffect(() => {
     if (commodity && state && district) {
       setAppUrl(
-        `http://localhost:3001/api/market-trends?commodity=${commodity}&state=${state}&market=${district}`
+        `https://backend-agrisutra.onrender.com/api/market-trends?commodity=${commodity}&state=${state}&market=${district}`
       );
     }
   }, [commodity, state, district]);
@@ -204,7 +204,9 @@ export default function MarketPage() {
                 >
                   <td className="border p-3 text-green-700">{idx + 1}</td>
                   <td className="border p-3 text-green-700">{item.City}</td>
-                  <td className="border p-3 text-green-700">{item.Commodity}</td>
+                  <td className="border p-3 text-green-700">
+                    {item.Commodity}
+                  </td>
                   <td className="border p-3 text-green-700">
                     {item["Min Price"]}
                   </td>
@@ -224,7 +226,6 @@ export default function MarketPage() {
     </div>
   );
 }
-
 
 // // pages/MarketGraphPage.tsx
 // 'use client';

@@ -34,7 +34,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         if (!token) return;
 
         const response = await fetch(
-          "http://localhost:3001/api/auth/userProfile",
+          "https://backend-agrisutra.onrender.com/api/auth/userProfile",
           {
             headers: { Authorization: `Bearer ${token}` },
           }

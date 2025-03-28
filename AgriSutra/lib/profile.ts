@@ -43,7 +43,9 @@ export interface ProfileData {
 export async function getProfile(): Promise<ProfileData> {
   // Get the user ID from localStorage (or your auth context)
   const id = localStorage.getItem("userId");
-  const res = await fetch(`http://localhost:3001/api/profile?userId=${id}`);
+  const res = await fetch(
+    `https://backend-agrisutra.onrender.com/api/profile?userId=${id}`
+  );
   if (!res.ok) {
     throw new Error("Failed to fetch profile");
   }
@@ -54,11 +56,14 @@ export async function updateProfile(
   data: Partial<ProfileData>
 ): Promise<ProfileData> {
   const id = localStorage.getItem("userId");
-  const res = await fetch(`http://localhost:3001/api/profile`, {
-    method: "PATCH",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
-  });
+  const res = await fetch(
+    `https://backend-agrisutra.onrender.com/api/profile`,
+    {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    }
+  );
 
   if (!res.ok) {
     throw new Error("Failed to update profile");

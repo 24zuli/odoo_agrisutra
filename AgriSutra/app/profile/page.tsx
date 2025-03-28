@@ -53,7 +53,7 @@ export default function ProfileHomePage() {
       try {
         console.log("🔹 Fetching profile for user ID:", storedUserId);
         const res = await fetch(
-          `http://localhost:3001/api/profile?userId=${storedUserId}`
+          `https://backend-agrisutra.onrender.com/api/profile?userId=${storedUserId}`
         );
 
         if (!res.ok) throw new Error("Failed to fetch profile");

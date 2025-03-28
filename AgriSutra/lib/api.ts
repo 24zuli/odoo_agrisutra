@@ -9,7 +9,10 @@ export interface Scheme {
 }
 
 export const fetchSchemes = async (): Promise<Scheme[]> => {
-  const res = await fetch("http://localhost:3001/api/schemes", {});
+  const res = await fetch(
+    "https://backend-agrisutra.onrender.com/api/schemes",
+    {}
+  );
   if (!res.ok) {
     throw new Error("Failed to fetch schemes");
   }
@@ -17,7 +20,9 @@ export const fetchSchemes = async (): Promise<Scheme[]> => {
 };
 
 export const fetchSchemeById = async (id: string): Promise<Scheme> => {
-  const res = await fetch(`http://localhost:3001/api/schemes/${id}`);
+  const res = await fetch(
+    `https://backend-agrisutra.onrender.com/api/schemes/${id}`
+  );
   if (!res.ok) {
     throw new Error("Failed to fetch scheme");
   }
