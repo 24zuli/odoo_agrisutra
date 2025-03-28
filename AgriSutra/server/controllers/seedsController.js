@@ -78,16 +78,16 @@ const storage = multer.diskStorage({
     cb(null, uploadDir);
   },
   filename: (req, file, cb) => {
-    cb(null, `${Date.now()}_${file.originalname}`);
+    cb(null, ${Date.now()}_${file.originalname});
   },
 });
 
 const upload = multer({ storage });
 
-// Function to Fetch Crop Description from Database
+// Fetch Crop Description from Database
 async function getCropDescription(cropName) {
   try {
-    console.log(`🔍 Fetching description for crop: ${cropName}`);
+    console.log(🔍 Fetching description for crop: ${cropName});
     
     const queryText = `
       SELECT description 
@@ -95,13 +95,12 @@ async function getCropDescription(cropName) {
       WHERE LOWER(name) = LOWER($1)
       LIMIT 1
     `;
-
     const result = await pool.query(queryText, [cropName]);
 
     if (result.rows.length > 0) {
       return result.rows[0].description;
     } else {
-      console.warn(`⚠️ No description found for crop: ${cropName}`);
+      console.warn(⚠ No description found for crop: ${cropName});
       return "No description available.";
     }
   } catch (error) {
@@ -110,16 +109,15 @@ async function getCropDescription(cropName) {
   }
 }
 
-// Crop Prediction Function
+// Main Prediction Handler
 async function predictCrop(req, res) {
-  const { N, P, K, temperature, humidity, ph, rainfall } = req.body;
-  const file = req.file; // Uploaded file
+  const { N, P, K, temperature, humidity, ph, rainfall, user_id } = req.body;
+  const file = req.file;
 
   try {
     console.log("📨 Received Request Data:", req.body);
     console.log("📂 Uploaded File:", file ? file.filename : "No file uploaded");
 
-    // Create a FormData instance
     const formData = new FormData();
 
     if (file) {
@@ -136,29 +134,29 @@ async function predictCrop(req, res) {
     }
 
     console.log("🚀 Sending Request to Flask API...");
-
-    // Send the request to Flask API
     const response = await axios.post(FLASK_API_URL, formData, {
       headers: formData.getHeaders(),
     });
 
     console.log("✅ Flask Response:", response.data);
-
     const { recommendedCrop, extractedText } = response.data;
 
-    // Fetch crop description from the database
     const description = await getCropDescription(recommendedCrop);
 
-    // Store file info in the database if a file was uploaded
+    // Optional: Store file upload record
     if (file) {
       const insertFileQuery = `
-        INSERT INTO uploads (filename, filepath, uploaded_at) 
-        VALUES ($1, $2, NOW()) RETURNING *;
+        INSERT INTO uploads (user_id, filename, filepath, uploaded_at) 
+        VALUES ($1, $2, $3, NOW()) RETURNING *;
       `;
-      await pool.query(insertFileQuery, [file.filename, file.path]);
+      await pool.query(insertFileQuery, [
+        user_id || null, // Optional user ID
+        file.filename,
+        file.path,
+      ]);
     }
 
-    // Send response to the frontend
+    // Send response to frontend
     res.json({
       recommendedCrop,
       description,
