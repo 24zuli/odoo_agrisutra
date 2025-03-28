@@ -64,7 +64,7 @@ const axios = require("axios");
 const FormData = require("form-data");
 const pool = require("../db");
 
-const FLASK_API_URL = "http://localhost:8000/predict";
+const FLASK_API_URL = "https://odoo-agrisutra.onrender.com/predict";
 
 // Configure Multer Storage
 const storage = multer.diskStorage({
