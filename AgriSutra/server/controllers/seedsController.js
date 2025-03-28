@@ -26,8 +26,8 @@
 
 //     // Query the database for the crop description (case-insensitive match)
 //     const queryText = `
-//       SELECT description 
-//       FROM crops 
+//       SELECT description
+//       FROM crops
 //       WHERE LOWER(name) = LOWER($1)
 //       LIMIT 1
 //     `;
@@ -57,8 +57,6 @@
 // }
 
 // module.exports = { predictCrop };
-
-
 const multer = require("multer");
 const path = require("path");
 const fs = require("fs");
@@ -70,15 +68,17 @@ const FLASK_API_URL = "http://localhost:8000/predict";
 
 // Configure Multer Storage
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
+  destination: function (req, file, cb) {
     const uploadDir = path.join(__dirname, "../uploads");
     if (!fs.existsSync(uploadDir)) {
       fs.mkdirSync(uploadDir, { recursive: true });
     }
     cb(null, uploadDir);
   },
-  filename: (req, file, cb) => {
-    cb(null, ${Date.now()}_${file.originalname});
+  filename: function (req, file, cb) {
+    const timestamp = Date.now();
+    const filename = timestamp + "_" + file.originalname;
+    cb(null, filename);
   },
 });
 
@@ -87,20 +87,20 @@ const upload = multer({ storage });
 // Fetch Crop Description from Database
 async function getCropDescription(cropName) {
   try {
-    console.log(🔍 Fetching description for crop: ${cropName});
-    
+    console.log("🔍 Fetching description for crop:", cropName);
+
     const queryText = `
-      SELECT description 
-      FROM crops 
-      WHERE LOWER(name) = LOWER($1)
-      LIMIT 1
-    `;
+            SELECT description 
+            FROM crops 
+            WHERE LOWER(name) = LOWER($1)
+            LIMIT 1
+        `;
     const result = await pool.query(queryText, [cropName]);
 
     if (result.rows.length > 0) {
       return result.rows[0].description;
     } else {
-      console.warn(⚠ No description found for crop: ${cropName});
+      console.warn("⚠ No description found for crop:", cropName);
       return "No description available.";
     }
   } catch (error) {
@@ -139,27 +139,27 @@ async function predictCrop(req, res) {
     });
 
     console.log("✅ Flask Response:", response.data);
-    const { recommendedCrop, extractedText } = response.data;
+    const recommendedCrop = response.data.recommendedCrop;
+    const extractedText = response.data.extractedText;
 
     const description = await getCropDescription(recommendedCrop);
 
     // Optional: Store file upload record
     if (file) {
       const insertFileQuery = `
-        INSERT INTO uploads (user_id, filename, filepath, uploaded_at) 
-        VALUES ($1, $2, $3, NOW()) RETURNING *;
-      `;
+                INSERT INTO uploads (user_id, filename, filepath, uploaded_at) 
+                VALUES ($1, $2, $3, NOW()) RETURNING *;
+            `;
       await pool.query(insertFileQuery, [
-        user_id || null, // Optional user ID
+        user_id || null,
         file.filename,
         file.path,
       ]);
     }
 
-    // Send response to frontend
     res.json({
-      recommendedCrop,
-      description,
+      recommendedCrop: recommendedCrop,
+      description: description,
       extractedText: extractedText || null,
       uploadedFile: file ? file.filename : null,
     });
@@ -170,7 +170,9 @@ async function predictCrop(req, res) {
     );
 
     res.status(500).json({
-      error: error.response?.data?.error || "Error processing request",
+      error:
+        (error.response && error.response.data && error.response.data.error) ||
+        "Error processing request",
     });
   }
 }
