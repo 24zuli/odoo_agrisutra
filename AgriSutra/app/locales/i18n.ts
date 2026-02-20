@@ -2,15 +2,25 @@
 
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import en from "./en.json";
-import gu from "./gu.json";
+
+// Define a helper to load all locales from the current directory
+const loadResources = () => {
+  const context = (require as any).context("./", false, /\.json$/);
+  const resources: any = {};
+
+  context.keys().forEach((key: string) => {
+    const locale = key.replace("./", "").replace(".json", "");
+    resources[locale] = {
+      translation: context(key),
+    };
+  });
+
+  return resources;
+};
 
 if (!i18n.isInitialized) {
   i18n.use(initReactI18next).init({
-    resources: {
-      en: { translation: en },
-      gu: { translation: gu },
-    },
+    resources: loadResources(),
     lng: "en", // default language
     fallbackLng: "en",
     interpolation: { escapeValue: false },

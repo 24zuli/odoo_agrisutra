@@ -55,29 +55,33 @@ export default function LanguageSelectionPage() {
 
       {/* Language List */}
       <ul className="mt-2 bg-white">
-        {/* English */}
-        <li
-          className="flex items-center justify-between p-4 border-b border-gray-200 cursor-pointer hover:bg-gray-50"
-          onClick={() => handleSelectLanguage("en")}
-        >
-          {/* 4. Replace "English" with translation */}
-          <span>{t("languagePage.english")}</span>
-          {language === "en" && (
-            <span className="text-green-600 font-semibold">&#10003;</span>
-          )}
-        </li>
-
-        {/* Gujarati */}
-        <li
-          className="flex items-center justify-between p-4 border-b border-gray-200 cursor-pointer hover:bg-gray-50"
-          onClick={() => handleSelectLanguage("gu")}
-        >
-          {/* 5. Replace "ગુજરાતી" with translation */}
-          <span>{t("languagePage.gujarati")}</span>
-          {language === "gu" && (
-            <span className="text-green-600 font-semibold">&#10003;</span>
-          )}
-        </li>
+        {i18n.options.resources &&
+          Object.keys(i18n.options.resources).map((lang) => {
+            const langNames: Record<string, string> = {
+              en: "English",
+              gu: "Gujarati",
+              hi: "Hindi",
+              mr: "Marathi",
+              ta: "Tamil",
+              te: "Telugu",
+              kn: "Kannada",
+              ml: "Malayalam",
+              bn: "Bengali",
+              pa: "Punjabi",
+            };
+            return (
+              <li
+                key={lang}
+                className="flex items-center justify-between p-4 border-b border-gray-200 cursor-pointer hover:bg-gray-50"
+                onClick={() => handleSelectLanguage(lang)}
+              >
+                <span>{langNames[lang] || lang.toUpperCase()}</span>
+                {language === lang && (
+                  <span className="text-green-600 font-semibold">&#10003;</span>
+                )}
+              </li>
+            );
+          })}
       </ul>
     </div>
   );

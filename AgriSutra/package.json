@@ -8,7 +8,10 @@
     "start": "next start",
     "lint": "next lint",
     "server": "node server/server.js",
-    "init-db": "node server/init-db.js"
+    "init-db": "node server/init-db.js",
+    "i18n:extract": "node scripts/extract-keys.js",
+    "i18n:translate": "node scripts/translate-all.js",
+    "i18n:update": "npm run i18n:extract && npm run i18n:translate"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -86,5 +89,10 @@
     "typescript": "5.2.2",
     "vaul": "^0.9.9",
     "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "glob": "^13.0.6",
+    "google-translate-api-x": "^10.7.2",
+    "i18next-parser": "^9.3.0"
   }
 }
