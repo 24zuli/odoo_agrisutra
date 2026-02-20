@@ -10,11 +10,11 @@
 <div style="display: flex; justify-content: space-between;">
     <img src="./image1.png" alt="Image 1" width="300" height="400">
     <img src="./image2.png" alt="Image 2" width="300" height="400">
-        <img src="./image3.png" alt="Image 3" width="300" height="400">
+    <img src="./image3.png" alt="Image 3" width="300" height="400">
 </div>
 <div style="display: flex; justify-content: space-between;">
-    <img src="./image4.png" alt="Image 4" width="300" height="400">
-    <img src="./image5.png" alt="Image 5" width="300" height="400">
+<img src="./image4.png" alt="Image 4" width="300" height="400">
+<img src="./image5.png" alt="Image 5" width="300" height="400">
 </div>
 
 # AgriSutra - Smart Farming Solutions
