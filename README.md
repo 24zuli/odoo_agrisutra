@@ -17,51 +17,150 @@
     <img src="./image5.png" alt="Image 5" width="300" height="400">
 </div>
 
+# AgriSutra - Smart Farming Solutions
 
+AgriSutra is a comprehensive agricultural platform designed to empower farmers with data-driven insights. It features crop recommendation based on soil parameters, market trends analysis, scheme information, and an interactive chatbot.
 
+## Core Features
 
-## 🚜 What is AgriSutra?
-AgriSutra is a smart digital assistant for farmers. It helps them make better farming decisions using **Artificial Intelligence (AI) and Machine Learning (ML)**. The platform provides real-time insights on:
-
-- 🌱 **Soil health & crop recommendations**
-- 🌦 **Weather forecasts**
-- 📈 **Market trends & commodity prices**
-- 🏛 **Government schemes & subsidies**
-- 🚜 **Farming equipment management**
-- 📰 **Latest agricultural news**
-
-With AgriSutra, farmers can access crucial information at their fingertips! 📲
+- **Crop Prediction**: ML-based recommendation using NPK values and climate data.
+- **Market Trends**: Real-time insights into agricultural market prices and trends.
+- **Schemes & News**: Stay updated with the latest government schemes and agricultural news.
+- **Smart Chatbot**: AI-powered assistant for farming queries.
+- **OCR Support**: Extract soil data directly from PDF reports or images using Tesseract OCR.
 
 ---
 
-## 📌 Why Did We Build AgriSutra?
-Farmers face many challenges, such as:
+## Technical Stack
 
-- ❌ Lack of access to **real-time farming data** (60-70% of farmers struggle with this)
-- ❌ Difficulty in understanding **government schemes & subsidies**
-- ❌ Unpredictable **weather patterns** affecting crops
-- ❌ Inefficient market access leading to **post-harvest losses** (up to 40%)
-
-AgriSutra bridges this gap by providing **easy-to-use, AI-powered farming solutions** to **boost productivity and income**. 🚀
+- **Frontend**: [Next.js](https://nextjs.org/) (React)
+- **Backend API**: [Node.js](https://nodejs.org/) with [Express](https://expressjs.com/)
+- **Machine Learning Server**: [Python](https://www.python.org/) with [Flask](https://flask.palletsprojects.com/)
+- **Database**: [PostgreSQL](https://www.postgresql.org/)
+- **OCR Engine**: [Tesseract OCR](https://github.com/tesseract-ocr/tesseract)
 
 ---
 
-## 🌟 Key Features
+## Setup & Installation
 
-### 🏆 Smart Farming Tools
-✔ **Soil Analysis & Crop Suggestion** – Know what to plant based on soil quality.  
-✔ **Weather Alerts** – Get forecasts to plan farming activities.  
-✔ **Market Prices** – Track crop price trends to sell at the best rates.  
-✔ **Government Schemes** – Find and apply for subsidies easily.  
-✔ **Equipment Services** – Rent, share, or book farm equipment.  
-✔ **Real-time News** – Stay updated on agriculture trends.  
+### 1. Prerequisites
+
+Ensure you have the following installed:
+
+- **Node.js** (v18 or later)
+- **Python** (v3.9 or later)
+- **PostgreSQL**
+- **Tesseract OCR** (For the ML server's OCR features)
+  - _Windows_: Download from [UB-Mannheim](https://github.com/UB-Mannheim/tesseract/wiki).
+  - _macOS_: `brew install tesseract`
+
+### 2. Database Setup
+
+1. Create a PostgreSQL database named `odooagrisutra`.
+2. Ensure you have the credentials (user and password) ready.
+
+### 3. Environment Configuration
+
+Create a `.env` file in the `AgriSutra` directory with the following variables:
+
+```env
+PORT=3001
+DATABASE_URL="postgresql://username:password@localhost:5432/odooagrisutra"
+JWT_SECRET=your_jwt_secret
+NEXT_PUBLIC_OPENWEATHER_API_KEY=your_openweather_api_key
+NEXT_PUBLIC_TOMORROW_API_KEY=your_tomorrow_api_key
+EMAIL_USER=your_email
+EMAIL_PASS=your_email_app_password
+```
+
+### 4. Install Dependencies
+
+#### Frontend & Backend API
+
+```bash
+cd AgriSutra
+npm install
+```
+
+#### Machine Learning Server
+
+We recommend using a virtual environment:
+
+```bash
+# Create virtual environment
+python -m venv venv
+
+# Activate virtual environment
+# Windows:
+venv\Scripts\activate
+# Unix/macOS:
+source venv/bin/activate
+
+# Install requirements
+pip install -r requirements.txt
+```
+
+---
+
+## Running the Application
+
+To fully run AgriSutra, you need to start three separate services. Open three terminal windows or tabs:
+
+### Tab 1: Frontend (Next.js)
+
+```bash
+cd AgriSutra
+npm run dev
+```
+
+The frontend will be available at `http://localhost:3000`.
+
+### Tab 2: Backend API (Express)
+
+```bash
+cd AgriSutra
+npm run server
+```
+
+The API will run on `http://localhost:3001`.
+
+### Tab 3: ML Server (Flask)
+
+```bash
+cd AgriSutra
+# Ensure venv is activated
+python server/server.py
+```
+
+The ML server will run on `http://localhost:8000`.
+
+---
+
+## Project Structure
+
+```text
+odoo_agrisutra/
+├── AgriSutra/
+│   ├── app/                # Next.js App Router (Frontend Pages)
+│   ├── components/         # Reusable UI Components
+│   ├── server/
+│   │   ├── server.js       # Express Backend Entry Point
+│   │   ├── server.py       # Flask ML/OCR Server
+│   │   ├── routes/         # Express API Routes
+│   │   └── models/         # Database Models
+│   ├── requirements.txt    # Python Dependencies
+│   └── package.json        # Node.js Dependencies
+└── image[1-5].png          # UI Screenshots
+```
 
 ---
 
 ## 🏛 Civic Tech for Farmers
-We chose the **Civic Tech** category because AgriSutra solves real-life problems for farmers, particularly small-scale ones. 🌍 By providing essential farming insights, we **empower rural communities and promote sustainable agriculture**. 
+
+We chose the **Civic Tech** category because AgriSutra solves real-life problems for farmers, particularly small-scale ones. 🌍 By providing essential farming insights, we **empower rural communities and promote sustainable agriculture**.
 
 ### 📊 Quick Facts:
+
 - 📡 **Digital advisory services** can **increase crop yield by 20-30%** 🌾
 - 📉 Only **30-40% of eligible farmers** successfully access government subsidies
 - 🚜 **Post-harvest losses** account for up to **40% of total produce**
@@ -73,22 +172,26 @@ AgriSutra helps farmers overcome these challenges with **simple and effective te
 ## 💻 Tech Stack
 
 ### 🖥 Frontend:
+
 - ⚡ **Next.js** – Fast, scalable web apps
 - 🛠 **TypeScript** – Ensures clean, bug-free code
 
 ### 🚀 Backend:
+
 - 🌐 **Express.js (JavaScript)** – Manages API requests
 - 🐍 **Flask (Python)** – Runs AI-powered insights
 
 ### 🗄 Database:
+
 - 🗃 **PostgreSQL** – Stores structured farming data
 
 ### 🧠 Machine Learning:
+
 - 🤖 **Python (ML models)** – Provides smart recommendations
 - 🔥 **Flask API** – Serves AI insights to users
 
 ---
 
 ## 📢 Join the AgriSutra Revolution! 🚜
-We believe **technology can transform farming** and make life easier for millions of farmers. **AgriSutra is built for them!** ❤️
 
+We believe **technology can transform farming** and make life easier for millions of farmers. **AgriSutra is built for them!** ❤️

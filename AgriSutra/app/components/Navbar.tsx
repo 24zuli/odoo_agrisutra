@@ -73,7 +73,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const storedSchemes = JSON.parse(
-      localStorage.getItem("savedSchemes") || "[]"
+      localStorage.getItem("savedSchemes") || "[]",
     );
     setSavedSchemes(storedSchemes);
   }, []);
@@ -102,6 +102,13 @@ export default function Navbar() {
               >
                 <Menu className="h-6 w-6" />
               </button>
+              {!isSidebarOpen && (
+                <div className="ml-3 flex items-center">
+                  <span className="text-xl font-bold text-green-600">
+                    AgriSutra
+                  </span>
+                </div>
+              )}
             </div>
             <div className="flex items-center space-x-4">
               {/* <button className="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none">

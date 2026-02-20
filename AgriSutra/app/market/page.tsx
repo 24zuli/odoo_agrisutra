@@ -199,23 +199,24 @@ export default function MarketPage() {
             <tbody>
               {data.map((item, idx) => (
                 <tr
-                  key={idx}
-                  className="transition-colors duration-200 hover:bg-green-100 hover:scale-105"
-                >
-                  <td className="border p-3 text-green-700">{idx + 1}</td>
-                  <td className="border p-3 text-green-700">{item.City}</td>
-                  <td className="border p-3 text-green-700">{item.Commodity}</td>
-                  <td className="border p-3 text-green-700">
-                    {item["Min Price"]}
-                  </td>
-                  <td className="border p-3 text-green-700">
-                    {item["Max Price"]}
-                  </td>
-                  <td className="border p-3 text-green-700">
-                    {item["Model Price"]}
-                  </td>
-                  <td className="border p-3 text-green-700">{item.Date}</td>
-                </tr>
+                key={idx}
+                className="transition-colors duration-200 hover:bg-green-100 hover:scale-105"
+              >
+                <td className="border p-3 text-green-700">{idx + 1}</td>
+                <td className="border p-3 text-green-700">{item.City}</td>
+                <td className="border p-3 text-green-700">{item.Commodity}</td>
+                <td className="border p-3 text-green-700">
+                  {item["Min Price"]} rs/qtl
+                </td>
+                <td className="border p-3 text-green-700">
+                  {item["Max Price"]} rs/qtl
+                </td>
+                <td className="border p-3 text-green-700">
+                  {item["Model Price"]} rs/qtl
+                </td>
+                <td className="border p-3 text-green-700">{item.Date}</td>
+              </tr>
+              
               ))}
             </tbody>
           </table>
