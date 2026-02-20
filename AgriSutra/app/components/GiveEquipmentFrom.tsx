@@ -17,7 +17,11 @@ const GiveEquipmentForm = ({ category }: { category: string }) => {
     phone_number: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -28,7 +32,7 @@ const GiveEquipmentForm = ({ category }: { category: string }) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-  
+
     const payload = {
       name: formData.name,
       description: formData.description,
@@ -38,51 +42,63 @@ const GiveEquipmentForm = ({ category }: { category: string }) => {
       phone_number: formData.phone_number,
       category: category,
     };
-  
+
     try {
       const token = localStorage.getItem("token"); // ✅ Get token from storage
-  
-      const response = await fetch(`http://localhost:3001/api/equipment`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${token}`, // ✅ Send token in request
-        },
-        body: JSON.stringify(payload),
-      });
-  
+
+      const response = await fetch(
+        `https://backend-agrisutra.onrender.com/api/equipment`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`, // ✅ Send token in request
+          },
+          body: JSON.stringify(payload),
+        }
+      );
+
       const responseData = await response.json();
-  
+
       if (response.ok) {
         alert("Equipment listed successfully!");
         router.push(`/`);
       } else {
         console.error("🔥 Error Response:", responseData);
-        alert("Failed to list equipment. " + (responseData.error || "Unknown Error"));
+        alert(
+          "Failed to list equipment. " + (responseData.error || "Unknown Error")
+        );
       }
     } catch (error) {
       console.error("🔥 Network Error:", error);
       alert("A network error occurred. Please try again.");
     }
   };
-    
 
   return (
     <div className="max-w-4xl mx-auto p-6">
       {/* Back Button */}
-      <button className="flex items-center text-black-600 hover:text-black mb-6" onClick={() => router.back()}>
-        <FaArrowLeft className="mr-3" /> <h6 className="text-2xl font-bold mb-1">List Your {category}</h6>
+      <button
+        className="flex items-center text-black-600 hover:text-black mb-6"
+        onClick={() => router.back()}
+      >
+        <FaArrowLeft className="mr-3" />{" "}
+        <h6 className="text-2xl font-bold mb-1">List Your {category}</h6>
       </button>
 
       {/* Title */}
       {/* <h1 className="text-3xl font-bold mb-4">List Your {category}</h1> */}
 
       <p className="text-gray-600 mb-6">
-        List your farming equipment for others to use. Fill out the details below to make your equipment available.
+        List your farming equipment for others to use. Fill out the details
+        below to make your equipment available.
       </p>
 
       {/* Form */}
-      <form onSubmit={handleSubmit} className="bg-white p-6 shadow-md rounded-lg">
+      <form
+        onSubmit={handleSubmit}
+        className="bg-white p-6 shadow-md rounded-lg"
+      >
         {/* Equipment Name */}
         <label className="block font-semibold">Equipment Name</label>
         <input
@@ -137,7 +153,12 @@ const GiveEquipmentForm = ({ category }: { category: string }) => {
 
         {/* Availability */}
         <label className="block font-semibold">Availability</label>
-        <select name="availability" value={formData.availability} onChange={handleChange} className="w-full p-2 border rounded-lg mb-4">
+        <select
+          name="availability"
+          value={formData.availability}
+          onChange={handleChange}
+          className="w-full p-2 border rounded-lg mb-4"
+        >
           <option>Available Now</option>
           <option>Not Available</option>
         </select>
@@ -159,7 +180,10 @@ const GiveEquipmentForm = ({ category }: { category: string }) => {
         />
 
         {/* Submit Button */}
-        <button type="submit" className="w-full bg-green-600 text-white p-3 rounded-lg font-semibold">
+        <button
+          type="submit"
+          className="w-full bg-green-600 text-white p-3 rounded-lg font-semibold"
+        >
           List Equipment
         </button>
       </form>

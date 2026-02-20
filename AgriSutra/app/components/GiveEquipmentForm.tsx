@@ -34,14 +34,17 @@ const GiveEquipmentForm = ({ category }: { category: string }) => {
     try {
       const token = localStorage.getItem("token"); 
 
-      const response = await fetch(`http://localhost:3001/api/equipment`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify(payload),
-      });
+      const response = await fetch(
+        `https://backend-agrisutra.onrender.com/api/equipment`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify(payload),
+        }
+      );
 
       const responseData = await response.json();
 

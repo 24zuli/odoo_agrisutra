@@ -245,7 +245,7 @@ export default function Chatbot() {
 
     try {
       const response = await fetch(
-        `http://localhost:3001/api/chat?lang=${language}&first=${isFirstMessage}`,
+        `https://backend-agrisutra.onrender.com/api/chat?lang=${language}&first=${isFirstMessage}`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

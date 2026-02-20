@@ -60,7 +60,7 @@ export default function MarketPage() {
   useEffect(() => {
     if (commodity && state && district) {
       setAppUrl(
-        `http://localhost:3001/api/market-trends?commodity=${commodity}&state=${state}&market=${district}`
+        `https://backend-agrisutra.onrender.com/api/market-trends?commodity=${commodity}&state=${state}&market=${district}`,
       );
     }
   }, [commodity, state, district]);
@@ -199,24 +199,25 @@ export default function MarketPage() {
             <tbody>
               {data.map((item, idx) => (
                 <tr
-                key={idx}
-                className="transition-colors duration-200 hover:bg-green-100 hover:scale-105"
-              >
-                <td className="border p-3 text-green-700">{idx + 1}</td>
-                <td className="border p-3 text-green-700">{item.City}</td>
-                <td className="border p-3 text-green-700">{item.Commodity}</td>
-                <td className="border p-3 text-green-700">
-                  {item["Min Price"]} rs/qtl
-                </td>
-                <td className="border p-3 text-green-700">
-                  {item["Max Price"]} rs/qtl
-                </td>
-                <td className="border p-3 text-green-700">
-                  {item["Model Price"]} rs/qtl
-                </td>
-                <td className="border p-3 text-green-700">{item.Date}</td>
-              </tr>
-              
+                  key={idx}
+                  className="transition-colors duration-200 hover:bg-green-100 hover:scale-105"
+                >
+                  <td className="border p-3 text-green-700">{idx + 1}</td>
+                  <td className="border p-3 text-green-700">{item.City}</td>
+                  <td className="border p-3 text-green-700">
+                    {item.Commodity}
+                  </td>
+                  <td className="border p-3 text-green-700">
+                    {item["Min Price"]} rs/qtl
+                  </td>
+                  <td className="border p-3 text-green-700">
+                    {item["Max Price"]} rs/qtl
+                  </td>
+                  <td className="border p-3 text-green-700">
+                    {item["Model Price"]} rs/qtl
+                  </td>
+                  <td className="border p-3 text-green-700">{item.Date}</td>
+                </tr>
               ))}
             </tbody>
           </table>
@@ -225,176 +226,3 @@ export default function MarketPage() {
     </div>
   );
 }
-
-
-// // pages/MarketGraphPage.tsx
-// 'use client';
-
-// import React, { useEffect, useState } from 'react';
-// import {
-//   LineChart,
-//   Line,
-//   XAxis,
-//   YAxis,
-//   Tooltip,
-//   CartesianGrid,
-//   ResponsiveContainer,
-//   Legend,
-// } from 'recharts';
-
-// interface MarketData {
-//   'S.No': number;
-//   City: string;
-//   Commodity: string;
-//   'Min Price': number;
-//   'Max Price': number;
-//   'Model Price': number;
-//   Date: string;
-// }
-
-// export default function MarketGraphPage() {
-//   const [data, setData] = useState<MarketData[]>([]);
-//   const [loading, setLoading] = useState(false);
-//   const [error, setError] = useState("");
-
-//   // Filter states for user selection
-//   const [commodity, setCommodity] = useState("Tomato");
-//   const [stateName, setStateName] = useState("Maharashtra");
-//   const [market, setMarket] = useState("Mumbai");
-
-//   // To trigger a new fetch when the user submits the form
-//   const [filters, setFilters] = useState({ commodity, state: stateName, market });
-
-//   useEffect(() => {
-//     const fetchData = async () => {
-//       setLoading(true);
-//       setError("");
-//       try {
-//         const response = await fetch(
-//           `http://localhost:3001/api/market-trends?commodity=${encodeURIComponent(filters.commodity)}&state=${encodeURIComponent(filters.state)}&market=${encodeURIComponent(filters.market)}`
-//         );
-//         if (!response.ok) throw new Error('Failed to fetch data');
-//         const json = await response.json();
-
-//         // Defensive mapping + validation
-//         const formatted = Array.isArray(json)
-//           ? json
-//               .filter(item =>
-//                 item &&
-//                 item.Date &&
-//                 !isNaN(new Date(item.Date).getTime()) &&
-//                 !isNaN(Number(item['Min Price'])) &&
-//                 !isNaN(Number(item['Max Price'])) &&
-//                 !isNaN(Number(item['Model Price']))
-//               )
-//               .map((item) => ({
-//                 ...item,
-//                 'Min Price': Number(item['Min Price']),
-//                 'Max Price': Number(item['Max Price']),
-//                 'Model Price': Number(item['Model Price']),
-//               }))
-//               .sort((a, b) => new Date(a.Date).getTime() - new Date(b.Date).getTime())
-//           : [];
-
-//         setData(formatted);
-//       } catch (err: any) {
-//         setError(err.message || 'Something went wrong');
-//       } finally {
-//         setLoading(false);
-//       }
-//     };
-
-//     fetchData();
-//   }, [filters]);
-
-//   // Form submission handler to update filters
-//   const handleSubmit = (e: React.FormEvent) => {
-//     e.preventDefault();
-//     setFilters({ commodity, state: stateName, market });
-//   };
-
-//   return (
-//     <div className="p-6 bg-green-50 min-h-screen">
-//       <h1 className="text-3xl font-bold text-green-800 mb-6 text-center">
-//         Market Price Trend 📈
-//       </h1>
-
-//       {/* Form for user to select filters */}
-//       <form onSubmit={handleSubmit} className="mb-6 max-w-2xl mx-auto bg-white rounded shadow p-4">
-//         <div className="mb-4">
-//           <label className="block font-medium mb-1">Commodity:</label>
-//           <input
-//             type="text"
-//             value={commodity}
-//             onChange={(e) => setCommodity(e.target.value)}
-//             className="w-full p-2 border rounded"
-//             placeholder="Enter commodity"
-//           />
-//         </div>
-//         <div className="mb-4">
-//           <label className="block font-medium mb-1">State:</label>
-//           <input
-//             type="text"
-//             value={stateName}
-//             onChange={(e) => setStateName(e.target.value)}
-//             className="w-full p-2 border rounded"
-//             placeholder="Enter state"
-//           />
-//         </div>
-//         <div className="mb-4">
-//           <label className="block font-medium mb-1">Market:</label>
-//           <input
-//             type="text"
-//             value={market}
-//             onChange={(e) => setMarket(e.target.value)}
-//             className="w-full p-2 border rounded"
-//             placeholder="Enter market"
-//           />
-//         </div>
-//         <button type="submit" className="w-full bg-green-600 text-white p-2 rounded">
-//           Get Data
-//         </button>
-//       </form>
-
-//       {/* Display selected filters above the graph */}
-//       <div className="text-center mb-4">
-//         <p>
-//           <strong>Commodity:</strong> {filters.commodity} | <strong>State:</strong> {filters.state} | <strong>Market:</strong> {filters.market}
-//         </p>
-//       </div>
-
-//       {loading ? (
-//         <p className="text-center text-green-700 font-semibold">Loading data...</p>
-//       ) : error ? (
-//         <p className="text-center text-red-500 font-medium">
-//           {error || "We couldn't fetch the data. Please try again later."}
-//         </p>
-//       ) : data.length === 0 ? (
-//         <p className="text-center text-gray-600">
-//           No data available for selected filters.
-//         </p>
-//       ) : (
-//         <div className="max-w-4xl mx-auto bg-white rounded shadow p-4">
-//           <ResponsiveContainer width="100%" height={400}>
-//             <LineChart data={data} margin={{ top: 10, right: 30, bottom: 10, left: 0 }}>
-//               <CartesianGrid strokeDasharray="3 3" />
-//               <XAxis
-//                 dataKey="Date"
-//                 tickFormatter={(date) => {
-//                   const d = new Date(date);
-//                   return `${d.getDate()}/${d.getMonth() + 1}`;
-//                 }}
-//               />
-//               <YAxis />
-//               <Tooltip />
-//               <Legend />
-//               <Line type="monotone" dataKey="Min Price" stroke="#8884d8" strokeWidth={2} />
-//               <Line type="monotone" dataKey="Max Price" stroke="#82ca9d" strokeWidth={2} />
-//               <Line type="monotone" dataKey="Model Price" stroke="#ffc658" strokeWidth={2} />
-//             </LineChart>
-//           </ResponsiveContainer>
-//         </div>
-//       )}
-//     </div>
-//   );
-// }

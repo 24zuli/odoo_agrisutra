@@ -27,7 +27,7 @@ export default function ResetPassword() {
 
     try {
       const response = await fetch(
-        "http://localhost:3001/api/auth/reset-password",
+        "https://backend-agrisutra.onrender.com/api/auth/reset-password",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

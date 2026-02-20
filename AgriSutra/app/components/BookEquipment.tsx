@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { fetchEquipmentDetails, bookEquipment } from "@/lib/apiCalls";
+import { ArrowLeft } from "lucide-react"; // ✅ Added icon
 
 const BookEquipment = ({ category }: { category: string }) => {
   const searchParams = useSearchParams();
@@ -24,16 +25,16 @@ const BookEquipment = ({ category }: { category: string }) => {
       alert("Please select start and end dates.");
       return;
     }
-    
+
     if (!equipmentId) {
-        alert("Equipment ID is missing!");
-        return;
+      alert("Equipment ID is missing!");
+      return;
     }
+
     const response = await bookEquipment(equipmentId, startDate, endDate);
     if (response.success) {
       alert("Booking confirmed!");
-    //   router.push(`/equipment/${category}/takeEquipment`);
-      router.push(`/equipment`);  
+      router.push(`/equipment`);
     } else {
       alert("Failed to book equipment.");
     }
@@ -43,12 +44,16 @@ const BookEquipment = ({ category }: { category: string }) => {
 
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-4">Book {equipment.name}</h1>
-      {/* <img
-        src={equipment.image_url || "/placeholder.jpg"}
-        alt={equipment.name}
-        className="w-full h-64 object-cover rounded-lg mb-4"
-      /> */}
+      {/* ✅ Arrow + Title inline */}
+      <div className="flex items-center gap-3 mb-4">
+        <ArrowLeft
+          className="w-6 h-6 cursor-pointer text-green-600 hover:text-green-800"
+          onClick={() => router.back()}
+        />
+        <h1 className="text-3xl font-bold">Book {equipment.name}</h1>
+      </div>
+
+      {/* Description & Details */}
       <p className="text-gray-600">{equipment.description}</p>
       <p className="text-green-600 font-semibold mt-2">
         ₹{equipment.price}/day

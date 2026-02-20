@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import CategoryCard from "../components/CategoryCard"; 
-import { Category } from "../types/equipment"; 
-import { fetchCategories } from "../../lib/apiCalls"; 
+import CategoryCard from "../components/CategoryCard";
+import { Category } from "../types/equipment";
+import { fetchCategories } from "../../lib/apiCalls";
 import { useRouter } from "next/navigation";
-import { FaSearch, FaArrowLeft } from "react-icons/fa"; 
+import { FaSearch, FaArrowLeft } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
 const EquipmentPage = () => {
@@ -15,7 +15,9 @@ const EquipmentPage = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [error, setError] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(true);
-  const [location, setLocation] = useState<{ lat: number; lng: number } | null>(null);
+  const [location, setLocation] = useState<{ lat: number; lng: number } | null>(
+    null
+  );
   const [locationError, setLocationError] = useState<string>("");
 
   const getToken = () => {
@@ -79,7 +81,7 @@ const EquipmentPage = () => {
 
           try {
             const response = await fetch(
-              `http://localhost:3001/api/users/update-location/${userId}`,
+              `https://backend-agrisutra.onrender.com/api/users/update-location/${userId}`,
               {
                 method: "PUT",
                 headers: {
@@ -135,13 +137,15 @@ const EquipmentPage = () => {
   return (
     <div className="max-w-6xl mx-auto px-6 py-8">
       <div className="flex items-center mb-6">
-        <button 
-          onClick={() => window.history.back()} 
+        <button
+          onClick={() => window.history.back()}
           className="mr-1 p-2 text-black-600 hover:text-black"
         >
           <FaArrowLeft size={20} />
         </button>
-        <h1 className="text-2xl font-bold text-left mb-1">{t("equipment.farmingEquipments")}</h1>
+        <h1 className="text-2xl font-bold text-left mb-1">
+          {t("equipment.farmingEquipments")}
+        </h1>
       </div>
 
       <div className="flex justify-center mb-6">
@@ -158,13 +162,17 @@ const EquipmentPage = () => {
       </div>
 
       {loading ? (
-        <p className="text-center text-gray-500">{t("equipment.loadingCategories")}</p>
+        <p className="text-center text-gray-500">
+          {t("equipment.loadingCategories")}
+        </p>
       ) : error ? (
         <p className="text-center text-red-500">{error}</p>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {filteredCategories.length === 0 ? (
-            <p className="text-center text-gray-500">{t("equipment.noCategoriesFound")}</p>
+            <p className="text-center text-gray-500">
+              {t("equipment.noCategoriesFound")}
+            </p>
           ) : (
             filteredCategories.map((category) => (
               <CategoryCard

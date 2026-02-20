@@ -26,8 +26,8 @@
 
 //     // Query the database for the crop description (case-insensitive match)
 //     const queryText = `
-//       SELECT description 
-//       FROM crops 
+//       SELECT description
+//       FROM crops
 //       WHERE LOWER(name) = LOWER($1)
 //       LIMIT 1
 //     `;
@@ -57,8 +57,6 @@
 // }
 
 // module.exports = { predictCrop };
-
-
 const multer = require("multer");
 const path = require("path");
 const fs = require("fs");

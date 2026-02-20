@@ -2,7 +2,9 @@
 import { jwtDecode } from "jwt-decode";
 export const fetchCategories = async () => {
     try {
-      const res = await fetch("http://localhost:3001/api/categories"); // Your API URL
+      const res = await fetch(
+        "https://backend-agrisutra.onrender.com/api/categories"
+      ); // Your API URL
       if (!res.ok) {
         throw new Error("Failed to fetch categories");
       }
@@ -16,7 +18,9 @@ export const fetchCategories = async () => {
   
 export const fetchEquipmentByCategory = async (category: string) => {
     try {
-      const response = await fetch(`http://localhost:3001/api/equipment/${category}`);
+      const response = await fetch(
+        `https://backend-agrisutra.onrender.com/api/equipment/${category}`
+      );
       if (!response.ok) throw new Error("Failed to fetch equipment");
       return await response.json();
     } catch (error) {
