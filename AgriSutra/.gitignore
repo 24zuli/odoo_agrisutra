@@ -1,41 +1,70 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Dependencies
+node_modules/
+frontend/node_modules/
+backend/node_modules/
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-package-lock.json
-package.json
+# Next.js Build
+.next/
+frontend/.next/
+out/
 
-# testing
-/coverage
+# Production
+build/
+dist/
 
-# next.js
-/.next/
-/out/
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+backend/env/
+venv/
+backend/venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.prototxt
+*.weights
+*.h5
 
-# production
-/build
-
-# misc
-.DS_Store
+# Environment & Sensitive Data
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+backend/.env
+frontend/.env
 *.pem
 
-# debug
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
-.env
+# Database
+*.sqlite
+backend/*.db
+backend/odooagrisutra.sql
 
-# vercel
+# Misc
+.cache/
 .vercel
-
-# typescript
-*.tsbuildinfo
 next-env.d.ts
+*.tsbuildinfo
 next.config.js
-
-# virtual environment
-venv/
+frontend/next.config.js

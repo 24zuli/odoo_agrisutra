@@ -61,7 +61,7 @@ Ensure you have the following installed:
 
 ### 3. Environment Configuration
 
-Create a `.env` file in the `AgriSutra` directory with the following variables:
+Create a `.env` file in the `AgriSutra/backend` directory with the following variables:
 
 ```env
 PORT=3001
@@ -75,82 +75,69 @@ EMAIL_PASS=your_email_app_password
 
 ### 4. Install Dependencies
 
-#### Frontend & Backend API
+You can now install dependencies for both the frontend and backend with a single command from the `AgriSutra` (root) folder:
 
 ```bash
 cd AgriSutra
-npm install
-```
-
-#### Machine Learning Server
-
-We recommend using a virtual environment:
-
-```bash
-# Create virtual environment
-python -m venv venv
-
-# Activate virtual environment
-# Windows:
-venv\Scripts\activate
-# Unix/macOS:
-source venv/bin/activate
-
-# Install requirements
-pip install -r requirements.txt
+npm run install:all
 ```
 
 ---
 
 ## Running the Application
 
-To fully run AgriSutra, you need to start three separate services. Open three terminal windows or tabs:
+AgriSutra is now split into a **Frontend** and **Backend**. You can run both from the root `AgriSutra` folder:
 
-### Tab 1: Frontend (Next.js)
-
-```bash
-cd AgriSutra
-npm run dev
-```
-
-The frontend will be available at `http://localhost:3000`.
-
-### Tab 2: Backend API (Express)
+### Start Frontend (Next.js)
 
 ```bash
-cd AgriSutra
-npm run server
+npm run dev:frontend
 ```
 
-The API will run on `http://localhost:3001`.
+_Frontend will be available at `http://localhost:3000`._
 
-### Tab 3: ML Server (Flask)
+### Start Backend (Express & Flask)
 
 ```bash
-cd AgriSutra
-# Ensure venv is activated
-python server/server.py
+npm run dev:backend
 ```
 
-The ML server will run on `http://localhost:8000`.
+_The API runs on `http://localhost:3001` and the Flask server on `http://localhost:8000`._
+
+---
+
+## 🌍 Multi-Language Support
+
+AgriSutra supports **English, Gujarati, Hindi, and Marathi** out of the box. We have implemented an automated translation pipeline:
+
+- **Auto-Extraction**: New text added to the code is automatically detected.
+- **AI Translation**: Use a single command to translate the entire app into any Indian language.
+
+To update translations after adding new features:
+
+```bash
+cd frontend
+npm run i18n:update
+```
 
 ---
 
 ## Project Structure
 
 ```text
-odoo_agrisutra/
-├── AgriSutra/
-│   ├── app/                # Next.js App Router (Frontend Pages)
-│   ├── components/         # Reusable UI Components
-│   ├── server/
-│   │   ├── server.js       # Express Backend Entry Point
-│   │   ├── server.py       # Flask ML/OCR Server
-│   │   ├── routes/         # Express API Routes
-│   │   └── models/         # Database Models
-│   ├── requirements.txt    # Python Dependencies
-│   └── package.json        # Node.js Dependencies
-└── image[1-5].png          # UI Screenshots
+AgriSutra/
+├── frontend/           # Next.js Application
+│   ├── app/            # Pages & Routes
+│   ├── components/     # UI Components
+│   ├── locales/        # Translation JSONs (EN, GU, HI, MR)
+│   └── scripts/        # Translation Automation
+├── backend/            # Server-side Logic
+│   ├── models/         # Database Schema
+│   ├── routes/         # API Endpoints
+│   ├── ML_Models/      # AI Models (KNN, etc.)
+│   ├── server.js       # Node Server
+│   └── server.py       # Flask AI/ML Server
+└── package.json        # Root Orchestration
 ```
 
 ---
