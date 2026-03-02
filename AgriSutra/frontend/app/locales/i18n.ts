@@ -19,9 +19,15 @@ const loadResources = () => {
 };
 
 if (!i18n.isInitialized) {
+  // Detect language from localStorage or default to 'en'
+  const savedLanguage =
+    typeof window !== "undefined"
+      ? localStorage.getItem("language") || "en"
+      : "en";
+
   i18n.use(initReactI18next).init({
     resources: loadResources(),
-    lng: "en", // default language
+    lng: savedLanguage,
     fallbackLng: "en",
     interpolation: { escapeValue: false },
   });

@@ -1,28 +1,4 @@
-// lib/api/profile.ts
-export interface ProfileData {
-  id: number;
-  name?: string;
-  username?: string;
-  email?: string;
-  gender?: string;
-  date_of_birth?: string; // ISO format (YYYY-MM-DD)
-  state?: string;
-  district?: string;
-  phone_number?: string;
-  profile_completed: boolean;
-  created_at?: string;
-  updated_at?: string;
-}
-
-// export async function getProfile(): Promise<ProfileData> {
-//   // Get the user ID from localStorage (or your auth context)
-//   const id = localStorage.getItem("userId");
-//   const res = await fetch(`http://localhost:3001/api/profile?userId=${id}`);
-//   if (!res.ok) {
-//     throw new Error("Failed to fetch profile");
-//   }
-//   return res.json();
-// }
+import { API_BASE_URL } from "./constants";
 
 // lib/api/profile.ts
 export interface ProfileData {
@@ -43,9 +19,7 @@ export interface ProfileData {
 export async function getProfile(): Promise<ProfileData> {
   // Get the user ID from localStorage (or your auth context)
   const id = localStorage.getItem("userId");
-  const res = await fetch(
-    `https://backend-agrisutra.onrender.com/api/profile?userId=${id}`
-  );
+  const res = await fetch(`${API_BASE_URL}/api/profile?userId=${id}`);
   if (!res.ok) {
     throw new Error("Failed to fetch profile");
   }
@@ -53,17 +27,14 @@ export async function getProfile(): Promise<ProfileData> {
 }
 
 export async function updateProfile(
-  data: Partial<ProfileData>
+  data: Partial<ProfileData>,
 ): Promise<ProfileData> {
   const id = localStorage.getItem("userId");
-  const res = await fetch(
-    `https://backend-agrisutra.onrender.com/api/profile`,
-    {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    }
-  );
+  const res = await fetch(`${API_BASE_URL}/api/profile`, {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
 
   if (!res.ok) {
     throw new Error("Failed to update profile");

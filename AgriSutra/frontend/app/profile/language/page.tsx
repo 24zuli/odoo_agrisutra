@@ -4,14 +4,15 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 
-// 1. Import the translation hook
+// 1. Import the translation hook and the configured i18n instance
 import { useTranslation } from "react-i18next";
+import i18n from "../../locales/i18n";
 
 export default function LanguageSelectionPage() {
   const router = useRouter();
   const [language, setLanguage] = useState("en");
 
-  // 2. Initialize the translation hook
+  // 2. Initialize the translation hook using our config
   const { t } = useTranslation();
 
   // Load the saved language from localStorage
@@ -24,10 +25,10 @@ export default function LanguageSelectionPage() {
   const handleSelectLanguage = (lang: string) => {
     localStorage.setItem("language", lang);
     setLanguage(lang);
+    // 4. Update the i18n instance immediately
+    i18n.changeLanguage(lang);
     // Force a page reload so the Navbar (which handles i18n) picks up the new language
     window.location.reload();
-    // OR, if you prefer, just go back:
-    // router.back();
   };
 
   // If you want a "Done" button that just goes back:

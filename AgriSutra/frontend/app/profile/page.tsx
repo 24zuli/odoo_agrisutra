@@ -16,6 +16,8 @@ import {
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
+import { API_BASE_URL } from "../../lib/constants";
+
 interface ProfileData {
   name: string;
   phone_number: string;
@@ -53,10 +55,16 @@ export default function ProfileHomePage() {
       try {
         console.log("🔹 Fetching profile for user ID:", storedUserId);
         const res = await fetch(
-          `https://backend-agrisutra.onrender.com/api/profile?userId=${storedUserId}`
+          `${API_BASE_URL}/api/profile?userId=${storedUserId}`,
         );
 
-        if (!res.ok) throw new Error("Failed to fetch profile");
+        if (!res.ok) {
+          const errorData = await res.json().catch(() => ({}));
+          throw new Error(
+            errorData.error ||
+              `Failed to fetch profile: ${res.status} ${res.statusText}`,
+          );
+        }
 
         const data = await res.json();
 

@@ -7,6 +7,8 @@ import { setToken, setUserId } from "../../lib/auth";
 import { Loader2 } from "lucide-react";
 import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
 
+import { API_BASE_URL } from "../../lib/constants";
+
 export default function Login() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
@@ -28,14 +30,11 @@ export default function Login() {
     }
 
     try {
-      const response = await fetch(
-        "https://backend-agrisutra.onrender.com/api/auth/login",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ username, password }),
-        }
-      );
+      const response = await fetch(`${API_BASE_URL}/api/auth/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password }),
+      });
 
       const data = await response.json();
       console.log("🔹 API Response:", data);
@@ -48,15 +47,15 @@ export default function Login() {
         throw new Error("Invalid response: Missing user data");
       }
 
-      localStorage.setItem("token", data.token);
-      localStorage.setItem("userId", data.user.id);
+      setToken(data.token);
+      setUserId(data.user.id);
 
       console.log("✅ User ID stored:", data.user.id);
 
       router.push("/");
     } catch (err) {
       setError(
-        (err as any).message || "Login failed. Please check your credentials."
+        (err as any).message || "Login failed. Please check your credentials.",
       );
     } finally {
       setLoading(false);
@@ -119,7 +118,7 @@ export default function Login() {
         </p>
 
         <p className="mt-6 text-center text-sm text-gray-600">
-          Don't have an account?{" "}
+          Don&apos;t have an account?{" "}
           <Link href="/signup" className="text-green-600 hover:text-green-500">
             Sign up
           </Link>
