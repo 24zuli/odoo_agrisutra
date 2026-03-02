@@ -4,7 +4,7 @@ const translate = require("google-translate-api-x");
 
 const localesDir = path.resolve(__dirname, "../app/locales");
 const sourceFile = path.resolve(localesDir, "en.json");
-const targetLocales = ["gu", "hi", "mr"]; // List of locales to translate TO
+const targetLocales = ["gu", "hi", "mr", "ta", "te", "kn", "ml", "bn", "pa"]; // List of locales to translate TO
 
 async function translateFile(targetLocale) {
   const targetPath = path.resolve(localesDir, `${targetLocale}.json`);
@@ -30,14 +30,32 @@ async function translateFile(targetLocale) {
       } else {
         // Translate only if missing or same as key (placeholder)
         if (!targetObj[key] || targetObj[key] === sourceObj[key]) {
-          try {
-            const res = await translate(sourceObj[key], { to: targetLocale });
-            targetObj[key] = res.text;
-            console.log(
-              `✓ Translated [${key}]: ${sourceObj[key]} -> ${res.text}`,
-            );
-          } catch (err) {
-            console.error(`✗ Error translating ${key}:`, err.message);
+          let retryCount = 0;
+          const maxRetries = 3;
+          while (retryCount < maxRetries) {
+            try {
+              const res = await translate(sourceObj[key], { to: targetLocale });
+              targetObj[key] = res.text;
+              console.log(
+                `✓ Translated [${key}]: ${sourceObj[key]} -> ${res.text}`,
+              );
+              // Add a larger delay to avoid rate limiting
+              await new Promise((resolve) => setTimeout(resolve, 3000));
+              break;
+            } catch (err) {
+              if (err.message.includes("Too Many Requests")) {
+                retryCount++;
+                const waitTime = retryCount * 10000; // 10s, 20s, 30s
+                console.error(
+                  `! Rate limit hit for ${key}. Retrying in ${waitTime / 1000}s... (Attempt ${retryCount}/${maxRetries})`,
+                );
+                await new Promise((resolve) => setTimeout(resolve, waitTime));
+              } else {
+                console.error(`✗ Error translating ${key}:`, err.message);
+                await new Promise((resolve) => setTimeout(resolve, 2000));
+                break;
+              }
+            }
           }
         }
       }

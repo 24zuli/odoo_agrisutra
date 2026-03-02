@@ -1,0 +1,384 @@
+{
+    "common": {
+        "welcome": "AgriSutra ಗೆ ಸುಸ್ವಾಗತ!"
+    },
+    "navbar": {
+        "dashboard": "ಡ್ಯಾಶ್‌ಬೋರ್ಡ್",
+        "profile": "ಪ್ರೊಫೈಲ್"
+    },
+    "homepage": {
+        "bannerTitle": "ಯಶಸ್ಸನ್ನು ಬೆಳೆಸಿಕೊಳ್ಳಿ",
+        "bannerQuote": "\"ರೈತ ಮಾತ್ರ ನಮ್ಮ ಆರ್ಥಿಕತೆಯಲ್ಲಿ ಎಲ್ಲವನ್ನೂ ಚಿಲ್ಲರೆಯಲ್ಲಿ ಖರೀದಿಸುತ್ತಾನೆ, ಎಲ್ಲವನ್ನೂ ಸಗಟು ಮಾರಾಟ ಮಾಡುತ್ತಾನೆ ಮತ್ತು ಎರಡೂ ರೀತಿಯಲ್ಲಿ ಸರಕುಗಳನ್ನು ಪಾವತಿಸುತ್ತಾನೆ.\"",
+        "governmentSchemesTitle": "ಸರ್ಕಾರದ ಯೋಜನೆಗಳು",
+        "governmentSchemesDescription": "ರೈತರಿಗೆ ಲಭ್ಯವಿರುವ ಇತ್ತೀಚಿನ ಸರ್ಕಾರದ ಉಪಕ್ರಮಗಳು ಮತ್ತು ಸಬ್ಸಿಡಿಗಳನ್ನು ಅನ್ವೇಷಿಸಿ.",
+        "exploreSchemes": "ಯೋಜನೆಗಳನ್ನು ಅನ್ವೇಷಿಸಿ",
+        "marketTrendsTitle": "ಕೃಷಿ ಮಾರುಕಟ್ಟೆ ಪ್ರವೃತ್ತಿಗಳು",
+        "marketTrendsDescription": "ಇತ್ತೀಚಿನ ಮಾರುಕಟ್ಟೆ ಬೆಲೆಗಳು ಮತ್ತು ಕೃಷಿ ಉತ್ಪನ್ನಗಳ ಪ್ರವೃತ್ತಿಗಳೊಂದಿಗೆ ನವೀಕೃತವಾಗಿರಿ.",
+        "viewAllTrends": "ಎಲ್ಲಾ ಟ್ರೆಂಡ್‌ಗಳನ್ನು ವೀಕ್ಷಿಸಿ",
+        "equipmentServicesTitle": "ಸಲಕರಣೆ ಸೇವೆಗಳು",
+        "tractorBooking": "ಟ್ರ್ಯಾಕ್ಟರ್ ಬುಕಿಂಗ್",
+        "tractorBookingDescription": "ನಿಮ್ಮ ಕೃಷಿ ಅಗತ್ಯಗಳಿಗಾಗಿ ಟ್ರಾಕ್ಟರ್‌ಗಳನ್ನು ಬುಕ್ ಮಾಡಿ.",
+        "irrigationEquipment": "ನೀರಾವರಿ ಸಲಕರಣೆ",
+        "irrigationEquipmentDescription": "ನೀರಿನ ಬಳಕೆಯನ್ನು ಅತ್ಯುತ್ತಮವಾಗಿಸಲು ಆಧುನಿಕ ನೀರಾವರಿ ಪರಿಹಾರಗಳು.",
+        "viewAllEquipment": "ಎಲ್ಲಾ ಸಲಕರಣೆಗಳನ್ನು ವೀಕ್ಷಿಸಿ",
+        "locationPermissionPopupTitle": "ಸ್ಥಳ ಪ್ರವೇಶವನ್ನು ಅನುಮತಿಸುವುದೇ?",
+        "locationPermissionPopupDescription": "ಲಭ್ಯವಿರುವ ಸಲಕರಣೆಗಳನ್ನು ತೋರಿಸಲು ನಮಗೆ ನಿಮ್ಮ ಸ್ಥಳದ ಅಗತ್ಯವಿದೆ.",
+        "allow": "ಅನುಮತಿಸಿ",
+        "deny": "ನಿರಾಕರಿಸು",
+        "soilAnalysisTitle": "ಮಣ್ಣಿನ ವಿಶ್ಲೇಷಣೆ",
+        "soilAnalysisDescription": "ನಿಮ್ಮ ಮಣ್ಣಿನ ಸ್ಥಿತಿಯನ್ನು ವಿಶ್ಲೇಷಿಸಿ ಮತ್ತು ಉತ್ತಮ ಬೆಳೆ ಇಳುವರಿಗಾಗಿ ಶಿಫಾರಸುಗಳನ್ನು ಪಡೆಯಿರಿ.",
+        "startAnalysis": "ವಿಶ್ಲೇಷಣೆಯನ್ನು ಪ್ರಾರಂಭಿಸಿ",
+        "allowLocation": "ಸ್ಥಳ ಪ್ರವೇಶವನ್ನು ಅನುಮತಿಸಿ",
+        "locationInfo": "ಲಭ್ಯವಿರುವ ಸಲಕರಣೆಗಳನ್ನು ತೋರಿಸಲು ನಮಗೆ ನಿಮ್ಮ ಸ್ಥಳದ ಅಗತ್ಯವಿದೆ."
+    },
+    "schemesPage": {
+        "schemeNotFound": "ಯೋಜನೆ ಕಂಡುಬಂದಿಲ್ಲ",
+        "schemeDetails": "ಯೋಜನೆಯ ವಿವರಗಳು",
+        "saveScheme": "ಸ್ಕೀಮ್ ಉಳಿಸಿ",
+        "schemeSavedSuccess": "ಯೋಜನೆಯನ್ನು ಯಶಸ್ವಿಯಾಗಿ ಉಳಿಸಲಾಗಿದೆ!",
+        "schemeSavedFail": "ಯೋಜನೆಯನ್ನು ಉಳಿಸಲು ವಿಫಲವಾಗಿದೆ.",
+        "mustBeLoggedIn": "ಸ್ಕೀಮ್ ಅನ್ನು ಉಳಿಸಲು ನೀವು ಲಾಗ್ ಇನ್ ಆಗಿರಬೇಕು.",
+        "governmentSchemes": "ಸರ್ಕಾರದ ಯೋಜನೆಗಳು",
+        "searchPlaceholder": "ಸ್ಕೀಮ್‌ಗಳನ್ನು ಹುಡುಕಿ...",
+        "trendingSchemes": "ಟ್ರೆಂಡಿಂಗ್ ಯೋಜನೆಗಳು",
+        "exploreMoreSchemes": "ಇನ್ನಷ್ಟು ಯೋಜನೆಗಳನ್ನು ಅನ್ವೇಷಿಸಿ",
+        "viewAll": "ಎಲ್ಲವನ್ನೂ ವೀಕ್ಷಿಸಿ",
+        "learnMore": "ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ"
+    },
+    "trendingSchemesPage": {
+        "title": "ಟ್ರೆಂಡಿಂಗ್ ಸರ್ಕಾರಿ ಯೋಜನೆಗಳು",
+        "searchPlaceholder": "ಟ್ರೆಂಡಿಂಗ್ ಸ್ಕೀಮ್‌ಗಳನ್ನು ಹುಡುಕಿ...",
+        "topTrendingSchemes": "ಟಾಪ್ ಟ್ರೆಂಡಿಂಗ್ ಯೋಜನೆಗಳು",
+        "learnMore": "ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ"
+    },
+    "allSchemesPage": {
+        "title": "ಎಲ್ಲಾ ಸರ್ಕಾರಿ ಯೋಜನೆಗಳು",
+        "searchPlaceholder": "ಸ್ಕೀಮ್‌ಗಳನ್ನು ಹುಡುಕಿ...",
+        "learnMore": "ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ"
+    },
+    "profilePage": {
+        "loading": "ಲೋಡ್ ಆಗುತ್ತಿದೆ...",
+        "errorLoadingProfile": "ಪ್ರೊಫೈಲ್ ಲೋಡ್ ಮಾಡುವಲ್ಲಿ ದೋಷ.",
+        "profileHeading": "ಪ್ರೊಫೈಲ್",
+        "editProfile": "ಪ್ರೊಫೈಲ್ ಸಂಪಾದಿಸಿ",
+        "equipmentHistory": "ಸಲಕರಣೆ ಇತಿಹಾಸ",
+        "trackEquipment": "ಸಲಕರಣೆಗಳನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಿ",
+        "languageSelection": "ಭಾಷೆಯ ಆಯ್ಕೆ",
+        "helpSupport": "ಸಹಾಯ ಮತ್ತು ಬೆಂಬಲ",
+        "rateUs": "ನಮ್ಮನ್ನು ರೇಟ್ ಮಾಡಿ",
+        "aboutUs": "ನಮ್ಮ ಬಗ್ಗೆ",
+        "logout": "ಲಾಗ್ಔಟ್"
+    },
+    "editProfilePage": {
+        "editProfile": "ಪ್ರೊಫೈಲ್ ಸಂಪಾದಿಸಿ",
+        "saving": "ಉಳಿಸಲಾಗುತ್ತಿದೆ...",
+        "save": "ಉಳಿಸಿ",
+        "loading": "ಲೋಡ್ ಆಗುತ್ತಿದೆ...",
+        "errorLoadingProfile": "ಪ್ರೊಫೈಲ್ ಲೋಡ್ ಮಾಡುವಲ್ಲಿ ದೋಷ.",
+        "nameLabel": "ಹೆಸರು *",
+        "usernameLabel": "ಬಳಕೆದಾರ ಹೆಸರು *",
+        "emailLabel": "ಇಮೇಲ್ *",
+        "genderLabel": "ಲಿಂಗ",
+        "selectGender": "ಲಿಂಗವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+        "male": "ಪುರುಷ",
+        "female": "ಹೆಣ್ಣು",
+        "other": "ಇತರೆ",
+        "dateOfBirth": "ಹುಟ್ಟಿದ ದಿನಾಂಕ",
+        "state": "ರಾಜ್ಯ",
+        "district": "ಜಿಲ್ಲೆ",
+        "phoneNumberLabel": "ದೂರವಾಣಿ ಸಂಖ್ಯೆ *",
+        "failedToUpdateProfile": "ಪ್ರೊಫೈಲ್ ಅನ್ನು ನವೀಕರಿಸಲು ವಿಫಲವಾಗಿದೆ"
+    },
+    "ratePage": {
+        "rateUs": "ನಮ್ಮನ್ನು ರೇಟ್ ಮಾಡಿ",
+        "rateOurApp": "ನಮ್ಮ ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ರೇಟ್ ಮಾಡಿ",
+        "tellUsHowWeAreDoing": "ನಾವು ಹೇಗೆ ಮಾಡುತ್ತಿದ್ದೇವೆ ಎಂದು ನಮಗೆ ತಿಳಿಸಿ",
+        "tapAStar": "ರೇಟ್ ಮಾಡಲು ನಕ್ಷತ್ರವನ್ನು ಟ್ಯಾಪ್ ಮಾಡಿ",
+        "pleaseSelectRating": "ಸಲ್ಲಿಸುವ ಮೊದಲು ದಯವಿಟ್ಟು ರೇಟಿಂಗ್ ಆಯ್ಕೆಮಾಡಿ.",
+        "submittedRating": "ನೀವು {{rating}} ನಕ್ಷತ್ರಗಳ ರೇಟಿಂಗ್ ಅನ್ನು ಸಲ್ಲಿಸಿದ್ದೀರಿ!",
+        "submit": "ಸಲ್ಲಿಸಿ",
+        "submitting": "ಸಲ್ಲಿಸಲಾಗುತ್ತಿದೆ..."
+    },
+    "helpSupportPage": {
+        "helpAndSupport": "ಸಹಾಯ ಮತ್ತು ಬೆಂಬಲ",
+        "howCanWeHelp": "ನಾವು ನಿಮಗೆ ಹೇಗೆ ಸಹಾಯ ಮಾಡಬಹುದು?",
+        "callUs": "ನಮಗೆ ಕರೆ ಮಾಡಿ",
+        "phoneNumber": "+91 7984420655",
+        "emailSupport": "ಇಮೇಲ್ ಬೆಂಬಲ",
+        "emailAddress": "agrisutra4@gmail.com",
+        "chatSupport": "ಚಾಟ್ ಬೆಂಬಲ",
+        "chatSupportDesc": "whatsapp ನಲ್ಲಿ ಸಂಪರ್ಕಿಸಿ",
+        "faqHeading": "ಪದೇ ಪದೇ ಕೇಳಲಾಗುವ ಪ್ರಶ್ನೆಗಳು",
+        "faq1Question": "ನನ್ನ ಸಲಕರಣೆಗಳನ್ನು ನಾನು ಹೇಗೆ ಟ್ರ್ಯಾಕ್ ಮಾಡುವುದು?",
+        "faq1Answer": "ನಿಮ್ಮ ಪ್ರೊಫೈಲ್ ಅಡಿಯಲ್ಲಿ \"ಟ್ರ್ಯಾಕ್ ಸಲಕರಣೆ\" ವಿಭಾಗಕ್ಕೆ ಭೇಟಿ ನೀಡುವ ಮೂಲಕ ನಿಮ್ಮ ಸಾಧನವನ್ನು ನೀವು ಟ್ರ್ಯಾಕ್ ಮಾಡಬಹುದು.",
+        "faq2Question": "ನನ್ನ ಪ್ರೊಫೈಲ್ ಅನ್ನು ಹೇಗೆ ನವೀಕರಿಸುವುದು?",
+        "faq2Answer": "ನಿಮ್ಮ ವಿವರಗಳನ್ನು ಬದಲಾಯಿಸಲು ನಿಮ್ಮ ಪ್ರೊಫೈಲ್ ಮೆನು ಅಡಿಯಲ್ಲಿ \"ಪ್ರೊಫೈಲ್ ಸಂಪಾದಿಸು\" ಗೆ ಹೋಗಿ.",
+        "faq3Question": "ಯೋಜನೆಗಳಲ್ಲಿ ನಾನು ಸಹಾಯವನ್ನು ಎಲ್ಲಿ ಪಡೆಯಬಹುದು?",
+        "faq3Answer": "Check out the \"Schemes\" page in the main menu for detailed information."
+    },
+    "languagePage": {
+        "selectLanguage": "ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+        "english": "ಇಂಗ್ಲೀಷ್",
+        "gujarati": "ಗುಜರಾತಿ"
+    },
+    "aboutPage": {
+        "aboutUs": "ನಮ್ಮ ಬಗ್ಗೆ",
+        "ourMission": "ನಮ್ಮ ಮಿಷನ್",
+        "missionDescription": "ಆಧುನಿಕ ತಂತ್ರಜ್ಞಾನದೊಂದಿಗೆ ರೈತರನ್ನು ಸಬಲೀಕರಣಗೊಳಿಸಲು ಮತ್ತು ಸುಸ್ಥಿರ ಕೃಷಿ ಪದ್ಧತಿಗಳಿಗೆ ಉತ್ತಮ ಕೃಷಿ ಪರಿಹಾರಗಳನ್ನು ಒದಗಿಸುವುದು.",
+        "contactInformation": "ಸಂಪರ್ಕ ಮಾಹಿತಿ",
+        "email": "agrisutra4@gmail.com",
+        "phone": "+91 7984420655",
+        "website": "www.agrisutra.com",
+        "versionTitle": "ಆವೃತ್ತಿ",
+        "versionNumber": "1.0.0",
+        "termsPrivacyTitle": "ನಿಯಮಗಳು ಮತ್ತು ಗೌಪ್ಯತೆ",
+        "termsOfService": "ಸೇವಾ ನಿಯಮಗಳು",
+        "privacyPolicy": "ಗೌಪ್ಯತೆ ನೀತಿ"
+    },
+    "termsPage": {
+        "title": "ಸೇವಾ ನಿಯಮಗಳು",
+        "introductionHeading": "1. ಪರಿಚಯ",
+        "introductionContent": "AgriSutra ಗೆ ಸುಸ್ವಾಗತ. ನಮ್ಮ ವೆಬ್‌ಸೈಟ್, ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನ್ ಅಥವಾ ಯಾವುದೇ ಸಂಬಂಧಿತ ಸೇವೆಗಳನ್ನು (ಒಟ್ಟಾರೆಯಾಗಿ, “ಸೇವೆಗಳು”) ಬಳಸುವ ಮೂಲಕ, ನೀವು ಈ ಸೇವಾ ನಿಯಮಗಳಿಗೆ (“ನಿಯಮಗಳು”) ಬದ್ಧರಾಗಿರಲು ಒಪ್ಪುತ್ತೀರಿ. ನಮ್ಮ ಸೇವೆಗಳನ್ನು ಬಳಸುವ ಮೊದಲು ದಯವಿಟ್ಟು ಅವುಗಳನ್ನು ಎಚ್ಚರಿಕೆಯಿಂದ ಓದಿ.",
+        "eligibilityHeading": "2. ಅರ್ಹತೆ",
+        "eligibilityContent": "ನಮ್ಮ ಸೇವೆಗಳನ್ನು ಬಳಸಲು ನಿಮಗೆ ಕನಿಷ್ಠ 18 ವರ್ಷ ವಯಸ್ಸಾಗಿರಬೇಕು. ನಮ್ಮ ಸೇವೆಗಳನ್ನು ಬಳಸುವ ಮೂಲಕ, ನೀವು ಬೈಂಡಿಂಗ್ ಒಪ್ಪಂದಕ್ಕೆ ಪ್ರವೇಶಿಸಲು ಕಾನೂನು ಸಾಮರ್ಥ್ಯವನ್ನು ಹೊಂದಿದ್ದೀರಿ ಮತ್ತು ಯಾವುದೇ ಅನ್ವಯವಾಗುವ ಕಾನೂನುಗಳ ಅಡಿಯಲ್ಲಿ ಹಾಗೆ ಮಾಡುವುದನ್ನು ನಿರ್ಬಂಧಿಸಲಾಗುವುದಿಲ್ಲ ಎಂದು ನೀವು ಪ್ರತಿನಿಧಿಸುತ್ತೀರಿ.",
+        "accountRegistrationHeading": "3. ಖಾತೆ ನೋಂದಣಿ",
+        "accountRegistrationContent": "ಕೆಲವು ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಪ್ರವೇಶಿಸಲು ನೀವು ಖಾತೆಯನ್ನು ರಚಿಸಬೇಕಾಗಬಹುದು. ನಿಖರವಾದ, ಪ್ರಸ್ತುತ ಮತ್ತು ಸಂಪೂರ್ಣ ಮಾಹಿತಿಯನ್ನು ಒದಗಿಸಲು ಮತ್ತು ಅಂತಹ ಮಾಹಿತಿಯನ್ನು ನವೀಕರಿಸಲು ನೀವು ಒಪ್ಪುತ್ತೀರಿ. ನಿಮ್ಮ ಖಾತೆಯ ರುಜುವಾತುಗಳ ಗೌಪ್ಯತೆಯನ್ನು ಕಾಪಾಡಿಕೊಳ್ಳಲು ಮತ್ತು ನಿಮ್ಮ ಖಾತೆಯ ಅಡಿಯಲ್ಲಿ ಸಂಭವಿಸುವ ಎಲ್ಲಾ ಚಟುವಟಿಕೆಗಳಿಗೆ ನೀವು ಜವಾಬ್ದಾರರಾಗಿರುತ್ತೀರಿ.",
+        "useOfServicesHeading": "4. ಸೇವೆಗಳ ಬಳಕೆ",
+        "useOfServicesContent": "ಕಾನೂನುಬದ್ಧ ಉದ್ದೇಶಗಳಿಗಾಗಿ ಮತ್ತು ಈ ನಿಯಮಗಳಿಗೆ ಅನುಸಾರವಾಗಿ ಮಾತ್ರ ಸೇವೆಗಳನ್ನು ಬಳಸಲು ನೀವು ಒಪ್ಪುತ್ತೀರಿ. ಅಕ್ರಮ, ಕಿರುಕುಳ, ಬೆದರಿಕೆ ಅಥವಾ ಆಕ್ಷೇಪಾರ್ಹವಾದ ಯಾವುದೇ ವಿಷಯವನ್ನು ಪೋಸ್ಟ್ ಮಾಡಲು ಅಥವಾ ರವಾನಿಸಲು ನೀವು ನಮ್ಮ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅನ್ನು ಬಳಸುವುದಿಲ್ಲ.",
+        "intellectualPropertyHeading": "5. ಬೌದ್ಧಿಕ ಆಸ್ತಿ",
+        "intellectualPropertyContent": "ಸಾಫ್ಟ್‌ವೇರ್, ಡೇಟಾಬೇಸ್‌ಗಳು, ಪಠ್ಯ, ಗ್ರಾಫಿಕ್ಸ್, ಐಕಾನ್‌ಗಳು ಮತ್ತು ಹೈಪರ್‌ಲಿಂಕ್‌ಗಳು ಸೇರಿದಂತೆ ನಮ್ಮ ಸೇವೆಗಳಲ್ಲಿನ ಎಲ್ಲಾ ವಿಷಯ, ಟ್ರೇಡ್‌ಮಾರ್ಕ್‌ಗಳು ಮತ್ತು ಡೇಟಾವು ಅಗ್ರಿಸೂತ್ರ ಅಥವಾ ಅದರ ಪರವಾನಗಿದಾರರ ಆಸ್ತಿಯಾಗಿದೆ. ನಮ್ಮ ಪೂರ್ವ ಲಿಖಿತ ಅನುಮತಿಯಿಲ್ಲದೆ ನೀವು ಸೇವೆಗಳ ಯಾವುದೇ ಭಾಗವನ್ನು ಪುನರುತ್ಪಾದಿಸಲು, ಮಾರ್ಪಡಿಸಲು ಅಥವಾ ವಿತರಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ.",
+        "disclaimersHeading": "6. ಹಕ್ಕು ನಿರಾಕರಣೆಗಳು",
+        "disclaimersContent": "ನಮ್ಮ ಸೇವೆಗಳನ್ನು \"ಇರುವಂತೆ\" ಆಧಾರದ ಮೇಲೆ ಒದಗಿಸಲಾಗಿದೆ. ಒದಗಿಸಿದ ಯಾವುದೇ ಮಾಹಿತಿಯ ನಿಖರತೆ, ವಿಶ್ವಾಸಾರ್ಹತೆ ಅಥವಾ ಸಂಪೂರ್ಣತೆಯನ್ನು ನಾವು ಖಾತರಿಪಡಿಸುವುದಿಲ್ಲ. AgriSutra ಎಲ್ಲಾ ವಾರಂಟಿಗಳನ್ನು ನಿರಾಕರಿಸುತ್ತದೆ, ಎಕ್ಸ್‌ಪ್ರೆಸ್ ಅಥವಾ ಸೂಚ್ಯವಾಗಿದೆ, ವ್ಯಾಪಾರದ ಸೂಚ್ಯವಾದ ವಾರಂಟಿಗಳು, ನಿರ್ದಿಷ್ಟ ಉದ್ದೇಶಕ್ಕಾಗಿ ಫಿಟ್‌ನೆಸ್ ಮತ್ತು ಉಲ್ಲಂಘನೆಯಲ್ಲ.",
+        "limitationOfLiabilityHeading": "7. ಹೊಣೆಗಾರಿಕೆಯ ಮಿತಿ",
+        "limitationOfLiabilityContent": "In no event shall AgriSutra or its affiliates be liable for any indirect, incidental, special, or consequential damages arising out of or in connection with the use of our Services. Our total liability for any claim arising from or related to these Terms shall not exceed the amount you paid, if any, for accessing the Services.",
+        "changesToTermsHeading": "8. ಈ ನಿಯಮಗಳಿಗೆ ಬದಲಾವಣೆಗಳು",
+        "changesToTermsContent": "ಯಾವುದೇ ಸಮಯದಲ್ಲಿ ಈ ನಿಯಮಗಳನ್ನು ಮಾರ್ಪಡಿಸುವ ಅಥವಾ ಬದಲಾಯಿಸುವ ಹಕ್ಕನ್ನು ನಾವು ಕಾಯ್ದಿರಿಸಿದ್ದೇವೆ. ಯಾವುದೇ ಬದಲಾವಣೆಗಳನ್ನು ನಮ್ಮ ವೆಬ್‌ಸೈಟ್‌ನಲ್ಲಿ ಪೋಸ್ಟ್ ಮಾಡಲಾಗುತ್ತದೆ ಅಥವಾ ಇಮೇಲ್ ಮೂಲಕ ನಿಮಗೆ ತಿಳಿಸಲಾಗುತ್ತದೆ. ಅಂತಹ ಮಾರ್ಪಾಡುಗಳ ನಂತರ ನೀವು ಸೇವೆಗಳ ನಿರಂತರ ಬಳಕೆಯು ಹೊಸ ನಿಯಮಗಳ ನಿಮ್ಮ ಅಂಗೀಕಾರವನ್ನು ಸೂಚಿಸುತ್ತದೆ.",
+        "governingLawHeading": "9. ಆಡಳಿತ ಕಾನೂನು",
+        "governingLawContent": "ಈ ನಿಯಮಗಳನ್ನು ನಿಮ್ಮ ಅಧಿಕಾರ ವ್ಯಾಪ್ತಿಯ ಕಾನೂನುಗಳಿಗೆ ಅನುಸಾರವಾಗಿ ನಿಯಂತ್ರಿಸಲಾಗುತ್ತದೆ ಮತ್ತು ಅರ್ಥೈಸಲಾಗುತ್ತದೆ. ಈ ನಿಯಮಗಳಿಂದ ಉದ್ಭವಿಸುವ ಅಥವಾ ಸಂಬಂಧಿಸಿದ ಯಾವುದೇ ವಿವಾದವನ್ನು ಆ ನ್ಯಾಯವ್ಯಾಪ್ತಿಯ ನ್ಯಾಯಾಲಯಗಳಲ್ಲಿ ಪರಿಹರಿಸಲಾಗುತ್ತದೆ.",
+        "contactUsHeading": "10. ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ",
+        "contactUsContent": "ಈ ನಿಯಮಗಳ ಕುರಿತು ನೀವು ಯಾವುದೇ ಪ್ರಶ್ನೆಗಳನ್ನು ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ನಮ್ಮನ್ನು ಇಲ್ಲಿ ಸಂಪರ್ಕಿಸಿ",
+        "contactEmail": "agrisutra@gmail.com"
+    },
+    "privacyPage": {
+        "title": "ಗೌಪ್ಯತೆ ನೀತಿ",
+        "introductionHeading": "1. ಪರಿಚಯ",
+        "introductionContent": "ನೀವು ನಮ್ಮ ಸೇವೆಗಳನ್ನು ಬಳಸುವಾಗ AgriSutra ಹೇಗೆ ಸಂಗ್ರಹಿಸುತ್ತದೆ, ಬಳಸುತ್ತದೆ ಮತ್ತು ನಿಮ್ಮ ಬಗ್ಗೆ ಮಾಹಿತಿಯನ್ನು ಹಂಚಿಕೊಳ್ಳುತ್ತದೆ ಎಂಬುದನ್ನು ಈ ಗೌಪ್ಯತಾ ನೀತಿ ವಿವರಿಸುತ್ತದೆ. ನಮ್ಮ ಸೇವೆಗಳನ್ನು ಬಳಸುವ ಮೂಲಕ, ಈ ನೀತಿಗೆ ಅನುಗುಣವಾಗಿ ಮಾಹಿತಿಯ ಸಂಗ್ರಹಣೆ ಮತ್ತು ಬಳಕೆಗೆ ನೀವು ಒಪ್ಪುತ್ತೀರಿ.",
+        "informationWeCollectHeading": "2. ನಾವು ಸಂಗ್ರಹಿಸುವ ಮಾಹಿತಿ",
+        "informationWeCollectContent": "ನಿಮ್ಮ ಹೆಸರು, ಇಮೇಲ್ ವಿಳಾಸ, ಫೋನ್ ಸಂಖ್ಯೆ ಮತ್ತು ಸ್ಥಳ ಡೇಟಾದಂತಹ ನೀವು ನಮಗೆ ಒದಗಿಸುವ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ನಾವು ಸಂಗ್ರಹಿಸಬಹುದು. ನಿಮ್ಮ IP ವಿಳಾಸ, ಬ್ರೌಸರ್ ಪ್ರಕಾರ ಮತ್ತು ಸಾಧನ ಗುರುತಿಸುವಿಕೆಗಳು ಸೇರಿದಂತೆ ನಮ್ಮ ಸೇವೆಗಳನ್ನು ನೀವು ಬಳಸುವಾಗ ನಾವು ಕೆಲವು ತಾಂತ್ರಿಕ ಮಾಹಿತಿಯನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸಂಗ್ರಹಿಸುತ್ತೇವೆ.",
+        "howWeUseYourInformationHeading": "3. ನಿಮ್ಮ ಮಾಹಿತಿಯನ್ನು ನಾವು ಹೇಗೆ ಬಳಸುತ್ತೇವೆ",
+        "howWeUseYourInformationContentIntro": "ನಾವು ಸಂಗ್ರಹಿಸುವ ಮಾಹಿತಿಯನ್ನು ನಾವು ಬಳಸುತ್ತೇವೆ:",
+        "howWeUseYourInformationList": "ನಮ್ಮ ಸೇವೆಗಳನ್ನು ಒದಗಿಸಿ, ನಿರ್ವಹಿಸಿ ಮತ್ತು ಸುಧಾರಿಸಿ; ನಿಮ್ಮ ಕಾಮೆಂಟ್‌ಗಳು, ಪ್ರಶ್ನೆಗಳು ಮತ್ತು ಗ್ರಾಹಕ ಸೇವಾ ವಿನಂತಿಗಳಿಗೆ ಪ್ರತಿಕ್ರಿಯಿಸಿ; ನಿಮಗೆ ತಾಂತ್ರಿಕ ಸೂಚನೆಗಳು, ನವೀಕರಣಗಳು ಮತ್ತು ಭದ್ರತಾ ಎಚ್ಚರಿಕೆಗಳನ್ನು ಕಳುಹಿಸಿ; ಹೊಸ ವೈಶಿಷ್ಟ್ಯಗಳು ಮತ್ತು ಸೇವೆಗಳನ್ನು ಅಭಿವೃದ್ಧಿಪಡಿಸಲು ಪ್ರವೃತ್ತಿಗಳು ಮತ್ತು ಬಳಕೆಯನ್ನು ವಿಶ್ಲೇಷಿಸಿ.",
+        "sharingYourInformationHeading": "4. ನಿಮ್ಮ ಮಾಹಿತಿಯನ್ನು ಹಂಚಿಕೊಳ್ಳುವುದು",
+        "sharingYourInformationContent": "ನಿಮ್ಮ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ನಾವು ಮಾರಾಟ ಮಾಡುವುದಿಲ್ಲ. ನಮ್ಮ ಸೇವೆಗಳನ್ನು ನಿರ್ವಹಿಸಲು ನಮಗೆ ಸಹಾಯ ಮಾಡುವ ವಿಶ್ವಾಸಾರ್ಹ ಮೂರನೇ ವ್ಯಕ್ತಿಯ ಸೇವಾ ಪೂರೈಕೆದಾರರೊಂದಿಗೆ ನಿಮ್ಮ ಮಾಹಿತಿಯನ್ನು ನಾವು ಹಂಚಿಕೊಳ್ಳಬಹುದು. ಕಾನೂನಿನಿಂದ ಅಗತ್ಯವಿದ್ದರೆ ಅಥವಾ ನಮ್ಮ ಹಕ್ಕುಗಳು ಮತ್ತು ಆಸ್ತಿಯನ್ನು ರಕ್ಷಿಸಲು ನಾವು ಮಾಹಿತಿಯನ್ನು ಹಂಚಿಕೊಳ್ಳಬಹುದು.",
+        "cookiesHeading": "5. ಕುಕೀಸ್",
+        "cookiesContent": "ನಮ್ಮ ಸೇವೆಗಳ ನಿಮ್ಮ ಬಳಕೆಯ ಬಗ್ಗೆ ಮಾಹಿತಿಯನ್ನು ಸಂಗ್ರಹಿಸಲು ಮತ್ತು ನಿಮ್ಮ ಅನುಭವವನ್ನು ಸುಧಾರಿಸಲು ನಾವು ಕುಕೀಗಳು ಮತ್ತು ಅಂತಹುದೇ ಟ್ರ್ಯಾಕಿಂಗ್ ತಂತ್ರಜ್ಞಾನಗಳನ್ನು ಬಳಸುತ್ತೇವೆ. ಕುಕೀಗಳನ್ನು ನಿರಾಕರಿಸಲು ಅಥವಾ ಕುಕೀಗಳನ್ನು ಕಳುಹಿಸಿದಾಗ ನಿಮಗೆ ಎಚ್ಚರಿಕೆ ನೀಡಲು ನಿಮ್ಮ ಬ್ರೌಸರ್ ಅನ್ನು ನೀವು ಹೊಂದಿಸಬಹುದು.",
+        "dataRetentionHeading": "6. ಡೇಟಾ ಧಾರಣ",
+        "dataRetentionContent": "ಈ ಗೌಪ್ಯತಾ ನೀತಿಯಲ್ಲಿ ವಿವರಿಸಿರುವ ಉದ್ದೇಶಗಳನ್ನು ಪೂರೈಸಲು ಅಗತ್ಯವಿರುವವರೆಗೆ ನಿಮ್ಮ ಮಾಹಿತಿಯನ್ನು ನಾವು ಉಳಿಸಿಕೊಳ್ಳುತ್ತೇವೆ, ದೀರ್ಘಾವಧಿಯ ಧಾರಣ ಅವಧಿಯು ಕಾನೂನಿನಿಂದ ಅನುಮತಿಸದ ಹೊರತು.",
+        "securityHeading": "7. ಭದ್ರತೆ",
+        "securityContent": "ನಿಮ್ಮ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ಅನಧಿಕೃತ ಪ್ರವೇಶ ಅಥವಾ ಬಹಿರಂಗಪಡಿಸುವಿಕೆಯಿಂದ ರಕ್ಷಿಸಲು ನಾವು ಸಮಂಜಸವಾದ ಕ್ರಮಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳುತ್ತೇವೆ. ಆದಾಗ್ಯೂ, ಯಾವುದೇ ಭದ್ರತಾ ವ್ಯವಸ್ಥೆಯು ತೂರಲಾಗದು, ಮತ್ತು ನಿಮ್ಮ ಡೇಟಾದ ಸಂಪೂರ್ಣ ಸುರಕ್ಷತೆಯನ್ನು ನಾವು ಖಾತರಿಪಡಿಸುವುದಿಲ್ಲ.",
+        "childrenHeading": "8. ಮಕ್ಕಳ ಗೌಪ್ಯತೆ",
+        "childrenContent": "ನಮ್ಮ ಸೇವೆಗಳು 18 ವರ್ಷದೊಳಗಿನ ವ್ಯಕ್ತಿಗಳಿಗೆ ಉದ್ದೇಶಿಸಿಲ್ಲ. ನಾವು 18 ವರ್ಷದೊಳಗಿನ ಮಕ್ಕಳಿಂದ ಉದ್ದೇಶಪೂರ್ವಕವಾಗಿ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ಸಂಗ್ರಹಿಸುವುದಿಲ್ಲ. 18 ವರ್ಷದೊಳಗಿನ ಮಗು ನಮಗೆ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ಒದಗಿಸಿದೆ ಎಂದು ನಾವು ಕಂಡುಕೊಂಡರೆ, ನಮ್ಮ ಸಿಸ್ಟಮ್‌ಗಳಿಂದ ಅಂತಹ ಮಾಹಿತಿಯನ್ನು ನಾವು ಅಳಿಸುತ್ತೇವೆ.",
+        "changesHeading": "9. ಈ ನೀತಿಗೆ ಬದಲಾವಣೆಗಳು",
+        "changesContent": "ನಾವು ಈ ಗೌಪ್ಯತಾ ನೀತಿಯನ್ನು ಕಾಲಕಾಲಕ್ಕೆ ನವೀಕರಿಸಬಹುದು. ನಮ್ಮ ವೆಬ್‌ಸೈಟ್‌ನಲ್ಲಿ ಹೊಸ ನೀತಿಯನ್ನು ಪೋಸ್ಟ್ ಮಾಡುವ ಮೂಲಕ ಅಥವಾ ನಿಮ್ಮ ಖಾತೆಯೊಂದಿಗೆ ಸಂಯೋಜಿತವಾಗಿರುವ ವಿಳಾಸಕ್ಕೆ ಇಮೇಲ್ ಕಳುಹಿಸುವ ಮೂಲಕ ನಾವು ಯಾವುದೇ ಮಹತ್ವದ ಬದಲಾವಣೆಗಳನ್ನು ನಿಮಗೆ ತಿಳಿಸುತ್ತೇವೆ.",
+        "contactUsHeading": "10. ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ",
+        "contactUsContent": "ಈ ಗೌಪ್ಯತೆ ನೀತಿಯ ಕುರಿತು ನೀವು ಯಾವುದೇ ಪ್ರಶ್ನೆಗಳನ್ನು ಅಥವಾ ಕಾಳಜಿಗಳನ್ನು ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ನಮ್ಮನ್ನು ಇಲ್ಲಿ ಸಂಪರ್ಕಿಸಿ",
+        "contactEmail": "agrisutra@gmail.com"
+    },
+    "newsPage": {
+        "latestNews": "ಇತ್ತೀಚಿನ ಸುದ್ದಿ",
+        "readMore": "ಮುಂದೆ ಓದಿ"
+    },
+    "marketPage": {
+        "heading": "ಕೃಷಿ ಮಾರುಕಟ್ಟೆ ಪ್ರವೃತ್ತಿಗಳು",
+        "selectCommodity": "ಸರಕು ಆಯ್ಕೆಮಾಡಿ",
+        "selectState": "ರಾಜ್ಯವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+        "selectDistrict": "ಜಿಲ್ಲೆ ಆಯ್ಕೆಮಾಡಿ",
+        "fetchData": "ಡೇಟಾವನ್ನು ಪಡೆದುಕೊಳ್ಳಿ",
+        "fetchingData": "ಮಾರುಕಟ್ಟೆ ಡೇಟಾವನ್ನು ಪಡೆಯಲಾಗುತ್ತಿದೆ...",
+        "noMarketData": "ಯಾವುದೇ ಮಾರುಕಟ್ಟೆ ಪ್ರವೃತ್ತಿಗಳು ಲಭ್ಯವಿಲ್ಲ. ಇತ್ತೀಚಿನ ನವೀಕರಣಗಳನ್ನು ನೋಡಲು ಸರಕು, ರಾಜ್ಯ ಮತ್ತು ಜಿಲ್ಲೆಯನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ಪ್ರಯತ್ನಿಸಿ.",
+        "selectAllFields": "ದಯವಿಟ್ಟು ಸರಕು, ರಾಜ್ಯ ಮತ್ತು ಜಿಲ್ಲೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ.",
+        "fetchError": "ಮಾರುಕಟ್ಟೆ ಡೇಟಾವನ್ನು ಪಡೆದುಕೊಳ್ಳಲು ವಿಫಲವಾಗಿದೆ. ದಯವಿಟ್ಟು ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
+        "city": "ನಗರ",
+        "commodity": "ಸರಕು",
+        "minPrice": "ಕನಿಷ್ಠ ಬೆಲೆ",
+        "maxPrice": "ಗರಿಷ್ಠ ಬೆಲೆ",
+        "modelPrice": "ಮಾದರಿ ಬೆಲೆ",
+        "date": "ದಿನಾಂಕ"
+    },
+    "soilAnalysis": {
+        "title": "ಮಣ್ಣಿನ ವಿಶ್ಲೇಷಣೆ ಪರೀಕ್ಷೆ",
+        "description": "ಮಣ್ಣಿನ ನಿಯತಾಂಕಗಳನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ನಮೂದಿಸಬೇಕೆ ಅಥವಾ PDF/ಚಿತ್ರವನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಬೇಕೆ ಎಂಬುದನ್ನು ಆರಿಸಿ.",
+        "manualInput": "ಹಸ್ತಚಾಲಿತ ಇನ್ಪುಟ್",
+        "uploadPdfImage": "PDF/ಚಿತ್ರವನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ",
+        "uploadLabel": "ಚಿತ್ರ ಅಥವಾ PDF ಅನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ",
+        "getRecommendation": "ಶಿಫಾರಸು ಪಡೆಯಿರಿ",
+        "cropRecommendation": "ಬೆಳೆ ಶಿಫಾರಸು",
+        "noDescription": "ಯಾವುದೇ ವಿವರಣೆ ಲಭ್ಯವಿಲ್ಲ.",
+        "errorFetching": "ಭವಿಷ್ಯವನ್ನು ಪಡೆಯುವಲ್ಲಿ ದೋಷ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
+        "formLabels": {
+            "N": "ಸಾರಜನಕ (N)",
+            "P": "ರಂಜಕ (ಪಿ)",
+            "K": "ಪೊಟ್ಯಾಸಿಯಮ್ (ಕೆ)",
+            "temperature": "ತಾಪಮಾನ (°C)",
+            "humidity": "ಆರ್ದ್ರತೆ (%)",
+            "ph": "pH ಮಟ್ಟ",
+            "rainfall": "ಮಳೆ (ಮಿಮೀ)",
+            "${key}": "soilAnalysis.formLabels.${key}"
+        },
+        "chooseMethod": "soilAnalysis.chooseMethod",
+        "tipsHeading": "soilAnalysis.tipsHeading"
+    },
+    "weather": {
+        "locationAccess": "ಸ್ಥಳ ಪ್ರವೇಶವನ್ನು ಅನುಮತಿಸುವುದೇ?",
+        "locationInfo": "ನಿಖರವಾದ ಹವಾಮಾನ ನವೀಕರಣಗಳನ್ನು ಒದಗಿಸಲು ನಮಗೆ ನಿಮ್ಮ ಸ್ಥಳದ ಅಗತ್ಯವಿದೆ.",
+        "allow": "ಅನುಮತಿಸಿ",
+        "deny": "ನಿರಾಕರಿಸು",
+        "temperature": "ತಾಪಮಾನ",
+        "humidity": "ಆರ್ದ್ರತೆ",
+        "uvIndex": "ಯುವಿ ಸೂಚ್ಯಂಕ",
+        "windSpeed": "ಗಾಳಿಯ ವೇಗ",
+        "airQualityIndex": "ವಾಯು ಗುಣಮಟ್ಟ ಸೂಚ್ಯಂಕ",
+        "sunrise": "ಸೂರ್ಯೋದಯ",
+        "sunset": "ಸೂರ್ಯಾಸ್ತ",
+        "sevenDayForecast": "7-ದಿನದ ಮುನ್ಸೂಚನೆ"
+    },
+    "settings": {
+        "loading": "ಲೋಡ್ ಆಗುತ್ತಿದೆ...",
+        "errorLoadingProfile": "ಪ್ರೊಫೈಲ್ ಲೋಡ್ ಮಾಡುವಲ್ಲಿ ದೋಷ.",
+        "editProfile": "ಪ್ರೊಫೈಲ್ ಸಂಪಾದಿಸಿ",
+        "languageSelection": "ಭಾಷೆಯ ಆಯ್ಕೆ",
+        "settings": "ಸೆಟ್ಟಿಂಗ್‌ಗಳು"
+    },
+    "general": {
+        "back": "ಹಿಂದೆ"
+    },
+    "equipment": {
+        "locationAccess": "ಸ್ಥಳ ಪ್ರವೇಶವನ್ನು ಅನುಮತಿಸುವುದೇ?",
+        "locationInfo": "ಸಮೀಪದಲ್ಲಿ ಲಭ್ಯವಿರುವ ಕೃಷಿ ಉಪಕರಣಗಳನ್ನು ತೋರಿಸಲು ನಮಗೆ ನಿಮ್ಮ ಸ್ಥಳದ ಅಗತ್ಯವಿದೆ.",
+        "allow": "ಅನುಮತಿಸಿ",
+        "deny": "ನಿರಾಕರಿಸು",
+        "searchPlaceholder": "ಸಲಕರಣೆ ವಿಭಾಗಗಳನ್ನು ಹುಡುಕಿ...",
+        "loadingCategories": "ವರ್ಗಗಳನ್ನು ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ...",
+        "noCategoriesFound": "ಯಾವುದೇ ವರ್ಗಗಳು ಕಂಡುಬಂದಿಲ್ಲ.",
+        "farmingEquipments": "ಕೃಷಿ ಉಪಕರಣಗಳು",
+        "availableEquipment": "{{category}} ನಲ್ಲಿ ಲಭ್ಯವಿರುವ ಸಲಕರಣೆಗಳು",
+        "noEquipment": "ಈ ವರ್ಗಕ್ಕೆ ಯಾವುದೇ ಉಪಕರಣಗಳು ಲಭ್ಯವಿಲ್ಲ.",
+        "unitsAvailable": "ಘಟಕಗಳು ಲಭ್ಯವಿದೆ",
+        "ownerName": "ಮಾಲೀಕರ ಹೆಸರು",
+        "pricePerUnit": "ಪ್ರತಿ ಯೂನಿಟ್ ಬೆಲೆ",
+        "location": "ಸ್ಥಳ",
+        "giveEquipment": "ನಿಮ್ಮ ಉಪಕರಣವನ್ನು ನೀಡಲು ಬಯಸುವಿರಾ?",
+        "listEquipment": "ಇತರರು ಬಳಸಲು ನಿಮ್ಮ ಉಪಕರಣಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡಿ",
+        "useEquipment": "ಸಲಕರಣೆಗಳನ್ನು ಬಳಸಲು ಬಯಸುವಿರಾ?",
+        "findEquipment": "ನಿಮ್ಮ ಅಗತ್ಯಗಳಿಗಾಗಿ ಉಪಕರಣಗಳನ್ನು ಹುಡುಕಿ ಮತ್ತು ಬುಕ್ ಮಾಡಿ"
+    },
+    "giveEquipment": {
+        "title": "ನಿಮ್ಮ {{category}} ಪಟ್ಟಿ ಮಾಡಿ",
+        "description": "List your farming equipment for others to use. ನಿಮ್ಮ ಉಪಕರಣವನ್ನು ಲಭ್ಯವಾಗುವಂತೆ ಮಾಡಲು ಕೆಳಗಿನ ವಿವರಗಳನ್ನು ಭರ್ತಿ ಮಾಡಿ.",
+        "equipmentName": "ಸಲಕರಣೆ ಹೆಸರು",
+        "equipmentPlaceholder": "ಉದಾ., ಜಾನ್ ಡೀರೆ 5075E ಟ್ರಾಕ್ಟರ್",
+        "descriptionLabel": "ವಿವರಣೆ",
+        "descriptionPlaceholder": "ಸ್ಥಿತಿ, ವೈಶಿಷ್ಟ್ಯಗಳು, ಇತ್ಯಾದಿ ಸೇರಿದಂತೆ ನಿಮ್ಮ ಉಪಕರಣವನ್ನು ವಿವರಿಸಿ.",
+        "rentalRate": "ಬಾಡಿಗೆ ದರ (ದಿನಕ್ಕೆ)",
+        "pricePlaceholder": "ಉದಾ., 5000",
+        "location": "ಸ್ಥಳ",
+        "locationPlaceholder": "ಉದಾ., ಅಮೃತಸರ, ಪಂಜಾಬ್",
+        "availability": "ಲಭ್ಯತೆ",
+        "availableNow": "ಈಗ ಲಭ್ಯವಿದೆ",
+        "notAvailable": "ಲಭ್ಯವಿಲ್ಲ",
+        "contactInfo": "ಸಂಪರ್ಕ ಮಾಹಿತಿ",
+        "phonePlaceholder": "ದೂರವಾಣಿ ಸಂಖ್ಯೆ",
+        "listButton": "ಪಟ್ಟಿ ಸಲಕರಣೆ",
+        "successMessage": "ಸಲಕರಣೆಗಳನ್ನು ಯಶಸ್ವಿಯಾಗಿ ಪಟ್ಟಿ ಮಾಡಲಾಗಿದೆ!",
+        "errorMessage": "ಸಲಕರಣೆಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡಲು ವಿಫಲವಾಗಿದೆ.",
+        "networkError": "ನೆಟ್‌ವರ್ಕ್ ದೋಷ ಸಂಭವಿಸಿದೆ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ."
+    },
+    "availableEquipment": {
+        "title": "ಲಭ್ಯವಿರುವ {{category}} ಸಲಕರಣೆಗಳು",
+        "filterOptions": "ಫಿಲ್ಟರ್ ಆಯ್ಕೆಗಳು",
+        "all": "ಎಲ್ಲಾ",
+        "availableNow": "ಈಗ ಲಭ್ಯವಿದೆ",
+        "notAvailable": "ಲಭ್ಯವಿಲ್ಲ",
+        "perDay": "ದಿನಕ್ಕೆ",
+        "location": "ಸ್ಥಳ",
+        "owner": "ಮಾಲೀಕ",
+        "available": "ಲಭ್ಯವಿದೆ",
+        "notavailable": "ಲಭ್ಯವಿಲ್ಲ",
+        "unknown": "ಅಜ್ಞಾತ",
+        "bookNow": "ಈಗಲೇ ಬುಕ್ ಮಾಡಿ",
+        "unavailable": "ಲಭ್ಯವಿಲ್ಲ",
+        "noEquipment": "ಯಾವುದೇ {{category}} ಉಪಕರಣಗಳು ಲಭ್ಯವಿಲ್ಲ."
+    },
+    "bookEquipment": {
+        "back": "ಹಿಂದೆ",
+        "title": "ಪುಸ್ತಕ ಸಲಕರಣೆ",
+        "equipmentName": "ಸಲಕರಣೆ ಹೆಸರು",
+        "location": "ಸ್ಥಳ",
+        "owner": "ಮಾಲೀಕ",
+        "bookingDetails": "ಬುಕಿಂಗ್ ವಿವರಗಳು",
+        "startDate": "ಪ್ರಾರಂಭ ದಿನಾಂಕ",
+        "endDate": "ಅಂತಿಮ ದಿನಾಂಕ",
+        "confirmBooking": "ಬುಕಿಂಗ್ ಅನ್ನು ದೃಢೀಕರಿಸಿ",
+        "bookingSuccess": "ಬುಕಿಂಗ್ ಯಶಸ್ವಿಯಾಗಿ ದೃಢೀಕರಿಸಲ್ಪಟ್ಟಿದೆ!"
+    },
+    ".": ".",
+    "T": "ಟಿ",
+    "email": "ಇಮೇಲ್",
+    "username": "ಬಳಕೆದಾರಹೆಸರು",
+    "name": "ಹೆಸರು",
+    "password": "ಪಾಸ್ವರ್ಡ್",
+    "You must be logged in to save a scheme.": "ಸ್ಕೀಮ್ ಅನ್ನು ಉಳಿಸಲು ನೀವು ಲಾಗ್ ಇನ್ ಆಗಿರಬೇಕು.",
+    "Scheme saved successfully!": "ಯೋಜನೆಯನ್ನು ಯಶಸ್ವಿಯಾಗಿ ಉಳಿಸಲಾಗಿದೆ!",
+    "Failed to save scheme.": "ಯೋಜನೆಯನ್ನು ಉಳಿಸಲು ವಿಫಲವಾಗಿದೆ.",
+    "Scheme is already saved.": "ಯೋಜನೆಯನ್ನು ಈಗಾಗಲೇ ಉಳಿಸಲಾಗಿದೆ.",
+    "token": "ಟೋಕನ್",
+    "loading": "ಲೋಡ್ ಆಗುತ್ತಿದೆ",
+    "soilAnalysis.chooseMethod": "ಮಣ್ಣಿನ ವಿಶ್ಲೇಷಣೆ.chooseMethod",
+    "soilAnalysis.formLabels.${key}": "soilAnalysis.formLabels.${key}",
+    "soilAnalysis.tipsHeading": "ಮಣ್ಣಿನ ವಿಶ್ಲೇಷಣೆ. ಸಲಹೆಗಳು ಶಿರೋನಾಮೆ",
+    " ": "",
+    "Equipment listed successfully!": "ಸಲಕರಣೆಗಳನ್ನು ಯಶಸ್ವಿಯಾಗಿ ಪಟ್ಟಿ ಮಾಡಲಾಗಿದೆ!",
+    "Failed to list equipment. ": "ಸಲಕರಣೆಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡಲು ವಿಫಲವಾಗಿದೆ.",
+    "A network error occurred. Please try again.": "ನೆಟ್‌ವರ್ಕ್ ದೋಷ ಸಂಭವಿಸಿದೆ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
+    "Geolocation is not supported by your browser.": "ನಿಮ್ಮ ಬ್ರೌಸರ್‌ನಿಂದ ಜಿಯೋಲೊಕೇಶನ್ ಬೆಂಬಲಿತವಾಗಿಲ್ಲ.",
+    "Location access denied. Please allow location access.": "ಸ್ಥಳ ಪ್ರವೇಶವನ್ನು ನಿರಾಕರಿಸಲಾಗಿದೆ. ದಯವಿಟ್ಟು ಸ್ಥಳ ಪ್ರವೇಶವನ್ನು ಅನುಮತಿಸಿ.",
+    "equipment_id": "ಉಪಕರಣ_ಐಡಿ",
+    "Please select start and end dates.": "ದಯವಿಟ್ಟು ಪ್ರಾರಂಭ ಮತ್ತು ಅಂತಿಮ ದಿನಾಂಕಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ.",
+    "Equipment ID is missing!": "ಸಲಕರಣೆ ID ಕಾಣೆಯಾಗಿದೆ!",
+    "Booking confirmed!": "ಬುಕಿಂಗ್ ಖಚಿತಪಡಿಸಲಾಗಿದೆ!",
+    "Failed to book equipment.": "ಸಲಕರಣೆಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲು ವಿಫಲವಾಗಿದೆ.",
+    "": {
+        "": "."
+    },
+    "You must be logged in to save a scheme": {
+        "": "You must be logged in to save a scheme."
+    },
+    "Failed to save scheme": {
+        "": "Failed to save scheme."
+    },
+    "Scheme is already saved": {
+        "": "Scheme is already saved."
+    },
+    "Failed to list equipment": {
+        " ": "Failed to list equipment. "
+    },
+    "A network error occurred": {
+        " Please try again": {
+            "": "A network error occurred. Please try again."
+        }
+    },
+    "Geolocation is not supported by your browser": {
+        "": "Geolocation is not supported by your browser."
+    },
+    "Location access denied": {
+        " Please allow location access": {
+            "": "Location access denied. Please allow location access."
+        }
+    },
+    "Please select start and end dates": {
+        "": "Please select start and end dates."
+    },
+    "Failed to book equipment": {
+        "": "Failed to book equipment."
+    }
+}

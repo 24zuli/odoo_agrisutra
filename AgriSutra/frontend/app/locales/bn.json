@@ -1,0 +1,384 @@
+{
+    "common": {
+        "welcome": "কৃষিসূত্রে স্বাগতম!"
+    },
+    "navbar": {
+        "dashboard": "ড্যাশবোর্ড",
+        "profile": "প্রোফাইল"
+    },
+    "homepage": {
+        "bannerTitle": "সাফল্য চাষ",
+        "bannerQuote": "\"আমাদের অর্থনীতিতে কৃষকই একমাত্র ব্যক্তি যিনি খুচরো সব কিছু কিনেন, সব কিছু পাইকারি বিক্রি করেন এবং উভয় উপায়ে মাল পরিশোধ করেন।\"",
+        "governmentSchemesTitle": "সরকারী স্কিম",
+        "governmentSchemesDescription": "কৃষকদের জন্য উপলব্ধ সর্বশেষ সরকারি উদ্যোগ এবং ভর্তুকি আবিষ্কার করুন।",
+        "exploreSchemes": "স্কিম অন্বেষণ",
+        "marketTrendsTitle": "কৃষি বাজারের প্রবণতা",
+        "marketTrendsDescription": "কৃষি পণ্যের সর্বশেষ বাজার মূল্য এবং প্রবণতাগুলির সাথে আপডেট থাকুন।",
+        "viewAllTrends": "সমস্ত প্রবণতা দেখুন",
+        "equipmentServicesTitle": "সরঞ্জাম পরিষেবা",
+        "tractorBooking": "ট্রাক্টর বুকিং",
+        "tractorBookingDescription": "আপনার কৃষি চাহিদার জন্য ট্রাক্টর বুক করুন।",
+        "irrigationEquipment": "সেচ সরঞ্জাম",
+        "irrigationEquipmentDescription": "জলের ব্যবহার অপ্টিমাইজ করার জন্য আধুনিক সেচ সমাধান।",
+        "viewAllEquipment": "সমস্ত সরঞ্জাম দেখুন",
+        "locationPermissionPopupTitle": "অবস্থান অ্যাক্সেসের অনুমতি দেবেন?",
+        "locationPermissionPopupDescription": "উপলব্ধ সরঞ্জামগুলি দেখানোর জন্য আমাদের আপনার অবস্থানের প্রয়োজন৷",
+        "allow": "অনুমতি দিন",
+        "deny": "অস্বীকার করুন",
+        "soilAnalysisTitle": "মাটি বিশ্লেষণ",
+        "soilAnalysisDescription": "আপনার মাটির অবস্থা বিশ্লেষণ করুন এবং ভাল ফসলের ফলনের জন্য সুপারিশ পান।",
+        "startAnalysis": "বিশ্লেষণ শুরু করুন",
+        "allowLocation": "অবস্থান অ্যাক্সেসের অনুমতি দিন",
+        "locationInfo": "উপলব্ধ সরঞ্জামগুলি দেখানোর জন্য আমাদের আপনার অবস্থানের প্রয়োজন৷"
+    },
+    "schemesPage": {
+        "schemeNotFound": "স্কিম পাওয়া যায়নি",
+        "schemeDetails": "স্কিম বিবরণ",
+        "saveScheme": "সেভ স্কিম",
+        "schemeSavedSuccess": "স্কিম সফলভাবে সংরক্ষিত!",
+        "schemeSavedFail": "স্কিম সংরক্ষণ করতে ব্যর্থ হয়েছে.",
+        "mustBeLoggedIn": "একটি স্কিম সংরক্ষণ করতে আপনাকে অবশ্যই লগ ইন করতে হবে৷",
+        "governmentSchemes": "সরকারী স্কিম",
+        "searchPlaceholder": "স্কিম অনুসন্ধান করুন...",
+        "trendingSchemes": "ট্রেন্ডিং স্কিম",
+        "exploreMoreSchemes": "আরো স্কিম এক্সপ্লোর করুন",
+        "viewAll": "সব দেখুন",
+        "learnMore": "আরও জানুন"
+    },
+    "trendingSchemesPage": {
+        "title": "প্রবণতা সরকারী স্কিম",
+        "searchPlaceholder": "ট্রেন্ডিং স্কিম অনুসন্ধান করুন...",
+        "topTrendingSchemes": "শীর্ষ ট্রেন্ডিং স্কিম",
+        "learnMore": "আরও জানুন"
+    },
+    "allSchemesPage": {
+        "title": "সমস্ত সরকারী প্রকল্প",
+        "searchPlaceholder": "স্কিম অনুসন্ধান করুন...",
+        "learnMore": "আরও জানুন"
+    },
+    "profilePage": {
+        "loading": "লোড হচ্ছে...",
+        "errorLoadingProfile": "প্রোফাইল লোড করার সময় ত্রুটি৷",
+        "profileHeading": "প্রোফাইল",
+        "editProfile": "প্রোফাইল সম্পাদনা করুন",
+        "equipmentHistory": "সরঞ্জাম ইতিহাস",
+        "trackEquipment": "ট্র্যাক সরঞ্জাম",
+        "languageSelection": "ভাষা নির্বাচন",
+        "helpSupport": "সাহায্য এবং সমর্থন",
+        "rateUs": "আমাদের রেট",
+        "aboutUs": "আমাদের সম্পর্কে",
+        "logout": "লগআউট"
+    },
+    "editProfilePage": {
+        "editProfile": "প্রোফাইল সম্পাদনা করুন",
+        "saving": "সংরক্ষণ করা হচ্ছে...",
+        "save": "সংরক্ষণ করুন",
+        "loading": "লোড হচ্ছে...",
+        "errorLoadingProfile": "প্রোফাইল লোড করার সময় ত্রুটি৷",
+        "nameLabel": "নাম*",
+        "usernameLabel": "ব্যবহারকারীর নাম *",
+        "emailLabel": "ইমেইল *",
+        "genderLabel": "লিঙ্গ",
+        "selectGender": "লিঙ্গ নির্বাচন করুন",
+        "male": "পুরুষ",
+        "female": "মহিলা",
+        "other": "অন্যান্য",
+        "dateOfBirth": "জন্ম তারিখ",
+        "state": "রাজ্য",
+        "district": "জেলা",
+        "phoneNumberLabel": "ফোন নম্বর *",
+        "failedToUpdateProfile": "প্রোফাইল আপডেট করতে ব্যর্থ হয়েছে"
+    },
+    "ratePage": {
+        "rateUs": "আমাদের রেট",
+        "rateOurApp": "আমাদের অ্যাপকে রেট দিন",
+        "tellUsHowWeAreDoing": "আমরা কিভাবে করছি আমাদের বলুন",
+        "tapAStar": "রেট দিতে একটি তারা ট্যাপ করুন",
+        "pleaseSelectRating": "জমা দেওয়ার আগে একটি রেটিং নির্বাচন করুন.",
+        "submittedRating": "আপনি {{rating}} স্টার রেটিং জমা দিয়েছেন!",
+        "submit": "জমা দিন",
+        "submitting": "জমা দেওয়া হচ্ছে..."
+    },
+    "helpSupportPage": {
+        "helpAndSupport": "সাহায্য এবং সমর্থন",
+        "howCanWeHelp": "আমরা কিভাবে আপনাকে সাহায্য করতে পারি?",
+        "callUs": "আমাদের কল করুন",
+        "phoneNumber": "+91 7984420655",
+        "emailSupport": "ইমেল সমর্থন",
+        "emailAddress": "agrisutra4@gmail.com",
+        "chatSupport": "চ্যাট সমর্থন",
+        "chatSupportDesc": "হোয়াটসঅ্যাপে যোগাযোগ করুন",
+        "faqHeading": "প্রায়শই জিজ্ঞাসিত প্রশ্নাবলী",
+        "faq1Question": "আমি কিভাবে আমার সরঞ্জাম ট্র্যাক করব?",
+        "faq1Answer": "আপনি আপনার প্রোফাইলের অধীনে \"ট্র্যাক সরঞ্জাম\" বিভাগে গিয়ে আপনার সরঞ্জামগুলি ট্র্যাক করতে পারেন৷",
+        "faq2Question": "কিভাবে আমার প্রোফাইল আপডেট করব?",
+        "faq2Answer": "আপনার বিবরণ পরিবর্তন করতে আপনার প্রোফাইল মেনুর অধীনে \"প্রোফাইল সম্পাদনা করুন\" এ যান৷",
+        "faq3Question": "স্কিমগুলিতে আমি কোথায় সাহায্য পেতে পারি?",
+        "faq3Answer": "বিস্তারিত তথ্যের জন্য প্রধান মেনুতে \"স্কিম\" পৃষ্ঠাটি দেখুন।"
+    },
+    "languagePage": {
+        "selectLanguage": "ভাষা নির্বাচন করুন",
+        "english": "ইংরেজি",
+        "gujarati": "গুজরাটি"
+    },
+    "aboutPage": {
+        "aboutUs": "আমাদের সম্পর্কে",
+        "ourMission": "আমাদের মিশন",
+        "missionDescription": "আধুনিক প্রযুক্তির সাথে কৃষকদের ক্ষমতায়ন করা এবং টেকসই চাষ পদ্ধতির জন্য সর্বোত্তম কৃষি সমাধান প্রদান করা।",
+        "contactInformation": "যোগাযোগের তথ্য",
+        "email": "agrisutra4@gmail.com",
+        "phone": "+91 7984420655",
+        "website": "www.agrisutra.com",
+        "versionTitle": "সংস্করণ",
+        "versionNumber": "1.0.0",
+        "termsPrivacyTitle": "শর্তাবলী এবং গোপনীয়তা",
+        "termsOfService": "পরিষেবার শর্তাবলী",
+        "privacyPolicy": "গোপনীয়তা নীতি"
+    },
+    "termsPage": {
+        "title": "পরিষেবার শর্তাবলী",
+        "introductionHeading": "1. ভূমিকা",
+        "introductionContent": "কৃষিসূত্রে স্বাগতম। আমাদের ওয়েবসাইট, মোবাইল অ্যাপ্লিকেশন, বা কোনো সম্পর্কিত পরিষেবা ব্যবহার করে (সম্মিলিতভাবে, \"পরিষেবা\"), আপনি এই পরিষেবার শর্তাবলী (\"শর্তাবলী\") দ্বারা আবদ্ধ হতে সম্মত হন। আমাদের পরিষেবাগুলি ব্যবহার করার আগে দয়া করে সেগুলি সাবধানে পড়ুন৷",
+        "eligibilityHeading": "2. যোগ্যতা",
+        "eligibilityContent": "আমাদের পরিষেবাগুলি ব্যবহার করার জন্য আপনার বয়স কমপক্ষে 18 বছর হতে হবে৷ আমাদের পরিষেবাগুলি ব্যবহার করে, আপনি প্রতিনিধিত্ব করেন যে আপনার কাছে একটি বাধ্যতামূলক চুক্তিতে প্রবেশ করার আইনি ক্ষমতা রয়েছে এবং কোনো প্রযোজ্য আইনের অধীনে এটি করতে বাধা দেওয়া হয় না।",
+        "accountRegistrationHeading": "3. অ্যাকাউন্ট নিবন্ধন",
+        "accountRegistrationContent": "কিছু বৈশিষ্ট্য অ্যাক্সেস করার জন্য আপনাকে একটি অ্যাকাউন্ট তৈরি করতে হতে পারে। আপনি সঠিক, বর্তমান, এবং সম্পূর্ণ তথ্য প্রদান করতে এবং এই ধরনের তথ্য আপডেট রাখতে সম্মত হন। আপনার অ্যাকাউন্টের শংসাপত্রের গোপনীয়তা বজায় রাখার জন্য এবং আপনার অ্যাকাউন্টের অধীনে ঘটে যাওয়া সমস্ত কার্যকলাপের জন্য আপনি দায়ী৷",
+        "useOfServicesHeading": "4. পরিষেবার ব্যবহার",
+        "useOfServicesContent": "আপনি শুধুমাত্র বৈধ উদ্দেশ্যে এবং এই শর্তাবলী মেনে পরিষেবাগুলি ব্যবহার করতে সম্মত হন৷ বেআইনি, হয়রানিমূলক, হুমকি বা অন্যথায় আপত্তিকর কোনো উপাদান পোস্ট বা প্রেরণ করতে আপনি আমাদের প্ল্যাটফর্ম ব্যবহার করবেন না।",
+        "intellectualPropertyHeading": "5. বুদ্ধিবৃত্তিক সম্পত্তি",
+        "intellectualPropertyContent": "সফ্টওয়্যার, ডেটাবেস, পাঠ্য, গ্রাফিক্স, আইকন এবং হাইপারলিঙ্ক সহ আমাদের পরিষেবাগুলির সমস্ত সামগ্রী, ট্রেডমার্ক এবং ডেটা কৃষিসূত্র বা এর লাইসেন্সকারীদের সম্পত্তি। আপনি আমাদের পূর্ব লিখিত অনুমতি ছাড়া পরিষেবাগুলির কোনও অংশ পুনরুত্পাদন, সংশোধন বা বিতরণ করতে পারবেন না।",
+        "disclaimersHeading": "6. দাবিত্যাগ",
+        "disclaimersContent": "আমাদের পরিষেবাগুলি \"যেমন আছে\" ভিত্তিতে প্রদান করা হয়৷ আমরা প্রদত্ত কোনো তথ্যের যথার্থতা, নির্ভরযোগ্যতা বা সম্পূর্ণতার নিশ্চয়তা দিই না। AgriSutra সমস্ত ওয়্যারেন্টি প্রত্যাখ্যান করে, তা প্রকাশ বা অন্তর্নিহিত, যার মধ্যে ব্যবসায়িকতার অন্তর্নিহিত ওয়ারেন্টি, একটি নির্দিষ্ট উদ্দেশ্যের জন্য ফিটনেস এবং অ লঙ্ঘন।",
+        "limitationOfLiabilityHeading": "7. দায়বদ্ধতার সীমাবদ্ধতা",
+        "limitationOfLiabilityContent": "In no event shall AgriSutra or its affiliates be liable for any indirect, incidental, special, or consequential damages arising out of or in connection with the use of our Services. Our total liability for any claim arising from or related to these Terms shall not exceed the amount you paid, if any, for accessing the Services.",
+        "changesToTermsHeading": "8. এই শর্তাবলী পরিবর্তন",
+        "changesToTermsContent": "আমরা যে কোনো সময় এই শর্তাদি পরিবর্তন বা প্রতিস্থাপন করার অধিকার সংরক্ষণ করি। যেকোনো পরিবর্তন আমাদের ওয়েবসাইটে পোস্ট করা হবে বা ইমেলের মাধ্যমে আপনাকে জানানো হবে। এই ধরনের পরিবর্তনের পরে পরিষেবাগুলির আপনার ক্রমাগত ব্যবহার নতুন শর্তাবলীতে আপনার সম্মতি নির্দেশ করে৷",
+        "governingLawHeading": "9. পরিচালনা আইন",
+        "governingLawContent": "এই শর্তাবলী আপনার এখতিয়ারের আইন অনুসারে পরিচালিত হবে এবং বোঝানো হবে। এই শর্তাবলী থেকে উদ্ভূত বা সম্পর্কিত যেকোন বিরোধ সেই এখতিয়ারের আদালতে সমাধান করা হবে।",
+        "contactUsHeading": "10. আমাদের সাথে যোগাযোগ করুন",
+        "contactUsContent": "এই শর্তাবলী সম্পর্কে আপনার কোন প্রশ্ন থাকলে, অনুগ্রহ করে আমাদের সাথে যোগাযোগ করুন",
+        "contactEmail": "agrisutra@gmail.com"
+    },
+    "privacyPage": {
+        "title": "গোপনীয়তা নীতি",
+        "introductionHeading": "1. ভূমিকা",
+        "introductionContent": "এই গোপনীয়তা নীতি ব্যাখ্যা করে যে আপনি যখন আমাদের পরিষেবাগুলি ব্যবহার করেন তখন কৃষিসূত্র কীভাবে আপনার সম্পর্কে তথ্য সংগ্রহ করে, ব্যবহার করে এবং ভাগ করে। আমাদের পরিষেবাগুলি ব্যবহার করে, আপনি এই নীতি অনুসারে তথ্য সংগ্রহ এবং ব্যবহারে সম্মত হন৷",
+        "informationWeCollectHeading": "2. তথ্য আমরা সংগ্রহ করি",
+        "informationWeCollectContent": "আমরা আপনার দেওয়া ব্যক্তিগত তথ্য সংগ্রহ করতে পারি, যেমন আপনার নাম, ইমেল ঠিকানা, ফোন নম্বর এবং অবস্থান ডেটা। আপনি যখন আমাদের পরিষেবাগুলি ব্যবহার করেন তখন আমরা স্বয়ংক্রিয়ভাবে কিছু প্রযুক্তিগত তথ্য সংগ্রহ করি, আপনার IP ঠিকানা, ব্রাউজারের ধরন এবং ডিভাইস শনাক্তকারী সহ।",
+        "howWeUseYourInformationHeading": "3. আমরা কিভাবে আপনার তথ্য ব্যবহার করি",
+        "howWeUseYourInformationContentIntro": "আমরা সংগ্রহ করা তথ্য ব্যবহার করি:",
+        "howWeUseYourInformationList": "আমাদের পরিষেবা প্রদান, বজায় রাখা এবং উন্নত করা; আপনার মন্তব্য, প্রশ্ন, এবং গ্রাহক সেবা অনুরোধের প্রতিক্রিয়া; আপনাকে প্রযুক্তিগত বিজ্ঞপ্তি, আপডেট, এবং নিরাপত্তা সতর্কতা পাঠান; নতুন বৈশিষ্ট্য এবং পরিষেবা বিকাশের জন্য প্রবণতা এবং ব্যবহার বিশ্লেষণ করুন।",
+        "sharingYourInformationHeading": "4. আপনার তথ্য শেয়ার করা",
+        "sharingYourInformationContent": "আমরা আপনার ব্যক্তিগত তথ্য বিক্রি না. আমরা আপনার তথ্য বিশ্বস্ত তৃতীয় পক্ষের পরিষেবা প্রদানকারীদের সাথে শেয়ার করতে পারি যারা আমাদের পরিষেবাগুলি পরিচালনা করতে আমাদের সাহায্য করে৷ আইন দ্বারা বা আমাদের অধিকার এবং সম্পত্তি রক্ষার জন্য প্রয়োজন হলে আমরা তথ্য শেয়ার করতে পারি।",
+        "cookiesHeading": "5. কুকিজ",
+        "cookiesContent": "আমরা কুকিজ এবং অনুরূপ ট্র্যাকিং প্রযুক্তি ব্যবহার করি আপনার আমাদের পরিষেবার ব্যবহার সম্পর্কে তথ্য সংগ্রহ করতে এবং আপনার অভিজ্ঞতা উন্নত করতে। আপনি কুকি প্রত্যাখ্যান করতে বা কুকি পাঠানোর সময় আপনাকে সতর্ক করতে আপনার ব্রাউজার সেট করতে পারেন।",
+        "dataRetentionHeading": "6. ডেটা ধারণ",
+        "dataRetentionContent": "এই গোপনীয়তা নীতিতে উল্লিখিত উদ্দেশ্যগুলি পূরণ করার জন্য যতক্ষণ প্রয়োজন ততক্ষণ আমরা আপনার তথ্য ধরে রাখব, যদি না আইন দ্বারা দীর্ঘ ধরে রাখার সময়ের প্রয়োজন হয় বা অনুমতি দেওয়া হয়।",
+        "securityHeading": "7. নিরাপত্তা",
+        "securityContent": "অননুমোদিত অ্যাক্সেস বা প্রকাশ থেকে আপনার ব্যক্তিগত তথ্য রক্ষা করার জন্য আমরা যুক্তিসঙ্গত ব্যবস্থা গ্রহণ করি। যাইহোক, কোন নিরাপত্তা ব্যবস্থা দুর্ভেদ্য নয়, এবং আমরা আপনার ডেটার সম্পূর্ণ নিরাপত্তার নিশ্চয়তা দিতে পারি না।",
+        "childrenHeading": "8. শিশুদের গোপনীয়তা",
+        "childrenContent": "আমাদের পরিষেবাগুলি 18 বছরের কম বয়সী ব্যক্তিদের জন্য নয়৷ আমরা জেনেশুনে 18 বছরের কম বয়সী শিশুদের কাছ থেকে ব্যক্তিগত তথ্য সংগ্রহ করি না৷ যদি আমরা আবিষ্কার করি যে 18 বছরের কম বয়সী কোনো শিশু আমাদের ব্যক্তিগত তথ্য প্রদান করেছে, আমরা আমাদের সিস্টেম থেকে এই ধরনের তথ্য মুছে দেব৷",
+        "changesHeading": "9. এই নীতিতে পরিবর্তন",
+        "changesContent": "আমরা সময়ে সময়ে এই গোপনীয়তা নীতি আপডেট করতে পারি। আমরা আমাদের ওয়েবসাইটে নতুন নীতি পোস্ট করার মাধ্যমে বা আপনার অ্যাকাউন্টের সাথে যুক্ত ঠিকানায় একটি ইমেল পাঠিয়ে কোনো উল্লেখযোগ্য পরিবর্তন সম্পর্কে আপনাকে অবহিত করব।",
+        "contactUsHeading": "10. আমাদের সাথে যোগাযোগ করুন",
+        "contactUsContent": "এই গোপনীয়তা নীতি সম্পর্কে আপনার কোন প্রশ্ন বা উদ্বেগ থাকলে, অনুগ্রহ করে আমাদের সাথে যোগাযোগ করুন",
+        "contactEmail": "agrisutra@gmail.com"
+    },
+    "newsPage": {
+        "latestNews": "সর্বশেষ খবর",
+        "readMore": "আরও পড়ুন"
+    },
+    "marketPage": {
+        "heading": "কৃষি বাজারের প্রবণতা",
+        "selectCommodity": "পণ্য নির্বাচন করুন",
+        "selectState": "রাজ্য নির্বাচন করুন",
+        "selectDistrict": "জেলা নির্বাচন করুন",
+        "fetchData": "ডেটা আনুন",
+        "fetchingData": "বাজার ডেটা আনা হচ্ছে...",
+        "noMarketData": "কোন বাজার প্রবণতা উপলব্ধ. সাম্প্রতিক আপডেটগুলি দেখতে একটি পণ্য, রাজ্য এবং জেলা নির্বাচন করার চেষ্টা করুন৷",
+        "selectAllFields": "অনুগ্রহ করে একটি পণ্য, রাজ্য এবং জেলা নির্বাচন করুন।",
+        "fetchError": "বাজারের ডেটা আনতে ব্যর্থ হয়েছে৷ পরে আবার চেষ্টা করুন.",
+        "city": "শহর",
+        "commodity": "পণ্য",
+        "minPrice": "ন্যূনতম মূল্য",
+        "maxPrice": "সর্বোচ্চ মূল্য",
+        "modelPrice": "মডেলের দাম",
+        "date": "তারিখ"
+    },
+    "soilAnalysis": {
+        "title": "মাটি বিশ্লেষণ পরীক্ষা",
+        "description": "ম্যানুয়ালি মাটির পরামিতি লিখবেন নাকি পিডিএফ/ইমেজ আপলোড করবেন তা বেছে নিন।",
+        "manualInput": "ম্যানুয়াল ইনপুট",
+        "uploadPdfImage": "পিডিএফ/ইমেজ আপলোড করুন",
+        "uploadLabel": "ছবি বা পিডিএফ আপলোড করুন",
+        "getRecommendation": "সুপারিশ পান",
+        "cropRecommendation": "ফসলের সুপারিশ",
+        "noDescription": "কোন বিবরণ উপলব্ধ.",
+        "errorFetching": "ভবিষ্যদ্বাণী আনার সময় ত্রুটি৷ আবার চেষ্টা করুন.",
+        "formLabels": {
+            "N": "নাইট্রোজেন (N)",
+            "P": "ফসফরাস (P)",
+            "K": "পটাসিয়াম (কে)",
+            "temperature": "তাপমাত্রা (°সে)",
+            "humidity": "আর্দ্রতা (%)",
+            "ph": "পিএইচ স্তর",
+            "rainfall": "বৃষ্টিপাত (মিমি)",
+            "${key}": "soilAnalysis.formLabels.${key}"
+        },
+        "chooseMethod": "soilAnalysis.chooseMethod",
+        "tipsHeading": "soilAnalysis.tipsHeading"
+    },
+    "weather": {
+        "locationAccess": "অবস্থান অ্যাক্সেসের অনুমতি দেবেন?",
+        "locationInfo": "সঠিক আবহাওয়ার আপডেট দিতে আমাদের আপনার অবস্থানের প্রয়োজন।",
+        "allow": "অনুমতি দিন",
+        "deny": "অস্বীকার করুন",
+        "temperature": "তাপমাত্রা",
+        "humidity": "আর্দ্রতা",
+        "uvIndex": "UV সূচক",
+        "windSpeed": "বাতাসের গতি",
+        "airQualityIndex": "বায়ুর গুণমান সূচক",
+        "sunrise": "সূর্যোদয়",
+        "sunset": "সূর্যাস্ত",
+        "sevenDayForecast": "7-দিনের পূর্বাভাস"
+    },
+    "settings": {
+        "loading": "লোড হচ্ছে...",
+        "errorLoadingProfile": "প্রোফাইল লোড করার সময় ত্রুটি৷",
+        "editProfile": "প্রোফাইল সম্পাদনা করুন",
+        "languageSelection": "ভাষা নির্বাচন",
+        "settings": "সেটিংস"
+    },
+    "general": {
+        "back": "ব্যাক"
+    },
+    "equipment": {
+        "locationAccess": "অবস্থান অ্যাক্সেসের অনুমতি দেবেন?",
+        "locationInfo": "কাছাকাছি উপলব্ধ কৃষি সরঞ্জাম দেখানোর জন্য আমাদের আপনার অবস্থান প্রয়োজন।",
+        "allow": "অনুমতি দিন",
+        "deny": "অস্বীকার করুন",
+        "searchPlaceholder": "সরঞ্জাম বিভাগ অনুসন্ধান করুন...",
+        "loadingCategories": "বিভাগগুলি লোড হচ্ছে...",
+        "noCategoriesFound": "কোন বিভাগ পাওয়া যায়নি.",
+        "farmingEquipments": "কৃষি সরঞ্জাম",
+        "availableEquipment": "{{category}} এ ​​উপলব্ধ সরঞ্জাম",
+        "noEquipment": "এই বিভাগের জন্য কোন সরঞ্জাম উপলব্ধ.",
+        "unitsAvailable": "ইউনিট উপলব্ধ",
+        "ownerName": "মালিকের নাম",
+        "pricePerUnit": "ইউনিট প্রতি মূল্য",
+        "location": "অবস্থান",
+        "giveEquipment": "আপনার সরঞ্জাম দিতে চান?",
+        "listEquipment": "অন্যদের ব্যবহারের জন্য আপনার সরঞ্জাম তালিকা",
+        "useEquipment": "সরঞ্জাম ব্যবহার করতে চান?",
+        "findEquipment": "আপনার প্রয়োজনের জন্য সরঞ্জাম খুঁজুন এবং বুক করুন"
+    },
+    "giveEquipment": {
+        "title": "আপনার {{category}} তালিকাভুক্ত করুন",
+        "description": "অন্যদের ব্যবহারের জন্য আপনার কৃষি সরঞ্জাম তালিকাভুক্ত করুন। আপনার সরঞ্জাম উপলব্ধ করতে নীচের বিবরণ পূরণ করুন.",
+        "equipmentName": "সরঞ্জামের নাম",
+        "equipmentPlaceholder": "যেমন, John Deere 5075E ট্র্যাক্টর",
+        "descriptionLabel": "বর্ণনা",
+        "descriptionPlaceholder": "শর্ত, বৈশিষ্ট্য, ইত্যাদি সহ আপনার সরঞ্জাম বর্ণনা করুন।",
+        "rentalRate": "ভাড়ার হার (প্রতিদিন)",
+        "pricePlaceholder": "যেমন, 5000",
+        "location": "অবস্থান",
+        "locationPlaceholder": "যেমন, অমৃতসর, পাঞ্জাব",
+        "availability": "প্রাপ্যতা",
+        "availableNow": "এখন উপলব্ধ",
+        "notAvailable": "উপলব্ধ নয়",
+        "contactInfo": "যোগাযোগের তথ্য",
+        "phonePlaceholder": "ফোন নম্বর",
+        "listButton": "তালিকা সরঞ্জাম",
+        "successMessage": "সরঞ্জাম সফলভাবে তালিকাভুক্ত!",
+        "errorMessage": "সরঞ্জাম তালিকা করতে ব্যর্থ.",
+        "networkError": "একটি নেটওয়ার্ক ত্রুটি ঘটেছে৷ আবার চেষ্টা করুন."
+    },
+    "availableEquipment": {
+        "title": "উপলব্ধ {{category}} সরঞ্জাম",
+        "filterOptions": "ফিল্টার অপশন",
+        "all": "সব",
+        "availableNow": "এখন উপলব্ধ",
+        "notAvailable": "উপলব্ধ নয়",
+        "perDay": "প্রতিদিন",
+        "location": "অবস্থান",
+        "owner": "মালিক",
+        "available": "পাওয়া যায়",
+        "notavailable": "উপলব্ধ নয়",
+        "unknown": "অজানা",
+        "bookNow": "এখন বুক করুন",
+        "unavailable": "অনুপলব্ধ",
+        "noEquipment": "কোনো {{category}} সরঞ্জাম উপলব্ধ নেই৷"
+    },
+    "bookEquipment": {
+        "back": "ব্যাক",
+        "title": "বইয়ের সরঞ্জাম",
+        "equipmentName": "সরঞ্জামের নাম",
+        "location": "অবস্থান",
+        "owner": "মালিক",
+        "bookingDetails": "বুকিং বিশদ",
+        "startDate": "শুরুর তারিখ",
+        "endDate": "শেষ তারিখ",
+        "confirmBooking": "বুকিং নিশ্চিত করুন",
+        "bookingSuccess": "বুকিং সফলভাবে নিশ্চিত করা হয়েছে!"
+    },
+    ".": ".",
+    "T": "টি",
+    "email": "ইমেইল",
+    "username": "ব্যবহারকারীর নাম",
+    "name": "নাম",
+    "password": "পাসওয়ার্ড",
+    "You must be logged in to save a scheme.": "একটি স্কিম সংরক্ষণ করতে আপনাকে অবশ্যই লগ ইন করতে হবে৷",
+    "Scheme saved successfully!": "স্কিম সফলভাবে সংরক্ষিত!",
+    "Failed to save scheme.": "স্কিম সংরক্ষণ করতে ব্যর্থ হয়েছে.",
+    "Scheme is already saved.": "স্কিম ইতিমধ্যে সংরক্ষণ করা হয়েছে.",
+    "token": "টোকেন",
+    "loading": "লোড হচ্ছে",
+    "soilAnalysis.chooseMethod": "soilAnalysis.chooseMethod",
+    "soilAnalysis.formLabels.${key}": "soilAnalysis.formLabels.${key}",
+    "soilAnalysis.tipsHeading": "soilAnalysis.tipsHeading",
+    " ": "",
+    "Equipment listed successfully!": "সরঞ্জাম সফলভাবে তালিকাভুক্ত!",
+    "Failed to list equipment. ": "সরঞ্জাম তালিকা করতে ব্যর্থ.",
+    "A network error occurred. Please try again.": "একটি নেটওয়ার্ক ত্রুটি ঘটেছে৷ আবার চেষ্টা করুন.",
+    "Geolocation is not supported by your browser.": "ভূ-অবস্থান আপনার ব্রাউজার দ্বারা সমর্থিত নয়।",
+    "Location access denied. Please allow location access.": "অবস্থান অ্যাক্সেস অস্বীকৃত. অনুগ্রহ করে অবস্থান অ্যাক্সেসের অনুমতি দিন।",
+    "equipment_id": "সরঞ্জাম_আইডি",
+    "Please select start and end dates.": "অনুগ্রহ করে শুরু এবং শেষ তারিখ নির্বাচন করুন।",
+    "Equipment ID is missing!": "সরঞ্জাম আইডি অনুপস্থিত!",
+    "Booking confirmed!": "বুকিং নিশ্চিত!",
+    "Failed to book equipment.": "সরঞ্জাম বুক করতে ব্যর্থ.",
+    "": {
+        "": "."
+    },
+    "You must be logged in to save a scheme": {
+        "": "You must be logged in to save a scheme."
+    },
+    "Failed to save scheme": {
+        "": "Failed to save scheme."
+    },
+    "Scheme is already saved": {
+        "": "Scheme is already saved."
+    },
+    "Failed to list equipment": {
+        " ": "Failed to list equipment. "
+    },
+    "A network error occurred": {
+        " Please try again": {
+            "": "A network error occurred. Please try again."
+        }
+    },
+    "Geolocation is not supported by your browser": {
+        "": "Geolocation is not supported by your browser."
+    },
+    "Location access denied": {
+        " Please allow location access": {
+            "": "Location access denied. Please allow location access."
+        }
+    },
+    "Please select start and end dates": {
+        "": "Please select start and end dates."
+    },
+    "Failed to book equipment": {
+        "": "Failed to book equipment."
+    }
+}

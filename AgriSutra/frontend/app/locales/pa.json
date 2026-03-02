@@ -1,0 +1,384 @@
+{
+    "common": {
+        "welcome": "ਜੀ ਆਇਆਂ ਨੂੰ AgriSutra ਜੀ!"
+    },
+    "navbar": {
+        "dashboard": "ਡੈਸ਼ਬੋਰਡ",
+        "profile": "ਪ੍ਰੋਫਾਈਲ"
+    },
+    "homepage": {
+        "bannerTitle": "ਸਫਲਤਾ ਦੀ ਕਾਸ਼ਤ ਕਰੋ",
+        "bannerQuote": "\"ਸਾਡੀ ਆਰਥਿਕਤਾ ਵਿੱਚ ਕਿਸਾਨ ਹੀ ਇੱਕ ਅਜਿਹਾ ਆਦਮੀ ਹੈ ਜੋ ਹਰ ਚੀਜ਼ ਪ੍ਰਚੂਨ ਵਿੱਚ ਖਰੀਦਦਾ ਹੈ, ਸਭ ਕੁਝ ਥੋਕ ਵਿੱਚ ਵੇਚਦਾ ਹੈ, ਅਤੇ ਭਾੜੇ ਦਾ ਭੁਗਤਾਨ ਦੋਵਾਂ ਤਰੀਕਿਆਂ ਨਾਲ ਕਰਦਾ ਹੈ।\"",
+        "governmentSchemesTitle": "ਸਰਕਾਰੀ ਸਕੀਮਾਂ",
+        "governmentSchemesDescription": "ਕਿਸਾਨਾਂ ਲਈ ਉਪਲਬਧ ਨਵੀਨਤਮ ਸਰਕਾਰੀ ਪਹਿਲਕਦਮੀਆਂ ਅਤੇ ਸਬਸਿਡੀਆਂ ਦੀ ਖੋਜ ਕਰੋ।",
+        "exploreSchemes": "ਸਕੀਮਾਂ ਦੀ ਪੜਚੋਲ ਕਰੋ",
+        "marketTrendsTitle": "ਖੇਤੀ ਮੰਡੀ ਦੇ ਰੁਝਾਨ",
+        "marketTrendsDescription": "ਖੇਤੀਬਾੜੀ ਵਸਤੂਆਂ ਲਈ ਨਵੀਨਤਮ ਬਾਜ਼ਾਰ ਕੀਮਤਾਂ ਅਤੇ ਰੁਝਾਨਾਂ ਨਾਲ ਅੱਪਡੇਟ ਰਹੋ।",
+        "viewAllTrends": "ਸਾਰੇ ਰੁਝਾਨ ਦੇਖੋ",
+        "equipmentServicesTitle": "ਉਪਕਰਨ ਸੇਵਾਵਾਂ",
+        "tractorBooking": "ਟਰੈਕਟਰ ਬੁਕਿੰਗ",
+        "tractorBookingDescription": "ਆਪਣੀਆਂ ਖੇਤੀ ਲੋੜਾਂ ਲਈ ਟਰੈਕਟਰ ਬੁੱਕ ਕਰੋ।",
+        "irrigationEquipment": "ਸਿੰਚਾਈ ਉਪਕਰਨ",
+        "irrigationEquipmentDescription": "ਪਾਣੀ ਦੀ ਵਰਤੋਂ ਨੂੰ ਅਨੁਕੂਲ ਬਣਾਉਣ ਲਈ ਆਧੁਨਿਕ ਸਿੰਚਾਈ ਹੱਲ।",
+        "viewAllEquipment": "ਸਾਰੇ ਉਪਕਰਨ ਦੇਖੋ",
+        "locationPermissionPopupTitle": "ਕੀ ਟਿਕਾਣਾ ਪਹੁੰਚ ਦੀ ਇਜਾਜ਼ਤ ਦੇਣੀ ਹੈ?",
+        "locationPermissionPopupDescription": "ਸਾਨੂੰ ਉਪਲਬਧ ਉਪਕਰਨ ਦਿਖਾਉਣ ਲਈ ਤੁਹਾਡੇ ਟਿਕਾਣੇ ਦੀ ਲੋੜ ਹੈ।",
+        "allow": "ਇਜਾਜ਼ਤ ਦਿਓ",
+        "deny": "ਇਨਕਾਰ",
+        "soilAnalysisTitle": "ਮਿੱਟੀ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ",
+        "soilAnalysisDescription": "ਆਪਣੀ ਮਿੱਟੀ ਦੀ ਸਥਿਤੀ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ ਕਰੋ ਅਤੇ ਬਿਹਤਰ ਫਸਲ ਦੇ ਝਾੜ ਲਈ ਸਿਫ਼ਾਰਸ਼ਾਂ ਪ੍ਰਾਪਤ ਕਰੋ।",
+        "startAnalysis": "ਵਿਸ਼ਲੇਸ਼ਣ ਸ਼ੁਰੂ ਕਰੋ",
+        "allowLocation": "ਟਿਕਾਣਾ ਪਹੁੰਚ ਦੀ ਇਜਾਜ਼ਤ ਦਿਓ",
+        "locationInfo": "ਸਾਨੂੰ ਉਪਲਬਧ ਉਪਕਰਨ ਦਿਖਾਉਣ ਲਈ ਤੁਹਾਡੇ ਟਿਕਾਣੇ ਦੀ ਲੋੜ ਹੈ।"
+    },
+    "schemesPage": {
+        "schemeNotFound": "ਸਕੀਮ ਨਹੀਂ ਮਿਲੀ",
+        "schemeDetails": "ਸਕੀਮ ਵੇਰਵੇ",
+        "saveScheme": "ਸੇਵ ਸਕੀਮ",
+        "schemeSavedSuccess": "ਸਕੀਮ ਸਫਲਤਾਪੂਰਵਕ ਸੁਰੱਖਿਅਤ ਕੀਤੀ ਗਈ!",
+        "schemeSavedFail": "ਸਕੀਮ ਨੂੰ ਸੁਰੱਖਿਅਤ ਕਰਨਾ ਅਸਫਲ ਰਿਹਾ।",
+        "mustBeLoggedIn": "ਇੱਕ ਸਕੀਮ ਨੂੰ ਸੁਰੱਖਿਅਤ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ ਲੌਗ ਇਨ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ।",
+        "governmentSchemes": "ਸਰਕਾਰੀ ਸਕੀਮਾਂ",
+        "searchPlaceholder": "ਖੋਜ ਸਕੀਮਾਂ...",
+        "trendingSchemes": "ਪ੍ਰਚਲਿਤ ਸਕੀਮਾਂ",
+        "exploreMoreSchemes": "ਹੋਰ ਸਕੀਮਾਂ ਦੀ ਪੜਚੋਲ ਕਰੋ",
+        "viewAll": "ਸਭ ਦੇਖੋ",
+        "learnMore": "ਜਿਆਦਾ ਜਾਣੋ"
+    },
+    "trendingSchemesPage": {
+        "title": "ਪ੍ਰਚਲਿਤ ਸਰਕਾਰੀ ਸਕੀਮਾਂ",
+        "searchPlaceholder": "ਪ੍ਰਚਲਿਤ ਸਕੀਮਾਂ ਦੀ ਖੋਜ ਕਰੋ...",
+        "topTrendingSchemes": "ਪ੍ਰਮੁੱਖ ਰੁਝਾਨ ਵਾਲੀਆਂ ਸਕੀਮਾਂ",
+        "learnMore": "ਜਿਆਦਾ ਜਾਣੋ"
+    },
+    "allSchemesPage": {
+        "title": "ਸਾਰੀਆਂ ਸਰਕਾਰੀ ਸਕੀਮਾਂ",
+        "searchPlaceholder": "ਖੋਜ ਸਕੀਮਾਂ...",
+        "learnMore": "ਜਿਆਦਾ ਜਾਣੋ"
+    },
+    "profilePage": {
+        "loading": "ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...",
+        "errorLoadingProfile": "ਪ੍ਰੋਫਾਈਲ ਲੋਡ ਕਰਨ ਵਿੱਚ ਤਰੁੱਟੀ।",
+        "profileHeading": "ਪ੍ਰੋਫਾਈਲ",
+        "editProfile": "ਪ੍ਰੋਫਾਈਲ ਦਾ ਸੰਪਾਦਨ ਕਰੋ",
+        "equipmentHistory": "ਉਪਕਰਣ ਇਤਿਹਾਸ",
+        "trackEquipment": "ਟਰੈਕ ਉਪਕਰਣ",
+        "languageSelection": "ਭਾਸ਼ਾ ਦੀ ਚੋਣ",
+        "helpSupport": "ਮਦਦ ਅਤੇ ਸਹਾਇਤਾ",
+        "rateUs": "ਸਾਨੂੰ ਦਰਜਾ ਦਿਓ",
+        "aboutUs": "ਸਾਡੇ ਬਾਰੇ",
+        "logout": "ਲਾਗਆਉਟ"
+    },
+    "editProfilePage": {
+        "editProfile": "ਪ੍ਰੋਫਾਈਲ ਦਾ ਸੰਪਾਦਨ ਕਰੋ",
+        "saving": "ਰੱਖਿਅਤ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...",
+        "save": "ਸੇਵ ਕਰੋ",
+        "loading": "ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...",
+        "errorLoadingProfile": "ਪ੍ਰੋਫਾਈਲ ਲੋਡ ਕਰਨ ਵਿੱਚ ਤਰੁੱਟੀ।",
+        "nameLabel": "ਨਾਮ*",
+        "usernameLabel": "ਉਪਭੋਗਤਾ ਨਾਮ *",
+        "emailLabel": "ਈਮੇਲ *",
+        "genderLabel": "ਲਿੰਗ",
+        "selectGender": "ਲਿੰਗ ਚੁਣੋ",
+        "male": "ਨਰ",
+        "female": "ਔਰਤ",
+        "other": "ਹੋਰ",
+        "dateOfBirth": "ਜਨਮ ਤਾਰੀਖ",
+        "state": "ਰਾਜ",
+        "district": "ਜ਼ਿਲ੍ਹਾ",
+        "phoneNumberLabel": "ਫੋਨ ਨੰਬਰ *",
+        "failedToUpdateProfile": "ਪ੍ਰੋਫਾਈਲ ਅੱਪਡੇਟ ਕਰਨ ਵਿੱਚ ਅਸਫਲ"
+    },
+    "ratePage": {
+        "rateUs": "ਸਾਨੂੰ ਦਰਜਾ ਦਿਓ",
+        "rateOurApp": "ਸਾਡੇ ਐਪ ਨੂੰ ਦਰਜਾ ਦਿਓ",
+        "tellUsHowWeAreDoing": "ਸਾਨੂੰ ਦੱਸੋ ਕਿ ਅਸੀਂ ਕਿਵੇਂ ਕਰ ਰਹੇ ਹਾਂ",
+        "tapAStar": "ਰੇਟ ਕਰਨ ਲਈ ਇੱਕ ਤਾਰੇ 'ਤੇ ਟੈਪ ਕਰੋ",
+        "pleaseSelectRating": "ਕਿਰਪਾ ਕਰਕੇ ਦਰਜ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਇੱਕ ਰੇਟਿੰਗ ਚੁਣੋ।",
+        "submittedRating": "ਤੁਸੀਂ {{rating}} ਸਿਤਾਰਿਆਂ ਦੀ ਰੇਟਿੰਗ ਦਰਜ ਕੀਤੀ ਹੈ!",
+        "submit": "ਜਮ੍ਹਾਂ ਕਰੋ",
+        "submitting": "ਸਪੁਰਦ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ..."
+    },
+    "helpSupportPage": {
+        "helpAndSupport": "ਮਦਦ ਅਤੇ ਸਹਾਇਤਾ",
+        "howCanWeHelp": "ਅਸੀਂ ਤੁਹਾਡੀ ਮਦਦ ਕਿਵੇਂ ਕਰ ਸਕਦੇ ਹਾਂ?",
+        "callUs": "ਸਾਨੂੰ ਕਾਲ ਕਰੋ",
+        "phoneNumber": "+91 7984420655",
+        "emailSupport": "ਈਮੇਲ ਸਹਾਇਤਾ",
+        "emailAddress": "agrisutra4@gmail.com",
+        "chatSupport": "ਚੈਟ ਸਹਾਇਤਾ",
+        "chatSupportDesc": "ਵਟਸਐਪ 'ਤੇ ਸੰਪਰਕ ਕਰੋ",
+        "faqHeading": "ਅਕਸਰ ਪੁੱਛੇ ਜਾਂਦੇ ਸਵਾਲ",
+        "faq1Question": "ਮੈਂ ਆਪਣੇ ਉਪਕਰਣਾਂ ਨੂੰ ਕਿਵੇਂ ਟ੍ਰੈਕ ਕਰਾਂ?",
+        "faq1Answer": "ਤੁਸੀਂ ਆਪਣੇ ਪ੍ਰੋਫਾਈਲ ਦੇ ਹੇਠਾਂ \"ਟਰੈਕ ਉਪਕਰਣ\" ਸੈਕਸ਼ਨ 'ਤੇ ਜਾ ਕੇ ਆਪਣੇ ਸਾਜ਼-ਸਾਮਾਨ ਨੂੰ ਟਰੈਕ ਕਰ ਸਕਦੇ ਹੋ।",
+        "faq2Question": "ਮੇਰੀ ਪ੍ਰੋਫਾਈਲ ਨੂੰ ਕਿਵੇਂ ਅਪਡੇਟ ਕਰਨਾ ਹੈ?",
+        "faq2Answer": "ਆਪਣੇ ਵੇਰਵਿਆਂ ਨੂੰ ਬਦਲਣ ਲਈ ਆਪਣੇ ਪ੍ਰੋਫਾਈਲ ਮੀਨੂ ਦੇ ਹੇਠਾਂ \"ਪ੍ਰੋਫਾਈਲ ਸੰਪਾਦਿਤ ਕਰੋ\" 'ਤੇ ਜਾਓ।",
+        "faq3Question": "ਮੈਨੂੰ ਸਕੀਮਾਂ ਬਾਰੇ ਮਦਦ ਕਿੱਥੋਂ ਮਿਲ ਸਕਦੀ ਹੈ?",
+        "faq3Answer": "ਵਿਸਤ੍ਰਿਤ ਜਾਣਕਾਰੀ ਲਈ ਮੁੱਖ ਮੀਨੂ ਵਿੱਚ \"ਸਕੀਮਾਂ\" ਪੰਨੇ ਨੂੰ ਦੇਖੋ।"
+    },
+    "languagePage": {
+        "selectLanguage": "ਭਾਸ਼ਾ ਚੁਣੋ",
+        "english": "ਅੰਗਰੇਜ਼ੀ",
+        "gujarati": "ਗੁਜਰਾਤੀ"
+    },
+    "aboutPage": {
+        "aboutUs": "ਸਾਡੇ ਬਾਰੇ",
+        "ourMission": "ਸਾਡਾ ਮਿਸ਼ਨ",
+        "missionDescription": "ਕਿਸਾਨਾਂ ਨੂੰ ਆਧੁਨਿਕ ਟੈਕਨਾਲੋਜੀ ਨਾਲ ਸਸ਼ਕਤ ਕਰਨਾ ਅਤੇ ਟਿਕਾਊ ਖੇਤੀ ਅਭਿਆਸਾਂ ਲਈ ਉਨ੍ਹਾਂ ਨੂੰ ਸਭ ਤੋਂ ਵਧੀਆ ਖੇਤੀਬਾੜੀ ਹੱਲ ਪ੍ਰਦਾਨ ਕਰਨਾ।",
+        "contactInformation": "ਸੰਪਰਕ ਜਾਣਕਾਰੀ",
+        "email": "agrisutra4@gmail.com",
+        "phone": "+91 7984420655",
+        "website": "www.agrisutra.com",
+        "versionTitle": "ਸੰਸਕਰਣ",
+        "versionNumber": "1.0.0",
+        "termsPrivacyTitle": "ਨਿਯਮ ਅਤੇ ਗੋਪਨੀਯਤਾ",
+        "termsOfService": "ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ",
+        "privacyPolicy": "ਪਰਾਈਵੇਟ ਨੀਤੀ"
+    },
+    "termsPage": {
+        "title": "ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ",
+        "introductionHeading": "1. ਜਾਣ-ਪਛਾਣ",
+        "introductionContent": "AgriSutra ਵਿੱਚ ਤੁਹਾਡਾ ਸੁਆਗਤ ਹੈ। ਸਾਡੀ ਵੈੱਬਸਾਈਟ, ਮੋਬਾਈਲ ਐਪਲੀਕੇਸ਼ਨ, ਜਾਂ ਕਿਸੇ ਵੀ ਸੰਬੰਧਿਤ ਸੇਵਾਵਾਂ (ਸਮੂਹਿਕ ਤੌਰ 'ਤੇ, \"ਸੇਵਾਵਾਂ\") ਦੀ ਵਰਤੋਂ ਕਰਕੇ, ਤੁਸੀਂ ਇਹਨਾਂ ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ (\"ਸ਼ਰਤਾਂ\") ਦੁਆਰਾ ਪਾਬੰਦ ਹੋਣ ਲਈ ਸਹਿਮਤ ਹੁੰਦੇ ਹੋ। ਕਿਰਪਾ ਕਰਕੇ ਸਾਡੀਆਂ ਸੇਵਾਵਾਂ ਦੀ ਵਰਤੋਂ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਉਹਨਾਂ ਨੂੰ ਧਿਆਨ ਨਾਲ ਪੜ੍ਹੋ।",
+        "eligibilityHeading": "2. ਯੋਗਤਾ",
+        "eligibilityContent": "ਸਾਡੀਆਂ ਸੇਵਾਵਾਂ ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ ਤੁਹਾਡੀ ਉਮਰ ਘੱਟੋ-ਘੱਟ 18 ਸਾਲ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ। ਸਾਡੀਆਂ ਸੇਵਾਵਾਂ ਦੀ ਵਰਤੋਂ ਕਰਕੇ, ਤੁਸੀਂ ਇਹ ਦਰਸਾਉਂਦੇ ਹੋ ਕਿ ਤੁਹਾਡੇ ਕੋਲ ਇੱਕ ਬਾਈਡਿੰਗ ਇਕਰਾਰਨਾਮੇ ਵਿੱਚ ਦਾਖਲ ਹੋਣ ਦੀ ਕਾਨੂੰਨੀ ਸਮਰੱਥਾ ਹੈ ਅਤੇ ਕਿਸੇ ਵੀ ਲਾਗੂ ਕਾਨੂੰਨਾਂ ਦੇ ਤਹਿਤ ਅਜਿਹਾ ਕਰਨ ਤੋਂ ਰੋਕਿਆ ਨਹੀਂ ਗਿਆ ਹੈ।",
+        "accountRegistrationHeading": "3. ਖਾਤਾ ਰਜਿਸਟਰੇਸ਼ਨ",
+        "accountRegistrationContent": "ਤੁਹਾਨੂੰ ਕੁਝ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਲਈ ਇੱਕ ਖਾਤਾ ਬਣਾਉਣ ਦੀ ਲੋੜ ਹੋ ਸਕਦੀ ਹੈ। ਤੁਸੀਂ ਸਹੀ, ਮੌਜੂਦਾ ਅਤੇ ਪੂਰੀ ਜਾਣਕਾਰੀ ਪ੍ਰਦਾਨ ਕਰਨ ਅਤੇ ਅਜਿਹੀ ਜਾਣਕਾਰੀ ਨੂੰ ਅੱਪਡੇਟ ਰੱਖਣ ਲਈ ਸਹਿਮਤ ਹੋ। ਤੁਸੀਂ ਆਪਣੇ ਖਾਤੇ ਦੇ ਪ੍ਰਮਾਣ ਪੱਤਰਾਂ ਦੀ ਗੁਪਤਤਾ ਨੂੰ ਬਣਾਈ ਰੱਖਣ ਅਤੇ ਤੁਹਾਡੇ ਖਾਤੇ ਦੇ ਅਧੀਨ ਹੋਣ ਵਾਲੀਆਂ ਸਾਰੀਆਂ ਗਤੀਵਿਧੀਆਂ ਲਈ ਜ਼ਿੰਮੇਵਾਰ ਹੋ।",
+        "useOfServicesHeading": "4. ਸੇਵਾਵਾਂ ਦੀ ਵਰਤੋਂ",
+        "useOfServicesContent": "ਤੁਸੀਂ ਸਿਰਫ਼ ਕਨੂੰਨੀ ਉਦੇਸ਼ਾਂ ਲਈ ਅਤੇ ਇਹਨਾਂ ਨਿਯਮਾਂ ਦੀ ਪਾਲਣਾ ਵਿੱਚ ਸੇਵਾਵਾਂ ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ ਸਹਿਮਤ ਹੋ। ਤੁਸੀਂ ਸਾਡੇ ਪਲੇਟਫਾਰਮ ਦੀ ਵਰਤੋਂ ਕਿਸੇ ਵੀ ਅਜਿਹੀ ਸਮੱਗਰੀ ਨੂੰ ਪੋਸਟ ਜਾਂ ਪ੍ਰਸਾਰਿਤ ਕਰਨ ਲਈ ਨਹੀਂ ਕਰੋਗੇ ਜੋ ਗੈਰ-ਕਾਨੂੰਨੀ, ਪਰੇਸ਼ਾਨ ਕਰਨ ਵਾਲੀ, ਧਮਕੀ ਦੇਣ ਵਾਲੀ, ਜਾਂ ਹੋਰ ਇਤਰਾਜ਼ਯੋਗ ਹੈ।",
+        "intellectualPropertyHeading": "5. ਬੌਧਿਕ ਸੰਪੱਤੀ",
+        "intellectualPropertyContent": "ਸਾੱਫਟਵੇਅਰ, ਡੇਟਾਬੇਸ, ਟੈਕਸਟ, ਗ੍ਰਾਫਿਕਸ, ਆਈਕਨ ਅਤੇ ਹਾਈਪਰਲਿੰਕਸ ਸਮੇਤ ਸਾਡੀਆਂ ਸੇਵਾਵਾਂ 'ਤੇ ਸਾਰੀ ਸਮੱਗਰੀ, ਟ੍ਰੇਡਮਾਰਕ ਅਤੇ ਡੇਟਾ ਐਗਰੀਸੂਤਰ ਜਾਂ ਇਸਦੇ ਲਾਇਸੈਂਸ ਦੇਣ ਵਾਲਿਆਂ ਦੀ ਸੰਪਤੀ ਹਨ। ਤੁਸੀਂ ਸਾਡੀ ਪੂਰਵ ਲਿਖਤੀ ਇਜਾਜ਼ਤ ਤੋਂ ਬਿਨਾਂ ਸੇਵਾਵਾਂ ਦੇ ਕਿਸੇ ਵੀ ਹਿੱਸੇ ਨੂੰ ਦੁਬਾਰਾ ਤਿਆਰ, ਸੋਧ ਜਾਂ ਵੰਡ ਨਹੀਂ ਸਕਦੇ ਹੋ।",
+        "disclaimersHeading": "6. ਬੇਦਾਅਵਾ",
+        "disclaimersContent": "ਸਾਡੀਆਂ ਸੇਵਾਵਾਂ \"ਜਿਵੇਂ ਹੈ\" ਦੇ ਆਧਾਰ 'ਤੇ ਪ੍ਰਦਾਨ ਕੀਤੀਆਂ ਜਾਂਦੀਆਂ ਹਨ। ਅਸੀਂ ਪ੍ਰਦਾਨ ਕੀਤੀ ਗਈ ਕਿਸੇ ਵੀ ਜਾਣਕਾਰੀ ਦੀ ਸ਼ੁੱਧਤਾ, ਭਰੋਸੇਯੋਗਤਾ ਜਾਂ ਸੰਪੂਰਨਤਾ ਦੀ ਵਾਰੰਟੀ ਨਹੀਂ ਦਿੰਦੇ ਹਾਂ। AgriSutra ਸਾਰੀਆਂ ਵਾਰੰਟੀਆਂ ਦਾ ਖੰਡਨ ਕਰਦਾ ਹੈ, ਭਾਵੇਂ ਸਪਸ਼ਟ ਜਾਂ ਅਪ੍ਰਤੱਖ, ਜਿਸ ਵਿੱਚ ਵਪਾਰਕਤਾ, ਕਿਸੇ ਖਾਸ ਉਦੇਸ਼ ਲਈ ਤੰਦਰੁਸਤੀ, ਅਤੇ ਗੈਰ-ਉਲੰਘਣ ਦੀ ਅਪ੍ਰਤੱਖ ਵਾਰੰਟੀਆਂ ਸ਼ਾਮਲ ਹਨ।",
+        "limitationOfLiabilityHeading": "7. ਦੇਣਦਾਰੀ ਦੀ ਸੀਮਾ",
+        "limitationOfLiabilityContent": "In no event shall AgriSutra or its affiliates be liable for any indirect, incidental, special, or consequential damages arising out of or in connection with the use of our Services. Our total liability for any claim arising from or related to these Terms shall not exceed the amount you paid, if any, for accessing the Services.",
+        "changesToTermsHeading": "8. ਇਹਨਾਂ ਸ਼ਰਤਾਂ ਵਿੱਚ ਬਦਲਾਅ",
+        "changesToTermsContent": "ਅਸੀਂ ਕਿਸੇ ਵੀ ਸਮੇਂ ਇਹਨਾਂ ਨਿਯਮਾਂ ਨੂੰ ਸੋਧਣ ਜਾਂ ਬਦਲਣ ਦਾ ਅਧਿਕਾਰ ਰਾਖਵਾਂ ਰੱਖਦੇ ਹਾਂ। ਕੋਈ ਵੀ ਤਬਦੀਲੀ ਸਾਡੀ ਵੈੱਬਸਾਈਟ 'ਤੇ ਪੋਸਟ ਕੀਤੀ ਜਾਵੇਗੀ ਜਾਂ ਈਮੇਲ ਰਾਹੀਂ ਤੁਹਾਨੂੰ ਦੱਸੀ ਜਾਵੇਗੀ। ਅਜਿਹੀਆਂ ਸੋਧਾਂ ਤੋਂ ਬਾਅਦ ਸੇਵਾਵਾਂ ਦੀ ਤੁਹਾਡੀ ਨਿਰੰਤਰ ਵਰਤੋਂ ਤੁਹਾਨੂੰ ਨਵੀਆਂ ਸ਼ਰਤਾਂ ਨੂੰ ਸਵੀਕਾਰ ਕਰਨ ਦਾ ਸੰਕੇਤ ਦਿੰਦੀ ਹੈ।",
+        "governingLawHeading": "9. ਗਵਰਨਿੰਗ ਕਾਨੂੰਨ",
+        "governingLawContent": "ਇਹ ਸ਼ਰਤਾਂ ਤੁਹਾਡੇ ਅਧਿਕਾਰ ਖੇਤਰ ਦੇ ਕਾਨੂੰਨਾਂ ਦੁਆਰਾ ਨਿਯੰਤ੍ਰਿਤ ਕੀਤੀਆਂ ਜਾਣਗੀਆਂ ਅਤੇ ਉਹਨਾਂ ਨੂੰ ਸਮਝਾਈਆਂ ਜਾਣਗੀਆਂ। ਇਹਨਾਂ ਸ਼ਰਤਾਂ ਤੋਂ ਪੈਦਾ ਹੋਣ ਵਾਲੇ ਜਾਂ ਉਹਨਾਂ ਨਾਲ ਸਬੰਧਤ ਕੋਈ ਵੀ ਵਿਵਾਦ ਉਸ ਅਧਿਕਾਰ ਖੇਤਰ ਦੀਆਂ ਅਦਾਲਤਾਂ ਵਿੱਚ ਹੱਲ ਕੀਤਾ ਜਾਵੇਗਾ।",
+        "contactUsHeading": "10. ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ",
+        "contactUsContent": "ਜੇਕਰ ਇਹਨਾਂ ਨਿਯਮਾਂ ਬਾਰੇ ਤੁਹਾਡੇ ਕੋਈ ਸਵਾਲ ਹਨ, ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਸਾਡੇ ਨਾਲ ਇੱਥੇ ਸੰਪਰਕ ਕਰੋ",
+        "contactEmail": "agrisutra@gmail.com"
+    },
+    "privacyPage": {
+        "title": "ਪਰਾਈਵੇਟ ਨੀਤੀ",
+        "introductionHeading": "1. ਜਾਣ-ਪਛਾਣ",
+        "introductionContent": "ਇਹ ਗੋਪਨੀਯਤਾ ਨੀਤੀ ਦੱਸਦੀ ਹੈ ਕਿ ਜਦੋਂ ਤੁਸੀਂ ਸਾਡੀਆਂ ਸੇਵਾਵਾਂ ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਹੋ ਤਾਂ AgriSutra ਤੁਹਾਡੇ ਬਾਰੇ ਜਾਣਕਾਰੀ ਕਿਵੇਂ ਇਕੱਤਰ ਕਰਦਾ ਹੈ, ਵਰਤਦਾ ਹੈ ਅਤੇ ਸਾਂਝਾ ਕਰਦਾ ਹੈ। ਸਾਡੀਆਂ ਸੇਵਾਵਾਂ ਦੀ ਵਰਤੋਂ ਕਰਕੇ, ਤੁਸੀਂ ਇਸ ਨੀਤੀ ਦੇ ਅਨੁਸਾਰ ਜਾਣਕਾਰੀ ਦੇ ਇਕੱਤਰੀਕਰਨ ਅਤੇ ਵਰਤੋਂ ਲਈ ਸਹਿਮਤ ਹੁੰਦੇ ਹੋ।",
+        "informationWeCollectHeading": "2. ਜਾਣਕਾਰੀ ਅਸੀਂ ਇਕੱਠੀ ਕਰਦੇ ਹਾਂ",
+        "informationWeCollectContent": "ਅਸੀਂ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਇਕੱਠੀ ਕਰ ਸਕਦੇ ਹਾਂ ਜੋ ਤੁਸੀਂ ਸਾਨੂੰ ਪ੍ਰਦਾਨ ਕਰਦੇ ਹੋ, ਜਿਵੇਂ ਕਿ ਤੁਹਾਡਾ ਨਾਮ, ਈਮੇਲ ਪਤਾ, ਫ਼ੋਨ ਨੰਬਰ, ਅਤੇ ਸਥਾਨ ਡੇਟਾ। ਜਦੋਂ ਤੁਸੀਂ ਸਾਡੀਆਂ ਸੇਵਾਵਾਂ ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਹੋ, ਤਾਂ ਅਸੀਂ ਆਪਣੇ ਆਪ ਕੁਝ ਤਕਨੀਕੀ ਜਾਣਕਾਰੀ ਵੀ ਇਕੱਤਰ ਕਰਦੇ ਹਾਂ, ਜਿਸ ਵਿੱਚ ਤੁਹਾਡਾ IP ਪਤਾ, ਬ੍ਰਾਊਜ਼ਰ ਦੀ ਕਿਸਮ, ਅਤੇ ਡਿਵਾਈਸ ਪਛਾਣਕਰਤਾ ਸ਼ਾਮਲ ਹਨ।",
+        "howWeUseYourInformationHeading": "3. ਅਸੀਂ ਤੁਹਾਡੀ ਜਾਣਕਾਰੀ ਦੀ ਵਰਤੋਂ ਕਿਵੇਂ ਕਰਦੇ ਹਾਂ",
+        "howWeUseYourInformationContentIntro": "ਅਸੀਂ ਇਕੱਠੀ ਕੀਤੀ ਜਾਣਕਾਰੀ ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਹਾਂ:",
+        "howWeUseYourInformationList": "ਸਾਡੀਆਂ ਸੇਵਾਵਾਂ ਪ੍ਰਦਾਨ ਕਰਨਾ, ਕਾਇਮ ਰੱਖਣਾ ਅਤੇ ਸੁਧਾਰ ਕਰਨਾ; ਤੁਹਾਡੀਆਂ ਟਿੱਪਣੀਆਂ, ਸਵਾਲਾਂ ਅਤੇ ਗਾਹਕ ਸੇਵਾ ਬੇਨਤੀਆਂ ਦਾ ਜਵਾਬ ਦਿਓ; ਤੁਹਾਨੂੰ ਤਕਨੀਕੀ ਨੋਟਿਸ, ਅੱਪਡੇਟ, ਅਤੇ ਸੁਰੱਖਿਆ ਚੇਤਾਵਨੀ ਭੇਜੋ; ਨਵੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਅਤੇ ਸੇਵਾਵਾਂ ਨੂੰ ਵਿਕਸਤ ਕਰਨ ਲਈ ਰੁਝਾਨਾਂ ਅਤੇ ਵਰਤੋਂ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ ਕਰੋ।",
+        "sharingYourInformationHeading": "4. ਤੁਹਾਡੀ ਜਾਣਕਾਰੀ ਸਾਂਝੀ ਕਰਨਾ",
+        "sharingYourInformationContent": "ਅਸੀਂ ਤੁਹਾਡੀ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਨਹੀਂ ਵੇਚਦੇ। ਅਸੀਂ ਤੁਹਾਡੀ ਜਾਣਕਾਰੀ ਨੂੰ ਭਰੋਸੇਯੋਗ ਤੀਜੀ-ਧਿਰ ਸੇਵਾ ਪ੍ਰਦਾਤਾਵਾਂ ਨਾਲ ਸਾਂਝਾ ਕਰ ਸਕਦੇ ਹਾਂ ਜੋ ਸਾਡੀਆਂ ਸੇਵਾਵਾਂ ਨੂੰ ਚਲਾਉਣ ਵਿੱਚ ਸਾਡੀ ਮਦਦ ਕਰਦੇ ਹਨ। ਅਸੀਂ ਕਾਨੂੰਨ ਦੁਆਰਾ ਜਾਂ ਸਾਡੇ ਅਧਿਕਾਰਾਂ ਅਤੇ ਜਾਇਦਾਦ ਦੀ ਸੁਰੱਖਿਆ ਲਈ ਲੋੜ ਪੈਣ 'ਤੇ ਜਾਣਕਾਰੀ ਸਾਂਝੀ ਵੀ ਕਰ ਸਕਦੇ ਹਾਂ।",
+        "cookiesHeading": "5. ਕੂਕੀਜ਼",
+        "cookiesContent": "ਅਸੀਂ ਸਾਡੀਆਂ ਸੇਵਾਵਾਂ ਦੀ ਤੁਹਾਡੀ ਵਰਤੋਂ ਬਾਰੇ ਜਾਣਕਾਰੀ ਇਕੱਠੀ ਕਰਨ ਅਤੇ ਤੁਹਾਡੇ ਅਨੁਭਵ ਨੂੰ ਬਿਹਤਰ ਬਣਾਉਣ ਲਈ ਕੂਕੀਜ਼ ਅਤੇ ਸਮਾਨ ਟਰੈਕਿੰਗ ਤਕਨੀਕਾਂ ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਹਾਂ। ਤੁਸੀਂ ਆਪਣੇ ਬ੍ਰਾਊਜ਼ਰ ਨੂੰ ਕੂਕੀਜ਼ ਤੋਂ ਇਨਕਾਰ ਕਰਨ ਲਈ ਜਾਂ ਕੂਕੀਜ਼ ਭੇਜੇ ਜਾਣ 'ਤੇ ਤੁਹਾਨੂੰ ਚੇਤਾਵਨੀ ਦੇਣ ਲਈ ਸੈੱਟ ਕਰ ਸਕਦੇ ਹੋ।",
+        "dataRetentionHeading": "6. ਡਾਟਾ ਧਾਰਨ",
+        "dataRetentionContent": "ਅਸੀਂ ਤੁਹਾਡੀ ਜਾਣਕਾਰੀ ਨੂੰ ਇਸ ਗੋਪਨੀਯਤਾ ਨੀਤੀ ਵਿੱਚ ਦਰਸਾਏ ਉਦੇਸ਼ਾਂ ਨੂੰ ਪੂਰਾ ਕਰਨ ਲਈ ਜਿੰਨਾ ਚਿਰ ਲੋੜੀਂਦਾ ਹੈ, ਉਦੋਂ ਤੱਕ ਬਰਕਰਾਰ ਰੱਖਾਂਗੇ, ਜਦੋਂ ਤੱਕ ਕਿ ਇੱਕ ਲੰਮੀ ਧਾਰਨ ਦੀ ਮਿਆਦ ਦੀ ਲੋੜ ਨਹੀਂ ਹੁੰਦੀ ਜਾਂ ਕਾਨੂੰਨ ਦੁਆਰਾ ਇਜਾਜ਼ਤ ਨਹੀਂ ਦਿੱਤੀ ਜਾਂਦੀ।",
+        "securityHeading": "7. ਸੁਰੱਖਿਆ",
+        "securityContent": "ਅਸੀਂ ਤੁਹਾਡੀ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਨੂੰ ਅਣਅਧਿਕਾਰਤ ਪਹੁੰਚ ਜਾਂ ਖੁਲਾਸੇ ਤੋਂ ਬਚਾਉਣ ਲਈ ਉਚਿਤ ਉਪਾਅ ਕਰਦੇ ਹਾਂ। ਹਾਲਾਂਕਿ, ਕੋਈ ਸੁਰੱਖਿਆ ਪ੍ਰਣਾਲੀ ਅਭੇਦ ਨਹੀਂ ਹੈ, ਅਤੇ ਅਸੀਂ ਤੁਹਾਡੇ ਡੇਟਾ ਦੀ ਪੂਰਨ ਸੁਰੱਖਿਆ ਦੀ ਗਰੰਟੀ ਨਹੀਂ ਦੇ ਸਕਦੇ ਹਾਂ।",
+        "childrenHeading": "8. ਬੱਚਿਆਂ ਦੀ ਗੋਪਨੀਯਤਾ",
+        "childrenContent": "ਸਾਡੀਆਂ ਸੇਵਾਵਾਂ 18 ਸਾਲ ਤੋਂ ਘੱਟ ਉਮਰ ਦੇ ਵਿਅਕਤੀਆਂ ਲਈ ਨਹੀਂ ਹਨ। ਅਸੀਂ ਜਾਣਬੁੱਝ ਕੇ 18 ਸਾਲ ਤੋਂ ਘੱਟ ਉਮਰ ਦੇ ਬੱਚਿਆਂ ਤੋਂ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਇਕੱਠੀ ਨਹੀਂ ਕਰਦੇ ਹਾਂ। ਜੇਕਰ ਸਾਨੂੰ ਪਤਾ ਲੱਗਦਾ ਹੈ ਕਿ 18 ਸਾਲ ਤੋਂ ਘੱਟ ਉਮਰ ਦੇ ਬੱਚੇ ਨੇ ਸਾਨੂੰ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਪ੍ਰਦਾਨ ਕੀਤੀ ਹੈ, ਤਾਂ ਅਸੀਂ ਆਪਣੇ ਸਿਸਟਮਾਂ ਤੋਂ ਅਜਿਹੀ ਜਾਣਕਾਰੀ ਮਿਟਾ ਦੇਵਾਂਗੇ।",
+        "changesHeading": "9. ਇਸ ਨੀਤੀ ਵਿੱਚ ਬਦਲਾਅ",
+        "changesContent": "ਅਸੀਂ ਸਮੇਂ-ਸਮੇਂ 'ਤੇ ਇਸ ਗੋਪਨੀਯਤਾ ਨੀਤੀ ਨੂੰ ਅਪਡੇਟ ਕਰ ਸਕਦੇ ਹਾਂ। ਅਸੀਂ ਸਾਡੀ ਵੈੱਬਸਾਈਟ 'ਤੇ ਨਵੀਂ ਨੀਤੀ ਪੋਸਟ ਕਰਕੇ ਜਾਂ ਤੁਹਾਡੇ ਖਾਤੇ ਨਾਲ ਜੁੜੇ ਪਤੇ 'ਤੇ ਈਮੇਲ ਭੇਜ ਕੇ ਤੁਹਾਨੂੰ ਕਿਸੇ ਵੀ ਮਹੱਤਵਪੂਰਨ ਤਬਦੀਲੀਆਂ ਬਾਰੇ ਸੂਚਿਤ ਕਰਾਂਗੇ।",
+        "contactUsHeading": "10. ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ",
+        "contactUsContent": "ਜੇਕਰ ਤੁਹਾਡੇ ਕੋਲ ਇਸ ਗੋਪਨੀਯਤਾ ਨੀਤੀ ਬਾਰੇ ਕੋਈ ਸਵਾਲ ਜਾਂ ਚਿੰਤਾਵਾਂ ਹਨ, ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਸਾਡੇ ਨਾਲ ਇੱਥੇ ਸੰਪਰਕ ਕਰੋ",
+        "contactEmail": "agrisutra@gmail.com"
+    },
+    "newsPage": {
+        "latestNews": "ਤਾਜ਼ਾ ਖ਼ਬਰਾਂ",
+        "readMore": "ਹੋਰ ਪੜ੍ਹੋ"
+    },
+    "marketPage": {
+        "heading": "ਖੇਤੀ ਮੰਡੀ ਦੇ ਰੁਝਾਨ",
+        "selectCommodity": "ਵਸਤੂ ਦੀ ਚੋਣ ਕਰੋ",
+        "selectState": "ਰਾਜ ਚੁਣੋ",
+        "selectDistrict": "ਜ਼ਿਲ੍ਹਾ ਚੁਣੋ",
+        "fetchData": "ਡਾਟਾ ਪ੍ਰਾਪਤ ਕਰੋ",
+        "fetchingData": "ਮਾਰਕੀਟ ਡੇਟਾ ਲਿਆ ਰਿਹਾ ਹੈ...",
+        "noMarketData": "ਕੋਈ ਮਾਰਕੀਟ ਰੁਝਾਨ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ਨਵੀਨਤਮ ਅੱਪਡੇਟ ਦੇਖਣ ਲਈ ਕਿਸੇ ਵਸਤੂ, ਰਾਜ ਅਤੇ ਜ਼ਿਲ੍ਹੇ ਨੂੰ ਚੁਣਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+        "selectAllFields": "ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਵਸਤੂ, ਰਾਜ ਅਤੇ ਜ਼ਿਲ੍ਹਾ ਚੁਣੋ।",
+        "fetchError": "ਮਾਰਕੀਟ ਡੇਟਾ ਪ੍ਰਾਪਤ ਕਰਨ ਵਿੱਚ ਅਸਫਲ। ਕਿਰਪਾ ਕਰਕੇ ਬਾਅਦ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+        "city": "ਸ਼ਹਿਰ",
+        "commodity": "ਵਸਤੂ",
+        "minPrice": "ਘੱਟੋ-ਘੱਟ ਕੀਮਤ",
+        "maxPrice": "ਅਧਿਕਤਮ ਕੀਮਤ",
+        "modelPrice": "ਮਾਡਲ ਦੀ ਕੀਮਤ",
+        "date": "ਮਿਤੀ"
+    },
+    "soilAnalysis": {
+        "title": "ਮਿੱਟੀ ਵਿਸ਼ਲੇਸ਼ਣ ਟੈਸਟ",
+        "description": "ਚੁਣੋ ਕਿ ਕੀ ਹੱਥੀਂ ਮਿੱਟੀ ਦੇ ਮਾਪਦੰਡ ਦਰਜ ਕਰਨੇ ਹਨ ਜਾਂ ਇੱਕ PDF/ਚਿੱਤਰ ਅੱਪਲੋਡ ਕਰਨਾ ਹੈ।",
+        "manualInput": "ਮੈਨੁਅਲ ਇੰਪੁੱਟ",
+        "uploadPdfImage": "PDF/ਚਿੱਤਰ ਅੱਪਲੋਡ ਕਰੋ",
+        "uploadLabel": "ਚਿੱਤਰ ਜਾਂ PDF ਅੱਪਲੋਡ ਕਰੋ",
+        "getRecommendation": "ਸਿਫਾਰਸ਼ ਪ੍ਰਾਪਤ ਕਰੋ",
+        "cropRecommendation": "ਫਸਲ ਦੀ ਸਿਫਾਰਸ਼",
+        "noDescription": "ਕੋਈ ਵੇਰਵਾ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
+        "errorFetching": "ਪੂਰਵ ਅਨੁਮਾਨ ਪ੍ਰਾਪਤ ਕਰਨ ਵਿੱਚ ਤਰੁੱਟੀ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+        "formLabels": {
+            "N": "ਨਾਈਟ੍ਰੋਜਨ (N)",
+            "P": "ਫਾਸਫੋਰਸ (ਪੀ)",
+            "K": "ਪੋਟਾਸ਼ੀਅਮ (ਕੇ)",
+            "temperature": "ਤਾਪਮਾਨ (°C)",
+            "humidity": "ਨਮੀ (%)",
+            "ph": "pH ਪੱਧਰ",
+            "rainfall": "ਮੀਂਹ (ਮਿਲੀਮੀਟਰ)",
+            "${key}": "soilAnalysis.formLabels.${key}"
+        },
+        "chooseMethod": "soilAnalysis.chooseMethod",
+        "tipsHeading": "soilAnalysis.tipsHeading"
+    },
+    "weather": {
+        "locationAccess": "ਕੀ ਟਿਕਾਣਾ ਪਹੁੰਚ ਦੀ ਇਜਾਜ਼ਤ ਦੇਣੀ ਹੈ?",
+        "locationInfo": "ਸਾਨੂੰ ਸਹੀ ਮੌਸਮ ਅੱਪਡੇਟ ਪ੍ਰਦਾਨ ਕਰਨ ਲਈ ਤੁਹਾਡੇ ਟਿਕਾਣੇ ਦੀ ਲੋੜ ਹੈ।",
+        "allow": "ਇਜਾਜ਼ਤ ਦਿਓ",
+        "deny": "ਇਨਕਾਰ",
+        "temperature": "ਤਾਪਮਾਨ",
+        "humidity": "ਨਮੀ",
+        "uvIndex": "ਯੂਵੀ ਇੰਡੈਕਸ",
+        "windSpeed": "ਹਵਾ ਦੀ ਗਤੀ",
+        "airQualityIndex": "ਹਵਾ ਗੁਣਵੱਤਾ ਸੂਚਕਾਂਕ",
+        "sunrise": "ਸੂਰਜ ਚੜ੍ਹਨਾ",
+        "sunset": "ਸੂਰਜ ਡੁੱਬਣ",
+        "sevenDayForecast": "7-ਦਿਨ ਦੀ ਭਵਿੱਖਬਾਣੀ"
+    },
+    "settings": {
+        "loading": "ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...",
+        "errorLoadingProfile": "ਪ੍ਰੋਫਾਈਲ ਲੋਡ ਕਰਨ ਵਿੱਚ ਤਰੁੱਟੀ।",
+        "editProfile": "ਪ੍ਰੋਫਾਈਲ ਦਾ ਸੰਪਾਦਨ ਕਰੋ",
+        "languageSelection": "ਭਾਸ਼ਾ ਦੀ ਚੋਣ",
+        "settings": "ਸੈਟਿੰਗਾਂ"
+    },
+    "general": {
+        "back": "ਪਿੱਛੇ"
+    },
+    "equipment": {
+        "locationAccess": "ਕੀ ਟਿਕਾਣਾ ਪਹੁੰਚ ਦੀ ਇਜਾਜ਼ਤ ਦੇਣੀ ਹੈ?",
+        "locationInfo": "ਸਾਨੂੰ ਨੇੜਲੇ ਉਪਲਬਧ ਖੇਤੀ ਉਪਕਰਨ ਦਿਖਾਉਣ ਲਈ ਤੁਹਾਡੇ ਟਿਕਾਣੇ ਦੀ ਲੋੜ ਹੈ।",
+        "allow": "ਇਜਾਜ਼ਤ ਦਿਓ",
+        "deny": "ਇਨਕਾਰ",
+        "searchPlaceholder": "ਖੋਜ ਉਪਕਰਣ ਸ਼੍ਰੇਣੀਆਂ...",
+        "loadingCategories": "ਸ਼੍ਰੇਣੀਆਂ ਲੋਡ ਕੀਤੀਆਂ ਜਾ ਰਹੀਆਂ ਹਨ...",
+        "noCategoriesFound": "ਕੋਈ ਸ਼੍ਰੇਣੀਆਂ ਨਹੀਂ ਮਿਲੀਆਂ।",
+        "farmingEquipments": "ਖੇਤੀ ਉਪਕਰਨ",
+        "availableEquipment": "{{ਸ਼੍ਰੇਣੀ}} ਵਿੱਚ ਉਪਕਰਨ ਉਪਲਬਧ ਹੈ",
+        "noEquipment": "ਇਸ ਸ਼੍ਰੇਣੀ ਲਈ ਕੋਈ ਉਪਕਰਨ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
+        "unitsAvailable": "ਯੂਨਿਟ ਉਪਲਬਧ ਹਨ",
+        "ownerName": "ਮਾਲਕ ਦਾ ਨਾਮ",
+        "pricePerUnit": "ਪ੍ਰਤੀ ਯੂਨਿਟ ਦੀ ਕੀਮਤ",
+        "location": "ਟਿਕਾਣਾ",
+        "giveEquipment": "ਕੀ ਤੁਸੀਂ ਆਪਣਾ ਸਾਜ਼-ਸਾਮਾਨ ਦੇਣਾ ਚਾਹੁੰਦੇ ਹੋ?",
+        "listEquipment": "ਦੂਜਿਆਂ ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ ਆਪਣੇ ਸਾਜ਼-ਸਾਮਾਨ ਦੀ ਸੂਚੀ ਬਣਾਓ",
+        "useEquipment": "ਸਾਜ਼-ਸਾਮਾਨ ਦੀ ਵਰਤੋਂ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?",
+        "findEquipment": "ਆਪਣੀਆਂ ਲੋੜਾਂ ਲਈ ਸਾਜ਼ੋ-ਸਾਮਾਨ ਲੱਭੋ ਅਤੇ ਬੁੱਕ ਕਰੋ"
+    },
+    "giveEquipment": {
+        "title": "ਆਪਣੇ {{ਸ਼੍ਰੇਣੀ}} ਦੀ ਸੂਚੀ ਬਣਾਓ",
+        "description": "ਦੂਜਿਆਂ ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ ਆਪਣੇ ਖੇਤੀ ਸੰਦ ਦੀ ਸੂਚੀ ਬਣਾਓ। ਆਪਣਾ ਸਾਜ਼ੋ-ਸਾਮਾਨ ਉਪਲਬਧ ਕਰਾਉਣ ਲਈ ਹੇਠਾਂ ਦਿੱਤੇ ਵੇਰਵਿਆਂ ਨੂੰ ਭਰੋ।",
+        "equipmentName": "ਉਪਕਰਨ ਦਾ ਨਾਮ",
+        "equipmentPlaceholder": "ਉਦਾਹਰਨ ਲਈ, ਜੌਨ ਡੀਅਰ 5075E ਟਰੈਕਟਰ",
+        "descriptionLabel": "ਵਰਣਨ",
+        "descriptionPlaceholder": "ਸਥਿਤੀ, ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਆਦਿ ਸਮੇਤ ਆਪਣੇ ਸਾਜ਼-ਸਾਮਾਨ ਦਾ ਵਰਣਨ ਕਰੋ।",
+        "rentalRate": "ਕਿਰਾਏ ਦੀ ਦਰ (ਪ੍ਰਤੀ ਦਿਨ)",
+        "pricePlaceholder": "ਉਦਾਹਰਨ ਲਈ, 5000",
+        "location": "ਟਿਕਾਣਾ",
+        "locationPlaceholder": "ਉਦਾਹਰਨ ਲਈ, ਅੰਮ੍ਰਿਤਸਰ, ਪੰਜਾਬ",
+        "availability": "ਉਪਲਬਧਤਾ",
+        "availableNow": "ਹੁਣ ਉਪਲਬਧ ਹੈ",
+        "notAvailable": "ਉਪਲਭਦ ਨਹੀ",
+        "contactInfo": "ਸੰਪਰਕ ਜਾਣਕਾਰੀ",
+        "phonePlaceholder": "ਫੋਨ ਨੰਬਰ",
+        "listButton": "ਸੂਚੀ ਉਪਕਰਣ",
+        "successMessage": "ਉਪਕਰਣ ਸਫਲਤਾਪੂਰਵਕ ਸੂਚੀਬੱਧ!",
+        "errorMessage": "ਉਪਕਰਣਾਂ ਦੀ ਸੂਚੀ ਬਣਾਉਣ ਵਿੱਚ ਅਸਫਲ।",
+        "networkError": "ਇੱਕ ਨੈੱਟਵਰਕ ਗਲਤੀ ਆਈ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
+    },
+    "availableEquipment": {
+        "title": "ਉਪਲਬਧ {{ਸ਼੍ਰੇਣੀ}} ਉਪਕਰਨ",
+        "filterOptions": "ਫਿਲਟਰ ਵਿਕਲਪ",
+        "all": "ਸਾਰੇ",
+        "availableNow": "ਹੁਣ ਉਪਲਬਧ ਹੈ",
+        "notAvailable": "ਉਪਲਭਦ ਨਹੀ",
+        "perDay": "ਪ੍ਰਤੀ ਦਿਨ",
+        "location": "ਟਿਕਾਣਾ",
+        "owner": "ਮਾਲਕ",
+        "available": "ਉਪਲਬਧ ਹੈ",
+        "notavailable": "ਉਪਲਭਦ ਨਹੀ",
+        "unknown": "ਅਗਿਆਤ",
+        "bookNow": "ਹੁਣੇ ਬੁੱਕ ਕਰੋ",
+        "unavailable": "ਅਣਉਪਲਬਧ",
+        "noEquipment": "ਕੋਈ {{ਸ਼੍ਰੇਣੀ}} ਉਪਕਰਨ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।"
+    },
+    "bookEquipment": {
+        "back": "ਪਿੱਛੇ",
+        "title": "ਕਿਤਾਬ ਦਾ ਉਪਕਰਨ",
+        "equipmentName": "ਉਪਕਰਨ ਦਾ ਨਾਮ",
+        "location": "ਟਿਕਾਣਾ",
+        "owner": "ਮਾਲਕ",
+        "bookingDetails": "ਬੁਕਿੰਗ ਵੇਰਵੇ",
+        "startDate": "ਤਾਰੀਖ ਸ਼ੁਰੂ",
+        "endDate": "ਸਮਾਪਤੀ ਮਿਤੀ",
+        "confirmBooking": "ਬੁਕਿੰਗ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ",
+        "bookingSuccess": "ਬੁਕਿੰਗ ਦੀ ਸਫਲਤਾਪੂਰਵਕ ਪੁਸ਼ਟੀ ਹੋਈ!"
+    },
+    ".": ".",
+    "T": "ਟੀ",
+    "email": "ਈਮੇਲ",
+    "username": "ਉਪਭੋਗਤਾ ਨਾਮ",
+    "name": "ਨਾਮ",
+    "password": "ਪਾਸਵਰਡ",
+    "You must be logged in to save a scheme.": "You must be logged in to save a scheme.",
+    "Scheme saved successfully!": "Scheme saved successfully!",
+    "Failed to save scheme.": "Failed to save scheme.",
+    "Scheme is already saved.": "Scheme is already saved.",
+    "token": "token",
+    "loading": "loading",
+    "soilAnalysis.chooseMethod": "soilAnalysis.chooseMethod",
+    "soilAnalysis.formLabels.${key}": "soilAnalysis.formLabels.${key}",
+    "soilAnalysis.tipsHeading": "soilAnalysis.tipsHeading",
+    " ": " ",
+    "Equipment listed successfully!": "Equipment listed successfully!",
+    "Failed to list equipment. ": "Failed to list equipment. ",
+    "A network error occurred. Please try again.": "A network error occurred. Please try again.",
+    "Geolocation is not supported by your browser.": "Geolocation is not supported by your browser.",
+    "Location access denied. Please allow location access.": "Location access denied. Please allow location access.",
+    "equipment_id": "equipment_id",
+    "Please select start and end dates.": "Please select start and end dates.",
+    "Equipment ID is missing!": "Equipment ID is missing!",
+    "Booking confirmed!": "Booking confirmed!",
+    "Failed to book equipment.": "Failed to book equipment.",
+    "": {
+        "": "."
+    },
+    "You must be logged in to save a scheme": {
+        "": "You must be logged in to save a scheme."
+    },
+    "Failed to save scheme": {
+        "": "Failed to save scheme."
+    },
+    "Scheme is already saved": {
+        "": "Scheme is already saved."
+    },
+    "Failed to list equipment": {
+        " ": "Failed to list equipment. "
+    },
+    "A network error occurred": {
+        " Please try again": {
+            "": "A network error occurred. Please try again."
+        }
+    },
+    "Geolocation is not supported by your browser": {
+        "": "Geolocation is not supported by your browser."
+    },
+    "Location access denied": {
+        " Please allow location access": {
+            "": "Location access denied. Please allow location access."
+        }
+    },
+    "Please select start and end dates": {
+        "": "Please select start and end dates."
+    },
+    "Failed to book equipment": {
+        "": "Failed to book equipment."
+    }
+}

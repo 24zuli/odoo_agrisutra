@@ -8,7 +8,7 @@ module.exports = {
     jsx: ["JavascriptLexer"],
     default: ["JavascriptLexer"],
   },
-  locales: ["en", "gu", "hi", "mr"],
+  locales: ["en", "gu", "hi", "mr", "ta", "te", "kn", "ml", "bn", "pa"],
   output: "app/locales/$LOCALE.json",
   input: ["app/**/*.{js,jsx,ts,tsx}"],
   exclude: [

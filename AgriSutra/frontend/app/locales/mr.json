@@ -117,7 +117,7 @@
     "ratePage.submit": "ratePage.submit",
     "languagePage.selectLanguage": "languagePage.SelectLanguage",
     "languagePage.english": "languagePage.english",
-    "languagePage.gujarati": "languagePage.gujarati",
+    "languagePage.gujarati": "languagepage.gujarati",
     "editProfilePage.loading": "editProfilePage.loading",
     "editProfilePage.errorLoadingProfile": "editProfilePage.errorLoadingProfile",
     "editProfilePage.failedToUpdateProfile": "editProfilePage.failedToUpdateProfile",
@@ -410,7 +410,8 @@
         "contactEmail": "agrisutra@gmail.com"
     },
     "newsPage": {
-        "latestNews": "ताज्या बातम्या"
+        "latestNews": "ताज्या बातम्या",
+        "readMore": "अधिक वाचा"
     },
     "marketPage": {
         "heading": "कृषी बाजाराचा ट्रेंड",
